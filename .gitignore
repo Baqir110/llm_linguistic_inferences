@@ -14,3 +14,11 @@ results/.cache_*.jsonl
 # OS/editor
 .DS_Store
 Thumbs.db
+
+# LaTeX build artifacts
+assets/report_template.aux
+assets/report_template.log
+assets/report_template.out
+assets/report_template.toc
+assets/report_template.synctex.gz
+assets/report_template.pdf
