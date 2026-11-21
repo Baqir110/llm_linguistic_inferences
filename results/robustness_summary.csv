@@ -1,4 +1,7 @@
 model,strategy,pairs,consistency_rate,joint_accuracy,acc_original,acc_perturbed
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,30,0.9667,0.9667,1.0,0.9667
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,30,0.9333,0.9,0.9333,0.9333
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,30,0.9667,0.9667,0.9667,1.0
 llama3:latest,cot,30,0.8,0.4333,0.5333,0.5333
 llama3:latest,few_shot,30,0.9,0.7333,0.8,0.7667
 llama3:latest,zero_shot,30,0.9667,0.5667,0.6,0.5667

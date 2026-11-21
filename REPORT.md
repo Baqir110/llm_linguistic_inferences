@@ -73,7 +73,7 @@ The code supports these backends:
 - **Hugging Face** for local transformer models, with exact Yes/No token probability for direct prompts.
 - **OpenAI API** for models like GPT-4o.
 
-I ran real local tests through Ollama on four models: `llama3:latest`, `mistral:7b`, `mixtral:8x7b`, and `qwen2.5:7b` (qwen was an extra model, not in the original proposal). I also ran `openai/gpt-oss-20b` via Groq (OpenAI-compatible API). I tried a free OpenRouter model, but the current key in `apikeys.env` did not authenticate for OpenRouter chat completions. I ran the full 180-item benchmark with all three prompt styles, plus the 30 perturbation items. I did not run all models named in the original proposal (still missing `llama3.3:70b` run, OpenAI GPT models due to API quota, and optional HF exact-logit check pending approval). The numbers below come from those saved result files.
+I ran real local tests through Ollama on four models: `llama3:latest`, `mistral:7b`, `mixtral:8x7b`, and `qwen2.5:7b` (qwen was an extra model, not in the original proposal). I also ran `openai/gpt-oss-20b` via Groq (OpenAI-compatible API) and `@cf/meta/llama-3.3-70b-instruct-fp8-fast` via Cloudflare Workers AI (a quantized fp8-fast variant of Llama 3.3 70B; close to the proposal model but not the same local/HF exact setup). I tried a free OpenRouter model, but the current key in `apikeys.env` did not authenticate for OpenRouter chat completions. I ran the full 180-item benchmark with all three prompt styles, plus the 30 perturbation items. I did not run all models named in the original proposal (still missing OpenAI GPT models due to API quota, and optional HF exact-logit check pending approval). The numbers below come from those saved result files.
 
 ### How answers are scored
 
@@ -146,6 +146,9 @@ I ran four local Ollama models on the full benchmark. These are real saved resul
 | openai/gpt-oss-20b (Groq) | zero_shot | 0.4389 | 0.3611-0.5056 | 0.5986 | 0.4389 | 0.6167 | 0.3833 | 0.3167 |
 | openai/gpt-oss-20b (Groq) | few_shot | 0.3667 | 0.2944-0.4389 | 0.4764 | 0.3667 | 0.4833 | 0.4000 | 0.2167 |
 | openai/gpt-oss-20b (Groq) | cot | 0.9056 | 0.8556-0.9444 | 0.9184 | 0.9056 | 0.9500 | 0.9000 | 0.8667 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | zero_shot | 0.9444 | 0.9056-0.9778 | 0.9443 | 0.9444 | 0.9500 | 0.9667 | 0.9167 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | few_shot | 0.9667 | 0.9389-0.9889 | 0.9667 | 0.9667 | 0.9333 | 0.9667 | 1.0000 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | cot | 0.9667 | 0.9333-0.9889 | 0.9666 | 0.9667 | 0.9833 | 0.9833 | 0.9333 |
 
 ### What I noticed
 
@@ -173,6 +176,9 @@ I ran four local Ollama models on the full benchmark. These are real saved resul
 | openai/gpt-oss-20b (Groq) | zero_shot | 0.0111 | 0.0444 | 0.5333 | 0.4432 |
 | openai/gpt-oss-20b (Groq) | few_shot | 0.2667 | 0.0444 | 0.4778 | 0.3580 |
 | openai/gpt-oss-20b (Groq) | cot | 0.0889 | 0.0444 | 0.0278 | 0.9148 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | zero_shot | 0.1000 | 0.0111 | 0.0000 | 0.9432 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | few_shot | 0.0556 | 0.0111 | 0.0000 | 0.9659 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | cot | 0.0667 | 0.0000 | 0.0000 | 0.9659 |
 
 The false positive rate shows over-entailment. Llama3 and Mistral had high false positive rates, which fits the idea that they accepted too many plausible statements.
 
@@ -195,6 +201,9 @@ The false positive rate shows over-entailment. Llama3 and Mistral had high false
 | openai/gpt-oss-20b (Groq) | zero_shot | 0.6333 | 0.0000 | 0.3333 | 0.0000 |
 | openai/gpt-oss-20b (Groq) | few_shot | 0.3667 | 0.0000 | 0.5000 | 0.0000 |
 | openai/gpt-oss-20b (Groq) | cot | 0.9667 | 0.9333 | 0.9333 | 0.9667 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | zero_shot | 0.9667 | 0.9667 | 0.9667 | 1.0000 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | few_shot | 0.9333 | 0.9000 | 0.9333 | 0.9333 |
+| @cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) | cot | 0.9667 | 0.9667 | 1.0000 | 0.9667 |
 
 These are small-sample robustness checks (only 30 pairs), so I would not make strong claims from them alone.
 
@@ -256,7 +265,7 @@ python -m src.analyze
 
 ## 10. Limits of this report
 
-This report is honest about what is done and what is not done. I ran real tests for four local Ollama models (`llama3:latest`, `mistral:7b`, `mixtral:8x7b`, `qwen2.5:7b`) and one Groq API model (`openai/gpt-oss-20b`), and the code/data checks pass. But I did not run all models from the original proposal (Llama 70B run, OpenAI GPT models, and optional HF exact-logit check are still missing). OpenRouter free-model run failed due to authentication with the current key. I also did not collect independent human agreement scores. The dataset is still small, and some labels are theory-dependent. These parts should be improved before a final submission.
+This report is honest about what is done and what is not done. I ran real tests for four local Ollama models (`llama3:latest`, `mistral:7b`, `mixtral:8x7b`, `qwen2.5:7b`), one Groq API model (`openai/gpt-oss-20b`), and one Cloudflare Workers AI model (`@cf/meta/llama-3.3-70b-instruct-fp8-fast`, an fp8-fast Llama 3.3 70B variant), and the code/data checks pass. But I did not run all models from the original proposal exactly as planned (OpenAI GPT models still missing due to quota/deprecation; HF exact-logit Meta-Llama-3-8B-Instruct check still pending approval). OpenRouter free-model runs were limited by authentication/quota. I also did not collect independent human agreement scores. The dataset is still small, and some labels are theory-dependent. These parts should be improved before a final submission.
 
 ## 11. Final thoughts
 
@@ -269,7 +278,7 @@ The main value of this project is that it gives a clear and simple way to test l
 - [x] Balanced benchmark (180) + perturbations (30) + data card.
 - [x] Reproducible code with tests (`13 passed`).
 - [x] Run manifests, caches, raw predictions, summaries, plots.
-- [x] Real runs for 5 models (llama3, mistral, mixtral, qwen2.5, gpt-oss-20b via Groq).
+- [x] Real runs for 6 models (llama3, mistral, mixtral, qwen2.5, gpt-oss-20b via Groq, llama-3.3-70b-instruct-fp8-fast via Cloudflare).
 - [x] Significance tests and error attribution.
 - [x] Annotation protocol/template for human agreement.
 - [x] RTX 4060 GPU detected; CUDA PyTorch install attempted for optional HF exact-logit run.

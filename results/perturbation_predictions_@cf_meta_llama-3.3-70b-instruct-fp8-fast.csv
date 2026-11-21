@@ -1,0 +1,151 @@
+base_id,premise,hypothesis,gold_label,model,strategy,predicted_label,prob_yes,prob_no,logprob_margin,raw_output
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388465,2.0611535283751814e-09,20.000000043575124,Yes.
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388463,2.06115370208827e-09,19.99999995929558,Yes.
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388461,2.061153911309469e-09,19.999999857788744,Yes.
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388465,2.0611535373756075e-09,20.00000003920843,Yes.
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999907625506,9.237449436720914e-09,18.500000015146952,Yes.
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388465,2.0611535616754876e-09,20.000000027418974,Yes.
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,0.01798621395515439,0.9820137860448456,-3.9999997739269197,No.
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,5.211412481685403e-10,0.9999999994788586,-21.375000000669157,No.
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,1.9947299577647436e-06,0.9999980052700422,-13.124999881568845,No.
+INF-042,That is a toy pistol.,That is a pistol.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,0.22270014696353385,0.7772998530364662,-1.2499999529867138,No.
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388465,2.0611535230928213e-09,20.00000004613794,Yes.
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9998415637752687,0.00015843622473138774,8.74999996446675,Yes.
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388465,2.0611535458319725e-09,20.000000035105696,Yes.
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999928058672,7.1941327955435395e-09,18.75000002544105,Yes.
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999998874648259,1.1253517402753795e-07,15.99999989361153,Yes.
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388465,2.0611534766726088e-09,20.000000068659414,Yes.
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,4.0586521243222836e-10,0.9999999995941349,-21.625000000124707,No.
+INF-095,He feigned being asleep.,He was asleep.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,4.5990553714632496e-10,0.9999999995400946,-21.500000001103256,No.
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,6.825603721676752e-08,0.9999999317439627,-16.49999988114889,No.
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,2.4616969461354553e-10,0.9999999997538302,-22.125000002061153,No.
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,4.0586521240065317e-10,0.9999999995941349,-21.625000000202505,No.
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,3.224186631820113e-08,0.9999999677581336,-17.250000000459906,No.
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,6.348800074662258e-09,0.9999999936511998,-18.87500000016919,No.
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,7.194132973544304e-09,0.9999999928058669,-18.75000000069856,No.
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,2.7535687810233122e-05,0.9999724643121899,-10.50000012000576,No.
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,5.043476486176111e-07,0.9999994956523514,-14.499999523312265,No.
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,7.194132977495678e-09,0.9999999928058669,-18.75000000014931,No.
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,No,6.348800074357173e-09,0.9999999936511998,-18.875000000217245,No.
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.999999996149258,3.850741824078987e-09,19.37500002177773,Yes.
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,Yes,0.9999999979388463,2.0611536051721325e-09,20.000000006315915,Yes.
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388463,2.061153668312895e-09,19.999999975682215,Yes
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388465,2.061153511567635e-09,20.00000005172956,Yes
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388465,2.061153500488583e-09,20.00000005710473,Yes
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388465,2.061153488533511e-09,20.000000062904917,Yes
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999943972038,5.6027961943540326e-09,19.000000037801108,Yes
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999785550426056,2.1444957394362282e-05,10.74999958154999,Yes
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9997965729598596,0.00020342704014048946,8.49999969474105,Yes
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,3.5817479287476737e-10,0.9999999996418252,-21.75000000007053,No
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,0.37754068351813863,0.6224593164818615,-0.4999999373627212,No
+INF-042,That is a toy pistol.,That is a pistol.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9914225150979519,0.008577484902048073,4.750000060168063,Yes
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388465,2.0611535418005837e-09,20.000000037061586,Yes
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999998362622956,1.6373770423671957e-07,15.624999890143345,Yes
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388463,2.0611535788013593e-09,20.000000019110097,Yes
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388465,2.061153540048638e-09,20.00000003791157,Yes
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999397642595,6.023574062008812e-08,16.624999902556723,Yes
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388465,2.0611535332402876e-09,20.000000041214744,Yes
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,1.573710210349494e-11,0.9999999999842628,-24.875000000198277,No
+INF-095,He feigned being asleep.,He was asleep.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,1.3887943862941178e-11,0.999999999986112,-25.000000000131767,No
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,8.592166611505339e-10,0.9999999991407833,-20.875000000033314,No
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,1.9171715131381382e-10,0.9999999998082829,-22.375000000131767,No
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,1.3887943862108568e-11,0.999999999986112,-25.00000000019172,No
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,1.493094675839013e-10,0.9999999998506905,-22.625000000090562,No.
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,4.5990553762128214e-10,0.9999999995400946,-21.50000000007053,No
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,4.8473687055682436e-11,0.9999999999515263,-23.75000000009635,No
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,5.211412484779184e-10,0.9999999994788586,-21.375000000075502,No
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,5.905303995089233e-10,0.9999999994094697,-21.25000000006224,No.
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,4.599055376444249e-10,0.9999999995400946,-21.500000000020208,No
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,No,1.9171715132375402e-10,0.9999999998082829,-22.37500000007992,No
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999998973812,1.0261879103540876e-10,23.000000051365635,Yes
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,Yes,0.9999999979388463,2.0611536410734225e-09,19.99999998889786,Yes
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that the shopper bought a sedan, and a sedan is a type of automobile. This relationship between ""sedan"" and ""automobile"" is based on word meanings and typical categorizations. Given that a sedan is an automobile, the Hypothesis must be true whenever the Premise is true.
+
+Final Answer: Yes"
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that a finch, which is a type of bird, perched on the railing. Given the normal sense of the word ""finch"" as a bird, it logically follows that a bird perched on the railing. This conclusion is based on the inherent relationship between the meanings of ""finch"" and ""bird"".
+
+Final Answer: Yes"
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"Since a carrot is a type of vegetable, the action of chopping a carrot implies chopping a vegetable. The Premise provides specific information about the cook's action on a carrot, which falls under the broader category of vegetables. This relationship between ""carrot"" and ""vegetable"" makes the Hypothesis necessarily true whenever the Premise is true.
+
+Final Answer: Yes"
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states a specific time at which the locomotive arrived, implying that an arrival did indeed occur. The Hypothesis simply asserts that the locomotive arrived, without specifying a time. Since the Premise provides a specific instance of the locomotive arriving, it necessarily entails the more general statement that the locomotive arrived.
+
+Final Answer: Yes"
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"To determine if the Hypothesis follows from the Premise, we must consider the meanings of ""murmured"" and ""spoke"". Murmuring is a form of speaking, but it typically implies speaking softly or indistinctly. Since murmuring is a subset of speaking, if Elena murmured the secret, it necessarily means she spoke the secret. 
+
+Final Answer: Yes"
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that the shopper did not buy an automobile, and a sedan is a type of automobile. This means that if the shopper did not purchase an automobile, they also did not purchase a sedan, as it falls under the category of automobiles. The Hypothesis is a more specific instance of the Premise.
+
+Final Answer: Yes"
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that the shopper did not purchase a sedan, which is a type of automobile. This implies that the shopper did not purchase at least one type of automobile, but it does not necessarily mean they did not purchase any other type of automobile. The Hypothesis requires that the shopper did not purchase any automobile, which is not necessarily true based on the Premise.
+
+Final Answer: No"
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that the shopper purchased an automobile, which is a broad category of vehicles. The Hypothesis narrows it down to a sedan, which is a specific type of automobile. Since the Premise does not specify the type of automobile, it leaves open the possibility that the shopper purchased a different type of vehicle.
+
+Final Answer: No"
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that it is a counterfeit diamond, which implies that it is not a genuine diamond but rather a fake or imitation one. The term ""counterfeit"" suggests that it is pretending to be something it is not, in this case, a diamond. This means that while it may appear to be a diamond, it is not actually a diamond in the true sense.
+
+Final Answer: No"
+INF-042,That is a toy pistol.,That is a pistol.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise describes the object as a ""toy pistol"", which implies it is a replica or imitation of a real pistol, but not an actual firearm. The term ""toy"" modifies the noun ""pistol"", indicating it is not a genuine pistol. Therefore, the Hypothesis that ""That is a pistol"" does not necessarily follow from the Premise because it ignores the modifying term ""toy"".
+
+Final Answer: No"
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"To quit smoking implies that one was previously smoking. The Premise states that Daniel quit smoking, which takes for granted that he was smoking before. This means he must have been a smoker at some point in the past.
+
+Final Answer: Yes"
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"To quit smoking implies that one was previously smoking. The Premise states Daniel did not quit, which means he either continued smoking or never smoked in the first place. However, the act of quitting is directly related to previous smoking behavior.
+
+Final Answer: No"
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that Hannah regretted selling her apartment, which implies that the sale of the apartment occurred. The use of the word ""regretted"" indicates a past action, in this case, the sale of the apartment. This past action is a prerequisite for the feeling of regret, so the sale must have happened.
+
+Final Answer: Yes"
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise implies that Hannah had sold her apartment, as regret is an emotion that would be associated with a past action. The phrase ""did not regret"" suggests that there was an action to potentially regret, which in this case is selling her apartment. This indicates a direct relationship between the action and the emotion, making the Hypothesis a necessary condition for the Premise to be true.
+
+Final Answer: Yes"
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that Lucas ""returned"" to Vienna, which implies a prior presence in the city. The word ""returned"" typically means to come back to a place where one has been before. This suggests that Lucas had indeed been in Vienna previously.
+
+Final Answer: Yes"
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that Thomas was the one who shattered the vase, which directly implies that there was an action of shattering the vase. This action is attributed to a specific individual, Thomas, indicating that the vase was indeed shattered by someone. The Hypothesis simply states that someone shattered the vase, which is a direct consequence of the Premise.
+
+Final Answer: Yes"
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that Daniel claims the earth is flat, which indicates his belief or statement, but does not necessarily confirm the fact. The truth of the earth's shape is not dependent on Daniel's claim. The Premise only reports Daniel's assertion, not the actual shape of the earth.
+
+Final Answer: No"
+INF-095,He feigned being asleep.,He was asleep.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"To feign being asleep means to pretend or fake being asleep, which implies that he was not actually asleep. The Premise suggests a deliberate act of deception, indicating a conscious state rather than unconscious sleep. This distinction makes the Hypothesis inconsistent with the Premise.
+
+Final Answer: No"
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states a conditional relationship between Daniel's past smoking habit and quitting last year. It does not assert that Daniel actually used to smoke, only what would happen if he did. The Hypothesis assumes a fact that the Premise does not confirm.
+
+Final Answer: No"
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that Daniel never smoked, which directly contradicts the Hypothesis that Daniel used to smoke. The phrase ""never smoked"" implies a complete absence of smoking throughout his life. This means the Hypothesis cannot be true if the Premise is true.
+
+Final Answer: No"
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that the sprinter collapsed after crossing the finish line, which could be due to various reasons such as exhaustion, dehydration, or a medical condition. The Hypothesis specifically suggests a myocardial infarction, which is not the only possible cause of collapse. The Premise does not provide enough information to conclusively determine the cause of the collapse.
+
+Final Answer: No"
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise describes a typical precursor to heavy rain, but it doesn't explicitly state that it rained. The gathering of storm clouds often leads to rain, but it's not a guarantee. The Premise leaves open the possibility that it might not have rained.
+
+Final Answer: No"
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise describes an action that is often a precursor to brewing tea, but it does not explicitly state that tea was brewed. The action of lighting the burner under the kettle could be for other purposes, such as making coffee or hot chocolate. The Premise leaves open the specific use of the heated kettle.
+
+Final Answer: No"
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise describes an accident involving a tumbler and a stone floor, which suggests a potentially damaging impact. However, it does not explicitly state that the tumbler broke or shattered. The outcome of the tumbler slipping onto the stone floor is left unspecified, allowing for various possibilities, including but not limited to shattering.
+
+Final Answer: No"
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise indicates the presence of smoke, which is often associated with fire, but it does not explicitly state that there was a fire. The smoke could be from other sources such as cooking or a malfunctioning appliance. The Premise leaves open the possibility of other explanations for the smoke.
+
+Final Answer: No"
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise mentions an ambulance racing down the avenue with sirens wailing, which typically indicates an emergency situation. However, it does not explicitly state the reason for the ambulance's urgency, leaving open various possibilities such as a medical emergency or a fire. The presence of an ambulance with sirens does not necessarily imply a crash.
+
+Final Answer: No"
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that he pressed the brake pedal abruptly, which typically leads to the vehicle slowing down or stopping. However, it does not explicitly state that the vehicle came to a full stop, as the outcome depends on various factors such as the vehicle's speed and the road conditions. The Premise only implies a sudden application of the brakes, not necessarily a complete halt.
+
+Final Answer: No"
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,No,,,,"The Premise states that the cat knocked the cup off the desk, which typically results in the cup falling. Falling can cause damage to a porcelain cup, but it doesn't necessarily mean the cup broke. The Premise leaves open the possibility that the cup survived the fall without breaking.
+
+Final Answer: No"
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that the sprinter crossed the finish line, which typically marks the end of a race. Crossing the finish line is generally understood to mean completing the race. Since the sprinter crossed the finish line, it logically follows that they finished the race.
+
+Final Answer: Yes"
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,Yes,,,,"The Premise states that every pupil in the room failed the test, which directly implies that none of them passed. This is because failing and passing are mutually exclusive outcomes. The Hypothesis simply rephrases this implication in a logically equivalent way.
+
+Final Answer: Yes"

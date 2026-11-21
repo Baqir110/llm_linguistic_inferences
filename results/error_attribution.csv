@@ -1,4 +1,7 @@
 model,strategy,factivity_overgeneralization,false_positive_other,format_error,lexical_entailment_failure,negation_scope_failure,overly_strict_on_control,presupposition_projection_failure,sibling_term_confusion,upward_monotonicity_bias,world_knowledge_overentailment
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,1,0,0,0,0,0,0,0,1,4
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,1,0,0,0,0,0,1,0,4,0
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,1,0,0,0,1,0,0,0,3,5
 llama3:latest,cot,9,0,8,5,6,3,5,0,8,29
 llama3:latest,few_shot,5,0,0,2,9,2,2,0,5,16
 llama3:latest,zero_shot,10,0,0,1,8,0,1,0,10,28

@@ -1,0 +1,48 @@
+{
+  "timestamp_utc": "2026-11-21T23:06:08.366368+00:00",
+  "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "backend": "openai",
+  "strategies": [
+    "zero_shot",
+    "few_shot",
+    "cot"
+  ],
+  "limit": null,
+  "data_path": "data\\inference_benchmark.csv",
+  "perturbations_path": "data\\perturbation_benchmark.csv",
+  "data_sha256": "27c91b96d000000d16942ac93d5d83f01fbb3375e53da05dcb203f78eeff7dbb",
+  "perturbations_sha256": "c469715b4f4442e60a4a1848e7bab1be1fb131a02e44ac40e130eee4bb58c9c7",
+  "prompt_sha256": "b886a8374bcd69373b30a0d4a5ee46d14d2cf8d8d9edd849280f7916007bbd59",
+  "python_version": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "git_commit": "f001288c273533b3b673d9a66fcd0fcd746c3677",
+  "command": [
+    "C:\\Users\\hzind\\Desktop\\Project\\llm_linguistic_inferences_improved\\llm_linguistic_inferences\\src\\evaluate.py",
+    "--backend",
+    "openai",
+    "--model",
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "--base-url",
+    "https://api.cloudflare.com/client/v4/accounts/fb856a871d45ec48a1ea3dd1f6e9aeff/ai/v1"
+  ],
+  "metrics_designation": {
+    "primary": [
+      "accuracy",
+      "macro_f1",
+      "balanced_accuracy",
+      "acc_ci_low",
+      "acc_ci_high",
+      "per_category_accuracy_macro_f1",
+      "mcnemar_p_value"
+    ],
+    "exploratory": [
+      "false_positive_rate",
+      "false_negative_rate",
+      "invalid_rate",
+      "acc_excl_contested",
+      "error_attribution",
+      "robustness_consistency",
+      "logprob_margin"
+    ]
+  }
+}

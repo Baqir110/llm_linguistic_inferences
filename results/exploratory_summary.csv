@@ -1,4 +1,7 @@
 model,strategy,false_positive_rate,false_negative_rate,invalid_rate,acc_excl_contested
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,cot,0.0667,0.0,0.0,0.9659
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,few_shot,0.0556,0.0111,0.0,0.9659
+@cf/meta/llama-3.3-70b-instruct-fp8-fast,zero_shot,0.1,0.0111,0.0,0.9432
 llama3:latest,cot,0.5333,0.1889,0.0444,0.5966
 llama3:latest,few_shot,0.3889,0.0667,0.0,0.767
 llama3:latest,zero_shot,0.6222,0.0222,0.0,0.6705

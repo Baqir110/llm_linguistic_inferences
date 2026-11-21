@@ -12,7 +12,7 @@ from typing import Iterable, Optional
 import requests
 
 COT_MAX_TOKENS = 400  # 180 truncated verbose models before "Final Answer"
-SEED = 0
+SEED = 1
 
 
 @dataclass
@@ -213,6 +213,10 @@ class OpenAIBackend:
                 if not is_cot and ("logprobs" in msg and ("not supported" in msg or "unsupported" in msg)):
                     kwargs.pop("logprobs", None)
                     kwargs.pop("top_logprobs", None)
+                    response = self.client.chat.completions.create(**kwargs)
+                    break
+                if "seed" in msg and any(x in msg for x in ["not supported", "unsupported", "unknown", "invalid", "must be"]):
+                    kwargs.pop("seed", None)
                     response = self.client.chat.completions.create(**kwargs)
                     break
                 if "429" in msg or "rate limit" in msg or "too many requests" in msg:
