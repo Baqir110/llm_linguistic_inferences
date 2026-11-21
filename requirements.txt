@@ -1,0 +1,25 @@
+# Core dependencies
+pandas>=2.1.0
+numpy>=1.26.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+requests>=2.31.0
+matplotlib>=3.8.0
+
+# Optional: OpenAI backend
+openai>=1.30.0
+
+# Optional: Hugging Face backend (large download)
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.28.0
+
+# Development/testing
+pytest>=8.0.0
+
+# Prefer installing via pyproject extras when possible:
+#   pip install -e .
+#   pip install -e .[openai]
+#   pip install -e .[hf]
+#   pip install -e .[dev]
+#   pip install -e .[all]

@@ -1,0 +1,4 @@
+model,strategy,pairs,consistency_rate,joint_accuracy,acc_original,acc_perturbed
+llama3:latest,cot,30,0.8,0.4333,0.5333,0.5333
+llama3:latest,few_shot,30,0.9,0.7333,0.8,0.7667
+llama3:latest,zero_shot,30,0.9667,0.5667,0.6,0.5667

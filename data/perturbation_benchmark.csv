@@ -1,0 +1,31 @@
+base_id,premise,hypothesis,gold_label
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No
+INF-041,It is a counterfeit diamond.,It is a diamond.,No
+INF-042,That is a toy pistol.,That is a pistol.,No
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No
+INF-095,He feigned being asleep.,He was asleep.,No
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes

@@ -1,0 +1,707 @@
+id,category,subtype,premise,hypothesis,gold_label,contested,contested_note,model,strategy,predicted_label,prob_yes,prob_no,logprob_margin,raw_output,error_type
+INF-001,lexical_entailment,hypernym,The customer bought a sedan.,The customer bought a car.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999999633481,3.6651911011935824e-10,21.726970453386336, Yes,correct
+INF-002,lexical_entailment,hypernym,A sparrow landed on the fence.,A bird landed on the fence.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999997938837,2.06116306815743e-09,19.999995415215295, Yes,correct
+INF-003,lexical_entailment,hypernym,The chef sliced a carrot.,The chef sliced a vegetable.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388403,2.0611596697561107e-09,19.999997063995142, Yes,correct
+INF-004,lexical_entailment,hypernym,She wore a silk kimono.,She wore clothing.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388416,2.0611582732522214e-09,19.999997741528468, Yes,correct
+INF-005,lexical_entailment,verb_entailment,The train arrived at midnight.,The train arrived.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999993621917,6.378082004419469e-10,21.172983503409625, Yes,correct
+INF-006,lexical_entailment,manner_verb,Maria whispered the secret.,Maria spoke the secret.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999809372527,1.9062747185643293e-08,17.775529796484392, Yes,correct
+INF-007,lexical_entailment,manner_verb,The athlete sprinted to the gate.,The athlete moved to the gate.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388452,2.0611547428962444e-09,19.99999945433192, Yes,correct
+INF-008,lexical_entailment,verb_entailment,The glass shattered on the floor.,The glass broke on the floor.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999993568642,6.431358641198275e-10,21.16466511613645, Yes,correct
+INF-009,lexical_entailment,manner_verb,He devoured the sandwich.,He ate the sandwich.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388432,2.0611567834558167e-09,19.999998464324463, Yes,correct
+INF-010,lexical_entailment,manner_verb,The baby giggled loudly.,The baby laughed loudly.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999996073317,3.9266824383188593e-10,21.65805602345073, Yes,correct
+INF-011,lexical_entailment,manner_verb,She glanced at the clock.,She looked at the clock.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999992720998,7.279002222447787e-10,21.040857133753253, Yes,correct
+INF-012,lexical_entailment,verb_entailment,The guard murdered the prisoner.,The guard killed the prisoner.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388419,2.0611581098830855e-09,19.99999782078931, Yes,correct
+INF-013,lexical_entailment,synonym,They purchased the old factory.,They bought the old factory.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999961793464,3.820653472066843e-09,19.382844359151306, Yes,correct
+INF-014,lexical_entailment,gradable_entailment,The water is boiling.,The water is hot.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388146,2.0611854569956813e-09,19.99998455303896, Yes,correct
+INF-015,lexical_entailment,gradable_entailment,The hallway is freezing.,The hallway is cold.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999994079989,5.920011812721668e-10,21.24751248506236, Yes,correct
+INF-016,lexical_entailment,definition,The box is completely empty.,There is nothing inside the box.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999984889232,1.5110768269127705e-09,20.310443308359357, Yes,correct
+INF-017,lexical_entailment,quantifier,Every student passed the exam.,Some students passed the exam.,Yes,True,"existential import of ""every""",mistral:7b,zero_shot,Yes,0.9999999927908507,7.209149193804767e-09,18.74791488903656, Yes,correct
+INF-018,lexical_entailment,quantifier,None of the doors were locked.,Every door was unlocked.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999974466798,2.5533203241756216e-09,19.785871234292063, Yes,correct
+INF-019,lexical_entailment,quantifier,Both brothers attended the lecture.,Two brothers attended the lecture.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999992666759,7.333239860261693e-10,21.033433510926113, Yes,correct
+INF-020,lexical_entailment,causative_alternation,The chef melted the butter.,The butter melted.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999996853328,3.146672625016287e-10,21.87950534459497, Yes,correct
+INF-021,lexical_entailment,hypernym,She is a pediatrician.,She is a doctor.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388403,2.061159714208374e-09,19.999997042428515, Yes,correct
+INF-022,lexical_entailment,hypernym,The cat chased a mouse.,The cat chased a rodent.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388421,2.0611579236153473e-09,19.999997911159742, Yes,correct
+INF-023,lexical_entailment,intersective_mod,He rode a tandem bicycle.,He rode a bicycle.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999969600437,3.039956284477511e-09,19.6114226986978, Yes,correct
+INF-024,lexical_entailment,intersective_mod,She wears a red coat.,She wears a coat.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999992466968,7.533032977165525e-10,21.006553182659626, Yes,correct
+INF-025,lexical_entailment,intersective_mod,They live in a brick apartment.,They live in an apartment.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999995637465,4.36253428882873e-10,21.552797782103113, Yes,correct
+INF-026,lexical_entailment,intersective_mod,The wooden chair broke.,The chair broke.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999995768605,4.231394169379792e-10,21.583319399892343, Yes,correct
+INF-027,lexical_entailment,subsective_mod,A tall stranger entered the room.,A stranger entered the room.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388385,2.0611614130597173e-09,19.999996218207745, Yes,correct
+INF-028,lexical_entailment,downward_monotone,The customer did not buy a car.,The customer did not buy a sedan.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999726801034083,2.731989659163328e-05,10.50786798807837, Yes,correct
+INF-029,lexical_entailment,negated_hypernym,The customer did not buy a sedan.,The customer did not buy a car.,No,False,,mistral:7b,zero_shot,Yes,0.9999984660519405,1.5339480595481868e-06,13.387664181129407, Yes,negation_scope_failure
+INF-030,lexical_entailment,downward_monotone,No birds landed on the fence.,No sparrows landed on the fence.,Yes,False,,mistral:7b,zero_shot,Yes,0.9657347819323542,0.03426521806764585,3.3387584544820412, Yes,correct
+INF-031,lexical_entailment,negated_hypernym,No sparrows landed on the fence.,No birds landed on the fence.,No,False,,mistral:7b,zero_shot,Yes,0.9999993546365761,6.453634237859194e-07,14.25345158573397, Yes,negation_scope_failure
+INF-032,lexical_entailment,downward_monotone,She never eats vegetables.,She never eats carrots.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999991059939711,8.940060289370626e-07,13.927552424011733, Yes,correct
+INF-033,lexical_entailment,negated_hypernym,She never eats carrots.,She never eats vegetables.,No,False,,mistral:7b,zero_shot,Yes,0.6487808298647655,0.3512191701352344,0.6136845103617119, Yes,negation_scope_failure
+INF-034,lexical_entailment,reverse_hypernym,The customer bought a car.,The customer bought a sedan.,No,False,,mistral:7b,zero_shot,No,0.008556216935805125,0.9914437830641949,-4.752504101761491, No,correct
+INF-035,lexical_entailment,reverse_hypernym,A bird landed on the fence.,A sparrow landed on the fence.,No,False,,mistral:7b,zero_shot,No,5.22382144546406e-06,0.9999947761785545,-12.16227612239768, No,correct
+INF-036,lexical_entailment,reverse_hypernym,She planted a tree in the yard.,She planted an oak in the yard.,No,False,,mistral:7b,zero_shot,No,1.1706637639897607e-07,0.9999998829336235,-15.960524626297858, No,correct
+INF-037,lexical_entailment,reverse_hypernym,He plays a musical instrument.,He plays the violin.,No,False,,mistral:7b,zero_shot,No,7.697487917948694e-07,0.9999992302512083,-14.07720085000113, No,correct
+INF-038,lexical_entailment,reverse_hypernym,The thief stole a gemstone.,The thief stole a sapphire.,No,False,,mistral:7b,zero_shot,No,2.1337395649776534e-05,0.9999786626043502,-10.755028022693935, No,correct
+INF-039,lexical_entailment,reverse_hypernym,A snake slithered across the path.,A cobra slithered across the path.,No,False,,mistral:7b,zero_shot,No,5.97443266497227e-08,0.9999999402556734,-16.633191542367715, No,correct
+INF-040,lexical_entailment,non_intersective_mod,He is an alleged thief.,He is a thief.,No,False,,mistral:7b,zero_shot,Yes,0.9407627350187885,0.059237264981211374,2.765140146586379, Yes,upward_monotonicity_bias
+INF-041,lexical_entailment,privative_mod,It is a fake diamond.,It is a diamond.,No,False,,mistral:7b,zero_shot,No,2.1524593046815367e-08,0.999999978475407,-17.65406967135804, No,correct
+INF-042,lexical_entailment,privative_mod,That is a toy gun.,That is a gun.,No,False,,mistral:7b,zero_shot,Yes,0.9886287704347124,0.0113712295652875,4.4652324595473445, Yes,upward_monotonicity_bias
+INF-043,lexical_entailment,reverse_manner,He ate the sandwich.,He devoured the sandwich.,No,False,,mistral:7b,zero_shot,Yes,0.9371607442409954,0.06283925575900469,2.7022748496535876, Yes,upward_monotonicity_bias
+INF-044,lexical_entailment,reverse_manner,She looked at the clock.,She glanced at the clock.,No,False,,mistral:7b,zero_shot,Yes,0.9999962400499965,3.759950003363359e-06,12.491101137671635, Yes,upward_monotonicity_bias
+INF-045,lexical_entailment,reverse_verb,The guard killed the prisoner.,The guard murdered the prisoner.,No,False,,mistral:7b,zero_shot,Yes,0.9999845829816354,1.5417018364675705e-05,11.080023152953121, Yes,upward_monotonicity_bias
+INF-046,lexical_entailment,reverse_verb,The glass broke on the floor.,The glass shattered on the floor.,No,False,,mistral:7b,zero_shot,Yes,0.9999999781097861,2.189021387660711e-08,17.637226133052614, Yes,upward_monotonicity_bias
+INF-047,lexical_entailment,reverse_gradable,The water is hot.,The water is boiling.,No,False,,mistral:7b,zero_shot,No,0.01657930214080393,0.9834206978591961,-4.082881943600422, No,correct
+INF-048,lexical_entailment,reverse_gradable,The soup is warm.,The soup is hot.,No,False,,mistral:7b,zero_shot,No,0.0014000753102966967,0.9985999246897033,-6.56982819440714, No,correct
+INF-049,lexical_entailment,reverse_quantifier,Some students passed the exam.,Every student passed the exam.,No,False,,mistral:7b,zero_shot,No,3.225140809540453e-08,0.9999999677485919,-17.249704100533364, No,correct
+INF-050,lexical_entailment,reverse_quantifier,Most of the doors were locked.,All of the doors were locked.,No,False,,mistral:7b,zero_shot,No,0.007333736541968977,0.9926662634580311,-4.907909372213953, No,correct
+INF-051,lexical_entailment,reverse_intersective,He rode a bicycle.,He rode a tandem bicycle.,No,False,,mistral:7b,zero_shot,No,1.7575503667100162e-08,0.9999999824244964,-17.856759723928334, No,correct
+INF-052,lexical_entailment,reverse_intersective,She wears a coat.,She wears a red coat.,No,False,,mistral:7b,zero_shot,No,4.230211254084366e-08,0.9999999576978875,-16.978428767975203, No,correct
+INF-053,lexical_entailment,privative_mod,She is a former teacher.,She is a teacher.,No,False,,mistral:7b,zero_shot,No,4.4947597346424153e-07,0.9999995505240267,-14.61518298667971, No,correct
+INF-054,lexical_entailment,privative_mod,It is a stuffed lion.,It is a lion.,No,False,,mistral:7b,zero_shot,Yes,0.999961946918233,3.805308176692868e-05,10.176490430569952, Yes,upward_monotonicity_bias
+INF-055,lexical_entailment,non_intersective_mod,He is a would-be author.,He is an author.,No,False,,mistral:7b,zero_shot,No,5.042032694537449e-08,0.9999999495796731,-16.802871380349124, No,correct
+INF-056,lexical_entailment,co_hyponym,She baked sourdough.,She baked rye bread.,No,False,,mistral:7b,zero_shot,No,5.361103815974321e-09,0.9999999946388962,-19.04409594188836, No,correct
+INF-057,lexical_entailment,co_hyponym,He plays the violin.,He plays the cello.,No,False,,mistral:7b,zero_shot,No,1.5600848279601188e-08,0.9999999843991516,-17.97594053167093, No,correct
+INF-058,lexical_entailment,negated_quantifier,Not every student passed the exam.,No student passed the exam.,No,False,,mistral:7b,zero_shot,No,0.00019025868696304627,0.9998097413130369,-8.56693562469829, No,correct
+INF-059,lexical_entailment,reverse_hypernym,The museum displays art.,The museum displays sculptures.,No,False,,mistral:7b,zero_shot,No,0.012477841395004786,0.9875221586049953,-4.3712445527799515," No
+
+The premise only states",correct
+INF-060,lexical_entailment,reverse_hypernym,He drank wine.,He drank merlot.,No,False,,mistral:7b,zero_shot,No,1.8408035510107994e-07,0.9999998159196449,-15.507893278082337, No,correct
+INF-061,presupposition,change_of_state,John stopped smoking last year.,John used to smoke.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999991289819,8.710181239742292e-10,20.861358330184743, Yes,correct
+INF-062,presupposition,negated_change_of_state,John did not stop smoking last year.,John used to smoke.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999923693544,7.630645711037639e-09,18.691093359679087, Yes,correct
+INF-063,presupposition,question_projection,Did John stop smoking last year?,John used to smoke.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999998479967407,1.5200325927983155e-07,15.699363721696283, Yes,correct
+INF-064,presupposition,factive_verb,Mary regretted selling her house.,Mary sold her house.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999887084962,1.1291503894872293e-08,18.299215250441314, Yes,correct
+INF-065,presupposition,negated_factive,Mary did not regret selling her house.,Mary sold her house.,Yes,False,,mistral:7b,zero_shot,Yes,0.9959884069434476,0.004011593056552308,5.514547184513907, Yes,correct
+INF-066,presupposition,definite_description,The king of France visited Berlin.,There is a king of France.,Yes,True,Russell vs Strawson on definite descriptions,mistral:7b,zero_shot,No,0.04974528544087688,0.9502547145591231,-2.949814375138621, No,presupposition_projection_failure
+INF-067,presupposition,possessive,My sister lives in Munich.,The speaker has a sister.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999944895124,5.5104876971211105e-09,19.016612700913743, Yes,correct
+INF-068,presupposition,negated_possessive,My sister does not live in Munich.,The speaker has a sister.,Yes,False,,mistral:7b,zero_shot,Yes,0.9997165685092111,0.00028343149078904607,8.168256647399765, Yes,correct
+INF-069,presupposition,iterative_verb,Liam returned to London.,Liam had been in London before.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999999673707,3.262929622405451e-10,21.843225480606574, Yes,correct
+INF-070,presupposition,negated_iterative,Liam did not return to London.,Liam had been in London before.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999833432232,1.6656776808793366e-07,15.607863428223343, Yes,correct
+INF-071,presupposition,cleft,It was Peter who broke the vase.,Someone broke the vase.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999992886288,7.113712222891168e-10,21.06382670874325, Yes,correct
+INF-072,presupposition,negated_cleft,It was not Peter who broke the vase.,Someone broke the vase.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999965520124,3.447987598733588e-08,17.182889953332502, Yes,correct
+INF-073,presupposition,temporal_clause,"After finishing the report, Elena went home.",Elena finished the report.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999997009823,2.9901773076427765e-10,21.930518243782057, Yes,correct
+INF-074,presupposition,focus_particle,Even Mark passed the difficult test.,Other people passed the difficult test.,Yes,False,,mistral:7b,zero_shot,No,1.027359594386686e-06,0.9999989726404056,-13.788517520351906, No,presupposition_projection_failure
+INF-075,presupposition,exclusive_particle,Only Alice solved the puzzle.,Alice solved the puzzle.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999999293377,7.066229167878091e-10,21.070523948346423, Yes,correct
+INF-076,presupposition,implicative,Mark managed to finish the marathon.,Finishing the marathon required effort.,Yes,True,"""managed"" conveys difficulty as implicature, not entailment",mistral:7b,zero_shot,Yes,0.9999999992795723,7.204277148594771e-10,21.05117603115899, Yes,correct
+INF-077,presupposition,negated_implicative,Mark did not manage to finish the marathon.,Mark tried to finish the marathon.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999840783579304,1.5921642069774964e-05,11.047815316011938, Yes,correct
+INF-078,presupposition,aspectual_verb,The snow continued to fall.,Snow was falling before.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999994572215,5.427784271805264e-10,21.334319931802682, Yes,correct
+INF-079,presupposition,negated_aspectual,The snow did not continue to fall.,Snow was falling before.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999700979363,2.99020636232874e-08,17.325338311528053, Yes,correct
+INF-080,presupposition,quantifier_presup,Both of his cats are asleep.,He has two cats.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999934372357,6.562764347332905e-09,18.841853921778835, Yes,correct
+INF-081,presupposition,quantifier_presup,Neither of her parents speaks German.,She has two parents.,Yes,False,,mistral:7b,zero_shot,Yes,0.999993033868816,6.966131183886398e-06,11.874443588017302, Yes,correct
+INF-082,presupposition,factive_speech_act,I apologize for arriving late.,The speaker arrived late.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999996272217,3.7277834966376113e-10,21.71003710936701, Yes,correct
+INF-083,presupposition,factive_verb,She criticized him for lying.,He lied.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999994831026,5.168973975691853e-10,21.383176717911468, Yes,correct
+INF-084,presupposition,factive_verb,They celebrated winning the cup.,They won the cup.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999994564124,5.435876403474984e-10,21.332830170034043, Yes,correct
+INF-085,presupposition,possessive,Her brother is a pilot.,She has a brother.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999818807291,1.811927082466485e-08,17.82628976048643, Yes,correct
+INF-086,presupposition,negated_possessive,Her brother is not a pilot.,She has a brother.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999976595112435,2.3404887564306364e-06,12.965148439644024, Yes,correct
+INF-087,presupposition,change_of_state,Ben started exercising in January.,Ben was not exercising right before January.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999998662453927,1.3375460726408325e-07,15.82725887117469, Yes,correct
+INF-088,presupposition,change_of_state,The children stopped shouting.,The children were shouting.,Yes,False,,mistral:7b,zero_shot,No,1.5943634191480916e-05,0.9999840563658084,-11.046434974889802, No,presupposition_projection_failure
+INF-089,presupposition,negated_change_of_state,The children did not stop shouting.,The children were shouting.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999910268516717,8.973148328272611e-06,11.621264986085682, Yes,correct
+INF-090,presupposition,emotive_factive,It surprised everyone that the team lost.,The team lost.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999992473259,7.526741710118116e-10,21.007388688840663, Yes,correct
+INF-091,presupposition,non_factive_verb,John claims that the earth is flat.,The earth is flat.,No,False,,mistral:7b,zero_shot,No,3.607043040582332e-05,0.9999639295695942,-10.230001059523858, No,correct
+INF-092,presupposition,non_factive_verb,Mary believes that it is raining.,It is raining.,No,False,,mistral:7b,zero_shot,Yes,0.999999980956329,1.904367085310344e-08,17.776531010215763, Yes,factivity_overgeneralization
+INF-093,presupposition,non_factive_verb,David thinks the train is late.,The train is late.,No,False,,mistral:7b,zero_shot,Yes,0.9999871243752283,1.2875624771600496e-05,11.260161710934604, Yes,factivity_overgeneralization
+INF-094,presupposition,non_factive_verb,Sarah hopes that she passed the test.,Sarah passed the test.,No,False,,mistral:7b,zero_shot,No,4.168202148331791e-07,0.9999995831797851,-14.690610430783439, No,correct
+INF-095,presupposition,counterfactive_verb,He pretended to be asleep.,He was asleep.,No,False,,mistral:7b,zero_shot,No,8.125544320779712e-07,0.9999991874455679,-14.023082119104975, No,correct
+INF-096,presupposition,counterfactive_verb,She falsely assumed the door was locked.,The door was locked.,No,False,,mistral:7b,zero_shot,No,2.8701521692605167e-08,0.9999999712984783,-17.366315666236595, No,correct
+INF-097,presupposition,conditional_filter,"If John used to smoke, he stopped last year.",John used to smoke.,No,False,,mistral:7b,zero_shot,Yes,0.9999999878021945,1.2197805597945017e-08,18.222009758208667, Yes,negation_scope_failure
+INF-098,presupposition,modal_filter,"Perhaps Mary sold her house, and if so, she regrets it.",Mary sold her house.,No,False,,mistral:7b,zero_shot,Yes,0.9999996653615394,3.346384607369e-07,14.910214774942778, Yes,negation_scope_failure
+INF-099,presupposition,explicit_cancellation,"John never smoked in his life, so he did not stop smoking.",John used to smoke.,No,False,,mistral:7b,zero_shot,No,0.44328842414075126,0.5567115758592487,-0.2278266601989074, No,correct
+INF-100,presupposition,explicit_cancellation,"I have no sister, so my sister does not live in Munich.",The speaker has a sister.,No,False,,mistral:7b,zero_shot,No,1.195698701687785e-05,0.9999880430129832,-11.334182805786611, No,correct
+INF-101,presupposition,non_factive_verb,The witness alleged that the suspect fled.,The suspect fled.,No,False,,mistral:7b,zero_shot,Yes,0.9999999987739543,1.2260457351832543e-09,20.51947169451123, Yes,factivity_overgeneralization
+INF-102,presupposition,non_factive_verb,She dreamed that she won the lottery.,She won the lottery.,No,False,,mistral:7b,zero_shot,No,4.9880167519954044e-08,0.9999999501198324,-16.813642307800663, No,correct
+INF-103,presupposition,non_factive_verb,They rumored that the company went bankrupt.,The company went bankrupt.,No,False,,mistral:7b,zero_shot,Yes,0.9999993513806701,6.486193299535095e-07,14.248419192317554, Yes,factivity_overgeneralization
+INF-104,presupposition,counterfactive_verb,He wished that he spoke French.,He speaks French.,No,False,,mistral:7b,zero_shot,No,1.7692481881893887e-08,0.9999999823075182,-17.850126022342387, No,correct
+INF-105,presupposition,suppositional,Suppose that Maria arrived early.,Maria arrived early.,No,False,,mistral:7b,zero_shot,Yes,0.9999999162820205,8.37179794917735e-08,16.29581199005828, Yes,factivity_overgeneralization
+INF-106,presupposition,conditional_filter,"If Anna has a brother, her brother is a pilot.",Anna has a brother.,No,False,,mistral:7b,zero_shot,Yes,0.999057644240487,0.0009423557595128561,6.9661848906027855, Yes,negation_scope_failure
+INF-107,presupposition,conditional_filter,"If Peter broke the vase, he regrets breaking it.",Peter broke the vase.,No,False,,mistral:7b,zero_shot,Yes,0.999999671990741,3.280092590180005e-07,14.930223672237961, Yes,negation_scope_failure
+INF-108,presupposition,disjunctive_filter,"Either Tom never smoked, or he stopped smoking last year.",Tom used to smoke.,No,False,,mistral:7b,zero_shot,Yes,0.9999229373140528,7.706268594723685e-05,9.47081429844657, Yes,negation_scope_failure
+INF-109,presupposition,explicit_cancellation,"The king of France did not visit Berlin, since there is no king of France.",There is a king of France.,No,False,,mistral:7b,zero_shot,No,1.3357954606168285e-07,0.999999866420454,-15.828568552325756, No,correct
+INF-110,presupposition,explicit_cancellation,"Anna did not open the window again, because she had never opened it.",Anna had opened the window before.,No,False,,mistral:7b,zero_shot,Yes,0.999969024578605,3.097542139497591e-05,10.382285550282887, Yes,negation_scope_failure
+INF-111,presupposition,non_factive_verb,Lena said that the road was closed.,The road was closed.,No,False,,mistral:7b,zero_shot,Yes,0.9999999989873982,1.0126018164521097e-09,20.710742761532142, Yes,factivity_overgeneralization
+INF-112,presupposition,non_factive_verb,Omar suspects that the milk is spoiled.,The milk is spoiled.,No,False,,mistral:7b,zero_shot,Yes,0.9990658067549973,0.0009341932450025275,6.974892610829937, Yes,factivity_overgeneralization
+INF-113,presupposition,non_factive_verb,Nina denied that she took the key.,Nina took the key.,No,False,,mistral:7b,zero_shot,No,1.447497558337276e-07,0.9999998552502442,-15.748259262558589, No,correct
+INF-114,presupposition,non_factive_verb,The report suggests that sales dropped.,Sales dropped.,No,False,,mistral:7b,zero_shot,Yes,0.9999999984857213,1.5142786994131187e-09,20.30832661584319, Yes,factivity_overgeneralization
+INF-115,presupposition,non_factive_verb,They doubt that the bridge is safe.,The bridge is safe.,No,False,,mistral:7b,zero_shot,No,2.8224019174358484e-08,0.9999999717759808,-17.383092449534633, No,correct
+INF-116,presupposition,implicative_failure,Mark failed to finish the marathon.,Mark finished the marathon.,No,False,,mistral:7b,zero_shot,No,3.000015030672471e-08,0.9999999699998496,-17.3220634150725, No,correct
+INF-117,presupposition,implicative_failure,Sam forgot to lock the door.,Sam locked the door.,No,False,,mistral:7b,zero_shot,No,2.111088630257855e-08,0.9999999788891136,-17.673476969893184, No,correct
+INF-118,presupposition,counterfactual_conditional,"If he had studied, he would have passed.",He studied.,No,True,counterfactual conditionals implicate the antecedent is false,mistral:7b,zero_shot,No,0.017939683324248733,0.9820603166757512,-4.002637524207158, No,correct
+INF-119,presupposition,almost_construction,Anna almost won the race.,Anna won the race.,No,False,,mistral:7b,zero_shot,No,2.6666517763832218e-08,0.9999999733334821,-17.439857048146003, No,correct
+INF-120,presupposition,exclusive_particle_neg,Only Alice solved the puzzle.,Bob solved the puzzle.,No,False,,mistral:7b,zero_shot,No,7.268396672636997e-08,0.9999999273160334,-16.43714494426053, No,correct
+INF-121,plausible_non_entailment,medical_plausibility,The runner collapsed right after crossing the finish line.,The runner was having a heart attack.,No,False,,mistral:7b,zero_shot,No,0.0005713947218731174,0.9994286052781269,-7.466858747364119, No,correct
+INF-122,plausible_non_entailment,physical_plausibility,The runner collapsed right after crossing the finish line.,The runner was exhausted.,No,False,,mistral:7b,zero_shot,Yes,0.9999999993695474,6.304524853421171e-10,21.18458332301498, Yes,world_knowledge_overentailment
+INF-123,plausible_non_entailment,weather_script,Dark clouds gathered rapidly over the city.,It started raining heavily.,No,False,,mistral:7b,zero_shot,Yes,0.9999986087090694,1.3912909305212315e-06,13.485277123536164, Yes,world_knowledge_overentailment
+INF-124,plausible_non_entailment,kitchen_script,She put the kettle on the stove and turned on the burner.,She made a cup of tea.,No,False,,mistral:7b,zero_shot,Yes,0.9702851714813127,0.02971482851868726,3.4859438215733487, Yes,world_knowledge_overentailment
+INF-125,plausible_non_entailment,physical_consequence,The glass slipped from her hand onto the tile floor.,The glass shattered into pieces.,No,False,,mistral:7b,zero_shot,Yes,0.9999999840450535,1.5954946418140897e-08,17.953496919578342, Yes,world_knowledge_overentailment
+INF-126,plausible_non_entailment,causal_abduction,Smoke poured out of the kitchen window.,There was a fire in the kitchen.,No,False,,mistral:7b,zero_shot,Yes,0.9999999983747527,1.6252473569277093e-09,20.237605811475877, Yes,world_knowledge_overentailment
+INF-127,plausible_non_entailment,emotional_script,The toddler dropped his ice cream cone on the sidewalk.,The toddler started crying.,No,False,,mistral:7b,zero_shot,Yes,0.9868585000702371,0.013141499929762861,4.318751509050913, Yes,world_knowledge_overentailment
+INF-128,plausible_non_entailment,emergency_script,The sirens wailed as the ambulance sped down the street.,Someone had been injured in an accident.,No,False,,mistral:7b,zero_shot,Yes,0.7800453576396388,0.21995464236036127,1.2659307148060799, Yes,world_knowledge_overentailment
+INF-129,plausible_non_entailment,weather_script,He forgot his umbrella on a stormy morning.,He got soaked on his way to work.,No,False,,mistral:7b,zero_shot,Yes,0.9999998938682847,1.061317151521171e-07,16.058584812311118, Yes,world_knowledge_overentailment
+INF-130,plausible_non_entailment,routine_script,She set her alarm for 6:00 AM before going to sleep.,She woke up at 6:00 AM.,No,False,,mistral:7b,zero_shot,Yes,0.8560615010815084,0.14393849891849175,1.7829561031157801, Yes,world_knowledge_overentailment
+INF-131,plausible_non_entailment,driving_script,He stepped on the brake pedal suddenly.,The car came to a complete stop.,No,False,,mistral:7b,zero_shot,Yes,0.9999999928774923,7.122507740980471e-09,18.760005955599823, Yes,world_knowledge_overentailment
+INF-132,plausible_non_entailment,device_script,The battery on her phone reached zero percent.,Her phone turned off.,No,False,,mistral:7b,zero_shot,Yes,0.9999999979388461,2.061153888566945e-09,19.999999868822623, Yes,world_knowledge_overentailment
+INF-133,plausible_non_entailment,culinary_plausibility,The chef added three chili peppers to the soup.,The soup tasted spicy.,No,False,,mistral:7b,zero_shot,Yes,0.9999999805134964,1.948650359152606e-08,17.753543715029743, Yes,world_knowledge_overentailment
+INF-134,plausible_non_entailment,food_spoilage,He left the milk out on the counter overnight.,The milk went sour.,No,False,,mistral:7b,zero_shot,Yes,0.9997530653483793,0.000246934651620795,8.306139859532534, Yes,world_knowledge_overentailment
+INF-135,plausible_non_entailment,social_abduction,The audience stood up and applauded loudly.,The audience enjoyed the performance.,No,False,,mistral:7b,zero_shot,Yes,0.9999999997212228,2.787771894937828e-10,22.000608256847364, Yes,world_knowledge_overentailment
+INF-136,plausible_non_entailment,physiological_script,He stayed up until 4:00 AM playing video games.,He felt tired the next morning.,No,False,,mistral:7b,zero_shot,Yes,0.9999999989988366,1.0011633426533835e-09,20.722103169450577, Yes,world_knowledge_overentailment
+INF-137,plausible_non_entailment,physical_plausibility,The ice cubes were left in a bowl in the warm sun.,The ice cubes melted into water.,No,False,,mistral:7b,zero_shot,Yes,0.9999999979388461,2.0611539297400275e-09,19.99999984884688, Yes,world_knowledge_overentailment
+INF-138,plausible_non_entailment,physical_plausibility,He dropped a heavy dictionary onto his bare foot.,His foot hurt.,No,False,,mistral:7b,zero_shot,Yes,0.9999999979388461,2.0611539890409125e-09,19.99999982007616, Yes,world_knowledge_overentailment
+INF-139,plausible_non_entailment,infrastructure_abduction,The lights in the entire neighborhood went out at once.,There was a power outage.,No,False,,mistral:7b,zero_shot,Yes,0.9999999998206457,1.7935430110546695e-10,22.441657930427752, Yes,world_knowledge_overentailment
+INF-140,plausible_non_entailment,medical_plausibility,She took two aspirin tablets for her headache.,Her headache went away.,No,False,,mistral:7b,zero_shot,Yes,0.9999922117266147,7.788273385288205e-06,11.76288357936556, Yes,world_knowledge_overentailment
+INF-141,plausible_non_entailment,diagnostic_abduction,The mechanic lifted the hood and examined the engine.,The car would not start.,No,False,,mistral:7b,zero_shot,No,0.0003978067932407693,0.9996021932067592,-7.829146228725295, No,correct
+INF-142,plausible_non_entailment,travel_script,The plane touched down smoothly on the runway.,The passengers unbuckled their seatbelts.,No,False,,mistral:7b,zero_shot,Yes,0.9272572784158888,0.07274272158411123,2.545302211710545, Yes,world_knowledge_overentailment
+INF-143,plausible_non_entailment,problem_solving_script,She locked her keys inside her car.,She called a locksmith.,No,False,,mistral:7b,zero_shot,Yes,0.9999729693796326,2.703062036728813e-05,10.518513215888545, Yes,world_knowledge_overentailment
+INF-144,plausible_non_entailment,physiological_script,He ate three large slices of pepperoni pizza.,He felt full.,No,False,,mistral:7b,zero_shot,Yes,0.9999999893978307,1.060216928950025e-08,18.362207196211312, Yes,world_knowledge_overentailment
+INF-145,plausible_non_entailment,physical_consequence,The cat knocked the ceramic mug off the desk.,The mug broke.,No,False,,mistral:7b,zero_shot,Yes,0.9999999815798751,1.8420124785868382e-08,17.80982201324496, Yes,world_knowledge_overentailment
+INF-146,plausible_non_entailment,medical_plausibility,He forgot to put sunscreen on at the beach.,He got a sunburn.,No,False,,mistral:7b,zero_shot,Yes,0.9999999956057684,4.3942316941241024e-09,19.24297313032036, Yes,world_knowledge_overentailment
+INF-147,plausible_non_entailment,horticulture_script,She watered the houseplant every day for a month.,The plant grew healthy and green.,No,False,,mistral:7b,zero_shot,Yes,0.9974319781206501,0.002568021879349928,5.962048048291066, Yes,world_knowledge_overentailment
+INF-148,plausible_non_entailment,statistical_plausibility,He bought a lottery ticket at the gas station.,He did not win the jackpot.,No,False,,mistral:7b,zero_shot,Yes,0.8611302026848514,0.1388697973151485,1.824708931444434, Yes,world_knowledge_overentailment
+INF-149,plausible_non_entailment,medical_script,The surgeon washed her hands and put on sterile gloves.,She was about to perform an operation.,No,False,,mistral:7b,zero_shot,Yes,0.9999891527205318,1.0847279468187024e-05,11.43158540233936, Yes,world_knowledge_overentailment
+INF-150,plausible_non_entailment,physical_plausibility,The child touched the hot stove.,The child burned his hand.,No,False,,mistral:7b,zero_shot,Yes,0.9999999835905002,1.6409499758496592e-08,17.925405399842482, Yes,world_knowledge_overentailment
+INF-151,plausible_non_entailment,event_entailment,The runner crossed the finish line before collapsing.,The runner finished the race.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999753864758,2.4613524184038093e-08,17.519969756880418, Yes,correct
+INF-152,plausible_non_entailment,hypernym_event,It rained heavily in the city all afternoon.,Precipitation fell in the city.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388456,2.0611544311598186e-09,19.999999605575514, Yes,correct
+INF-153,plausible_non_entailment,lexical_entailment,She boiled water in the kettle.,The water reached its boiling point.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999996113036,3.8869651188884633e-10,21.668222251509317, Yes,correct
+INF-154,plausible_non_entailment,manner_entailment,He flew from Berlin to Paris.,He traveled from Berlin to Paris.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999999444207,5.557929926125788e-10,21.31062520589378, Yes,correct
+INF-155,plausible_non_entailment,factive_temporal,The glass shattered when it hit the floor.,The glass hit the floor.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999987929951,1.207005045950899e-09,20.53512371306034, Yes,correct
+INF-156,plausible_non_entailment,logical_equivalence,Every student in the class failed the exam.,No student in the class passed the exam.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999989883559,1.011644171882427e-09,20.711688935710196, Yes,correct
+INF-157,plausible_non_entailment,presupposition_existence,Firefighters extinguished the blaze in the kitchen.,There was a fire in the kitchen.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999995627522,4.372477820396693e-10,21.55052107412765, Yes,correct
+INF-158,plausible_non_entailment,factive_temporal,The toddler cried after dropping his cone.,The toddler dropped his cone.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999955260337,4.473966263990748e-09,19.224990509890972, Yes,correct
+INF-159,plausible_non_entailment,definite_existence,She blew out all five candles on the cake.,There were five candles on the cake.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999994492459,5.507541154877405e-10,21.31973265720807, Yes,correct
+INF-160,plausible_non_entailment,intersective_entailment,The ambulance transported two injured passengers.,Two passengers were injured.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999990010926,9.989074480482841e-10,20.724358985169175, Yes,correct
+INF-161,plausible_non_entailment,adjunct_drop,He arrived at work completely soaked.,He arrived at work.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999996599749,3.400251679296233e-10,21.802001477395486, Yes,correct
+INF-162,plausible_non_entailment,passive_entailment,The customer paid the bill in cash.,The bill was paid.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999994633062,5.366937875931924e-10,21.345593411470414, Yes,correct
+INF-163,plausible_non_entailment,lexical_presupposition,She woke up at 6:00 AM.,She was asleep before 6:00 AM.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999995435751,4.564249474113517e-10,21.507596837691153, Yes,correct
+INF-164,plausible_non_entailment,aspectual_presupposition,The car stopped completely at the red light.,The car was moving before it stopped.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999909069784,9.093021632273214e-09,18.51575856210956, Yes,correct
+INF-165,plausible_non_entailment,aspectual_presupposition,His phone turned off automatically.,His phone was on before it turned off.,Yes,False,,mistral:7b,zero_shot,No,2.7299880189473055e-05,0.9999727001198104,-10.508600944194143, No,overly_strict_on_control
+INF-166,plausible_non_entailment,conjunct_entailment,Heavy rain fell on the city after dark clouds gathered rapidly.,Dark clouds gathered over the city.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999996421787,3.5782125480076245e-10,21.750987542121944, Yes,correct
+INF-167,plausible_non_entailment,conjunct_entailment,She made a cup of tea after putting the kettle on the stove.,She put the kettle on the stove.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999983722239,1.627776155170096e-09,20.236051074016107, Yes,correct
+INF-168,plausible_non_entailment,conjunct_entailment,The glass slipped from her hand and shattered on the tile floor.,The glass shattered.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388461,2.0611539864935903e-09,19.99999982131203, Yes,correct
+INF-169,plausible_non_entailment,lexical_complement,The student passed the final exam.,The student did not fail the final exam.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999993258641,6.741359542490882e-10,21.117589312147604, Yes,correct
+INF-170,plausible_non_entailment,hypernym_event,He got soaked on his way to work.,He got wet on his way to work.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388388,2.0611612357334633e-09,19.99999630423995, Yes,correct
+INF-171,plausible_non_entailment,adjunct_drop,She set her alarm for 6:00 AM.,She set an alarm.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999991199877,8.800121819980309e-10,20.85108536449252, Yes,correct
+INF-172,plausible_non_entailment,temporal_entailment,Her phone turned off after its battery reached zero percent.,The battery on her phone reached zero percent.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999984358103,1.5641897287123908e-09,20.275897890698147, Yes,correct
+INF-173,plausible_non_entailment,lexical_entailment,He stayed up until 4:00 AM.,He did not go to bed before 4:00 AM.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999985158337,1.484166418760326e-09,20.32841255498272, Yes,correct
+INF-174,plausible_non_entailment,event_entailment,He dropped a heavy dictionary onto his bare foot.,The dictionary fell.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388459,2.0611541657286195e-09,19.99999973435345, Yes,correct
+INF-175,plausible_non_entailment,adjunct_drop,The lights in the entire neighborhood went out at once.,The lights in the neighborhood went out.,Yes,False,,mistral:7b,zero_shot,Yes,0.99999999969222,3.077800332013563e-10,21.901635765711404, Yes,correct
+INF-176,plausible_non_entailment,presupposition_existence,She took two aspirin tablets for her headache.,She had a headache.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999998322358,1.677642902469132e-10,22.50846115577623, Yes,correct
+INF-177,plausible_non_entailment,synonym,The plane touched down smoothly on the runway.,The plane landed.,Yes,False,,mistral:7b,zero_shot,Yes,0.999999997938845,2.0611549680876404e-09,19.999999345076958, Yes,correct
+INF-178,plausible_non_entailment,locative_entailment,She locked her keys inside her car.,Her keys were in the car.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999968710751,3.128924813682786e-09,19.582576398284, Yes,correct
+INF-179,plausible_non_entailment,implicative,He forgot to put sunscreen on at the beach.,He did not put sunscreen on.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999979388445,2.0611554782260856e-09,19.99999909757573, Yes,correct
+INF-180,plausible_non_entailment,presupposition_existence,The child touched the hot stove.,The stove was hot.,Yes,False,,mistral:7b,zero_shot,Yes,0.9999999993734467,6.26553304017817e-10,21.190787262354007, Yes,correct
+INF-001,lexical_entailment,hypernym,The customer bought a sedan.,The customer bought a car.,Yes,False,,mistral:7b,few_shot,Yes,0.9999997930411286,2.0695887130633638e-07,15.390745545804862, Yes,correct
+INF-002,lexical_entailment,hypernym,A sparrow landed on the fence.,A bird landed on the fence.,Yes,False,,mistral:7b,few_shot,Yes,0.999999970230804,2.9769196096405303e-08,17.329791636329883, Yes,correct
+INF-003,lexical_entailment,hypernym,The chef sliced a carrot.,The chef sliced a vegetable.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999074178231,9.258217694064293e-08,16.19516909488069, Yes,correct
+INF-004,lexical_entailment,hypernym,She wore a silk kimono.,She wore clothing.,Yes,False,,mistral:7b,few_shot,Yes,0.999999940046665,5.995333489346021e-08,16.62969926915246, Yes,correct
+INF-005,lexical_entailment,verb_entailment,The train arrived at midnight.,The train arrived.,Yes,False,,mistral:7b,few_shot,Yes,0.9999998835931916,1.1640680843389855e-07,15.966174695252672," Yes
+
+Premise: The",correct
+INF-006,lexical_entailment,manner_verb,Maria whispered the secret.,Maria spoke the secret.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999617174499,3.828255015125141e-08,17.078271615926763, Yes,correct
+INF-007,lexical_entailment,manner_verb,The athlete sprinted to the gate.,The athlete moved to the gate.,Yes,False,,mistral:7b,few_shot,Yes,0.9999997363283433,2.636716566081949e-07,15.148560969165146, Yes,correct
+INF-008,lexical_entailment,verb_entailment,The glass shattered on the floor.,The glass broke on the floor.,Yes,False,,mistral:7b,few_shot,Yes,0.999999986070994,1.392900595459343e-08,18.089292397815484, Yes,correct
+INF-009,lexical_entailment,manner_verb,He devoured the sandwich.,He ate the sandwich.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999796732577,2.0326742261465437e-08,17.711328444738253, Yes,correct
+INF-010,lexical_entailment,manner_verb,The baby giggled loudly.,The baby laughed loudly.,Yes,False,,mistral:7b,few_shot,Yes,0.9999998758063046,1.241936955046499e-07,15.90142330537383, Yes,correct
+INF-011,lexical_entailment,manner_verb,She glanced at the clock.,She looked at the clock.,Yes,False,,mistral:7b,few_shot,Yes,0.9999998038877387,1.9611226131639912e-07,15.444578383750695, Yes,correct
+INF-012,lexical_entailment,verb_entailment,The guard murdered the prisoner.,The guard killed the prisoner.,Yes,False,,mistral:7b,few_shot,Yes,0.999999871476127,1.2852387300465125e-07,15.867151039205256, Yes,correct
+INF-013,lexical_entailment,synonym,They purchased the old factory.,They bought the old factory.,Yes,False,,mistral:7b,few_shot,Yes,0.9999997622657099,2.3773429002789732e-07,15.25211197766531, Yes,correct
+INF-014,lexical_entailment,gradable_entailment,The water is boiling.,The water is hot.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999784704794,2.152952048196077e-08,17.65384077637593, Yes,correct
+INF-015,lexical_entailment,gradable_entailment,The hallway is freezing.,The hallway is cold.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999097952351,9.020476493490471e-08,16.221183494739005, Yes,correct
+INF-016,lexical_entailment,definition,The box is completely empty.,There is nothing inside the box.,Yes,False,,mistral:7b,few_shot,Yes,0.9999996155699066,3.844300934018677e-07,14.77150349179895, Yes,correct
+INF-017,lexical_entailment,quantifier,Every student passed the exam.,Some students passed the exam.,Yes,True,"existential import of ""every""",mistral:7b,few_shot,Yes,0.999940000750975,5.9999249025038837e-05,9.721118511020803, Yes,correct
+INF-018,lexical_entailment,quantifier,None of the doors were locked.,Every door was unlocked.,Yes,False,,mistral:7b,few_shot,Yes,0.9900589814827295,0.009941018517270472,4.601095036663913, Yes,correct
+INF-019,lexical_entailment,quantifier,Both brothers attended the lecture.,Two brothers attended the lecture.,Yes,False,,mistral:7b,few_shot,Yes,0.9999995896935885,4.1030641154285016e-07,14.706361200838483, Yes,correct
+INF-020,lexical_entailment,causative_alternation,The chef melted the butter.,The butter melted.,Yes,False,,mistral:7b,few_shot,Yes,0.999999794192159,2.0580784103141613e-07,15.39632270821456, Yes,correct
+INF-021,lexical_entailment,hypernym,She is a pediatrician.,She is a doctor.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999900952362,9.904763808273943e-09,18.430249992882267, Yes,correct
+INF-022,lexical_entailment,hypernym,The cat chased a mouse.,The cat chased a rodent.,Yes,False,,mistral:7b,few_shot,Yes,0.9999985666162341,1.433383765790762e-06,13.455471205731651, Yes,correct
+INF-023,lexical_entailment,intersective_mod,He rode a tandem bicycle.,He rode a bicycle.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999838125384,1.618746165851035e-08,17.93902884988823, Yes,correct
+INF-024,lexical_entailment,intersective_mod,She wears a red coat.,She wears a coat.,Yes,False,,mistral:7b,few_shot,Yes,0.9999996888903802,3.111096199318363e-07,14.983120200097394, Yes,correct
+INF-025,lexical_entailment,intersective_mod,They live in a brick apartment.,They live in an apartment.,Yes,False,,mistral:7b,few_shot,Yes,0.9999998931586968,1.0684130320304675e-07,16.051921144230445, Yes,correct
+INF-026,lexical_entailment,intersective_mod,The wooden chair broke.,The chair broke.,Yes,False,,mistral:7b,few_shot,Yes,0.9999998095793124,1.9042068758560767e-07,15.474029876785027," Yes
+
+Premise: The",correct
+INF-027,lexical_entailment,subsective_mod,A tall stranger entered the room.,A stranger entered the room.,Yes,False,,mistral:7b,few_shot,Yes,0.999999445627054,5.543729459512944e-07,14.40542763467747, Yes,correct
+INF-028,lexical_entailment,downward_monotone,The customer did not buy a car.,The customer did not buy a sedan.,Yes,False,,mistral:7b,few_shot,Yes,0.9964261208355968,0.00357387916440323,5.630523391713255, Yes,correct
+INF-029,lexical_entailment,negated_hypernym,The customer did not buy a sedan.,The customer did not buy a car.,No,False,,mistral:7b,few_shot,Yes,0.990294047985853,0.009705952014147166,4.625262610161229, Yes,negation_scope_failure
+INF-030,lexical_entailment,downward_monotone,No birds landed on the fence.,No sparrows landed on the fence.,Yes,False,,mistral:7b,few_shot,Yes,0.9996659602117375,0.0003340397882625068,8.003916349956144, Yes (assuming sparrows are,correct
+INF-031,lexical_entailment,negated_hypernym,No sparrows landed on the fence.,No birds landed on the fence.,No,False,,mistral:7b,few_shot,Yes,0.9999483264435798,5.16735564203066e-05,9.870512713641473, Yes,negation_scope_failure
+INF-032,lexical_entailment,downward_monotone,She never eats vegetables.,She never eats carrots.,Yes,False,,mistral:7b,few_shot,Yes,0.9995229493080295,0.00047705069197045817,7.647410635730844, Yes,correct
+INF-033,lexical_entailment,negated_hypernym,She never eats carrots.,She never eats vegetables.,No,False,,mistral:7b,few_shot,No,0.36791333582421326,0.6320866641757866,-0.5411791016495932, No,correct
+INF-034,lexical_entailment,reverse_hypernym,The customer bought a car.,The customer bought a sedan.,No,False,,mistral:7b,few_shot,No,0.01901483479423331,0.9809851652057667,-3.943337884175397, No (unless it's given,correct
+INF-035,lexical_entailment,reverse_hypernym,A bird landed on the fence.,A sparrow landed on the fence.,No,False,,mistral:7b,few_shot,No,0.005870526070187798,0.9941294739298122,-5.131923203678087, No (unless it's given,correct
+INF-036,lexical_entailment,reverse_hypernym,She planted a tree in the yard.,She planted an oak in the yard.,No,False,,mistral:7b,few_shot,No,1.4533972255684425e-05,0.9999854660277443,-11.139007200618751, No,correct
+INF-037,lexical_entailment,reverse_hypernym,He plays a musical instrument.,He plays the violin.,No,False,,mistral:7b,few_shot,No,3.971900770213631e-06,0.9999960280992297,-12.436261822507605, No (unless it's given,correct
+INF-038,lexical_entailment,reverse_hypernym,The thief stole a gemstone.,The thief stole a sapphire.,No,False,,mistral:7b,few_shot,No,0.08249573847831841,0.9175042615216816,-2.4089105874300003, No (assuming the Premise doesn,correct
+INF-039,lexical_entailment,reverse_hypernym,A snake slithered across the path.,A cobra slithered across the path.,No,False,,mistral:7b,few_shot,No,8.007095873660058e-05,0.9999199290412634,-9.432517258056336, No (unless it is given that,correct
+INF-040,lexical_entailment,non_intersective_mod,He is an alleged thief.,He is a thief.,No,False,,mistral:7b,few_shot,No,0.05403971807426069,0.9459602819257392,-2.8624812867953295," No (The term ""alleged",correct
+INF-041,lexical_entailment,privative_mod,It is a fake diamond.,It is a diamond.,No,False,,mistral:7b,few_shot,No,3.7139147586990363e-07,0.999999628608524,-14.806008768246164, No,correct
+INF-042,lexical_entailment,privative_mod,That is a toy gun.,That is a gun.,No,False,,mistral:7b,few_shot,Yes,0.9748325520081047,0.02516744799189533,3.656714301577906, Yes (but with a caveat:,upward_monotonicity_bias
+INF-043,lexical_entailment,reverse_manner,He ate the sandwich.,He devoured the sandwich.,No,False,,mistral:7b,few_shot,No,0.2349899499897951,0.7650100500102048,-1.1803462237796887, No (The Premise does not necessarily,correct
+INF-044,lexical_entailment,reverse_manner,She looked at the clock.,She glanced at the clock.,No,False,,mistral:7b,few_shot,Yes,0.9999017174741248,9.828252587523667e-05,9.227566022479403," Yes
+
+Premise: She",upward_monotonicity_bias
+INF-045,lexical_entailment,reverse_verb,The guard killed the prisoner.,The guard murdered the prisoner.,No,False,,mistral:7b,few_shot,Yes,0.9566123115408259,0.043387688459174005,3.0932224764598897," Yes (assuming ""murder",upward_monotonicity_bias
+INF-046,lexical_entailment,reverse_verb,The glass broke on the floor.,The glass shattered on the floor.,No,False,,mistral:7b,few_shot,Yes,0.999998013487836,1.9865121640057264e-06,13.129128151860991, Yes,upward_monotonicity_bias
+INF-047,lexical_entailment,reverse_gradable,The water is hot.,The water is boiling.,No,False,,mistral:7b,few_shot,No,0.0035940004220156078,0.9964059995779844,-5.624888898840776, No (The water being hot does not,correct
+INF-048,lexical_entailment,reverse_gradable,The soup is warm.,The soup is hot.,No,False,,mistral:7b,few_shot,Yes,0.9673633721158763,0.032636627884123665,3.38913898509537," Yes (assuming ""hot"" implies",upward_monotonicity_bias
+INF-049,lexical_entailment,reverse_quantifier,Some students passed the exam.,Every student passed the exam.,No,False,,mistral:7b,few_shot,No,1.3178043632771549e-07,0.9999998682195637,-15.842128528654392, No,correct
+INF-050,lexical_entailment,reverse_quantifier,Most of the doors were locked.,All of the doors were locked.,No,False,,mistral:7b,few_shot,No,0.11673280545788899,0.883267194542111,-2.023740144294895, No,correct
+INF-051,lexical_entailment,reverse_intersective,He rode a bicycle.,He rode a tandem bicycle.,No,False,,mistral:7b,few_shot,No,1.9730080629229078e-07,0.9999998026991938,-15.438536139994394, No,correct
+INF-052,lexical_entailment,reverse_intersective,She wears a coat.,She wears a red coat.,No,False,,mistral:7b,few_shot,No,1.1099385832127559e-06,0.9999988900614168,-13.711204764670576, No (unless it's given,correct
+INF-053,lexical_entailment,privative_mod,She is a former teacher.,She is a teacher.,No,False,,mistral:7b,few_shot,No,0.0006350382447089505,0.9993649617552911,-7.3611900930301974, No,correct
+INF-054,lexical_entailment,privative_mod,It is a stuffed lion.,It is a lion.,No,False,,mistral:7b,few_shot,Yes,0.9998568181588128,0.00014318184118727135,8.851251926737232," Yes
+
+Premise: It",upward_monotonicity_bias
+INF-055,lexical_entailment,non_intersective_mod,He is a would-be author.,He is an author.,No,False,,mistral:7b,few_shot,No,1.1421621757701363e-06,0.9999988578378243,-13.682586304343538, No,correct
+INF-056,lexical_entailment,co_hyponym,She baked sourdough.,She baked rye bread.,No,False,,mistral:7b,few_shot,No,1.903648560896539e-07,0.9999998096351439,-15.4743231206222, No,correct
+INF-057,lexical_entailment,co_hyponym,He plays the violin.,He plays the cello.,No,False,,mistral:7b,few_shot,No,4.486547433201609e-08,0.9999999551345256,-16.919597238958048, No,correct
+INF-058,lexical_entailment,negated_quantifier,Not every student passed the exam.,No student passed the exam.,No,False,,mistral:7b,few_shot,No,0.05410815652862761,0.9458918434713723,-2.861143290031868, No,correct
+INF-059,lexical_entailment,reverse_hypernym,The museum displays art.,The museum displays sculptures.,No,False,,mistral:7b,few_shot,No,0.11239592752020845,0.8876040724797916,-2.0664980744639783, No (unless it's known,correct
+INF-060,lexical_entailment,reverse_hypernym,He drank wine.,He drank merlot.,No,False,,mistral:7b,few_shot,No,7.472100741024001e-06,0.999992527899259,-11.80432690252887, No (unless it's given,correct
+INF-061,presupposition,change_of_state,John stopped smoking last year.,John used to smoke.,Yes,False,,mistral:7b,few_shot,Yes,0.9999982150311648,1.7849688351901072e-06,13.23610781719191, Yes,correct
+INF-062,presupposition,negated_change_of_state,John did not stop smoking last year.,John used to smoke.,Yes,False,,mistral:7b,few_shot,Yes,0.9999948246029452,5.1753970548158945e-06,12.171589320777361, Yes,correct
+INF-063,presupposition,question_projection,Did John stop smoking last year?,John used to smoke.,Yes,False,,mistral:7b,few_shot,Yes,0.9988256100875945,0.0011743899124054477,6.745831409665314, Yes,correct
+INF-064,presupposition,factive_verb,Mary regretted selling her house.,Mary sold her house.,Yes,False,,mistral:7b,few_shot,Yes,0.9999995883881236,4.1161187627070055e-07,14.703184567877555, Yes,correct
+INF-065,presupposition,negated_factive,Mary did not regret selling her house.,Mary sold her house.,Yes,False,,mistral:7b,few_shot,Yes,0.9999878088927685,1.219110723151022e-05,11.314791596281534, Yes,correct
+INF-066,presupposition,definite_description,The king of France visited Berlin.,There is a king of France.,Yes,True,Russell vs Strawson on definite descriptions,mistral:7b,few_shot,No,0.0001271988328324978,0.9998728011671676,-8.969631876022204, No (as of 202,presupposition_projection_failure
+INF-067,presupposition,possessive,My sister lives in Munich.,The speaker has a sister.,Yes,False,,mistral:7b,few_shot,Yes,0.999998723441963,1.2765580370289786e-06,13.571341858990259, Yes,correct
+INF-068,presupposition,negated_possessive,My sister does not live in Munich.,The speaker has a sister.,Yes,False,,mistral:7b,few_shot,Yes,0.9984610838519403,0.0015389161480597459,6.475136808805491, Yes,correct
+INF-069,presupposition,iterative_verb,Liam returned to London.,Liam had been in London before.,Yes,False,,mistral:7b,few_shot,Yes,0.9999991372519754,8.627480245980089e-07,13.963142301880003, Yes,correct
+INF-070,presupposition,negated_iterative,Liam did not return to London.,Liam had been in London before.,Yes,False,,mistral:7b,few_shot,Yes,0.9997513809251435,0.00024861907485641425,8.299340002736823, Yes,correct
+INF-071,presupposition,cleft,It was Peter who broke the vase.,Someone broke the vase.,Yes,False,,mistral:7b,few_shot,Yes,0.9999991212980929,8.787019072095911e-07,13.944819245254644, Yes,correct
+INF-072,presupposition,negated_cleft,It was not Peter who broke the vase.,Someone broke the vase.,Yes,False,,mistral:7b,few_shot,Yes,0.999937963904371,6.203609562904352e-05,9.68773211673945, Yes,correct
+INF-073,presupposition,temporal_clause,"After finishing the report, Elena went home.",Elena finished the report.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999778828577,2.211714236914709e-08,17.626912834172156, Yes,correct
+INF-074,presupposition,focus_particle,Even Mark passed the difficult test.,Other people passed the difficult test.,Yes,False,,mistral:7b,few_shot,Yes,0.5453928100323674,0.4546071899676326,0.18207256007473482, Yes,correct
+INF-075,presupposition,exclusive_particle,Only Alice solved the puzzle.,Alice solved the puzzle.,Yes,False,,mistral:7b,few_shot,Yes,0.999999825492083,1.7450791701112907e-07,15.561295552133886," Yes
+
+Premise: Only",correct
+INF-076,presupposition,implicative,Mark managed to finish the marathon.,Finishing the marathon required effort.,Yes,True,"""managed"" conveys difficulty as implicature, not entailment",mistral:7b,few_shot,Yes,0.999994092238389,5.907761611128796e-06,12.039237636511483, Yes,correct
+INF-077,presupposition,negated_implicative,Mark did not manage to finish the marathon.,Mark tried to finish the marathon.,Yes,False,,mistral:7b,few_shot,Yes,0.9984669483719614,0.0015330516280384827,6.478960773924322, Yes,correct
+INF-078,presupposition,aspectual_verb,The snow continued to fall.,Snow was falling before.,Yes,False,,mistral:7b,few_shot,Yes,0.9999994080831918,5.919168081655164e-07,14.339899146767669, Yes,correct
+INF-079,presupposition,negated_aspectual,The snow did not continue to fall.,Snow was falling before.,Yes,False,,mistral:7b,few_shot,Yes,0.9996706115540359,0.0003293884459640331,8.017943374134415, Yes,correct
+INF-080,presupposition,quantifier_presup,Both of his cats are asleep.,He has two cats.,Yes,False,,mistral:7b,few_shot,Yes,0.9999963763305899,3.6236694101404846e-06,12.528019772635995, Yes,correct
+INF-081,presupposition,quantifier_presup,Neither of her parents speaks German.,She has two parents.,Yes,False,,mistral:7b,few_shot,Yes,0.9992273799164163,0.0007726200835836899,7.16495019456008, Yes,correct
+INF-082,presupposition,factive_speech_act,I apologize for arriving late.,The speaker arrived late.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999580761674,4.192383262898202e-08,16.98741133197092, Yes,correct
+INF-083,presupposition,factive_verb,She criticized him for lying.,He lied.,Yes,False,,mistral:7b,few_shot,Yes,0.9999997169691777,2.8303082245325625e-07,15.07770974894054, Yes,correct
+INF-084,presupposition,factive_verb,They celebrated winning the cup.,They won the cup.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999497384923,5.026150767614626e-08,16.806026257483634, Yes,correct
+INF-085,presupposition,possessive,Her brother is a pilot.,She has a brother.,Yes,False,,mistral:7b,few_shot,Yes,0.9999686806882735,3.131931172648888e-05,10.371244342808126, Yes,correct
+INF-086,presupposition,negated_possessive,Her brother is not a pilot.,She has a brother.,Yes,False,,mistral:7b,few_shot,Yes,0.9999329256085517,6.707439144814046e-05,9.609641157760267, Yes,correct
+INF-087,presupposition,change_of_state,Ben started exercising in January.,Ben was not exercising right before January.,Yes,False,,mistral:7b,few_shot,Yes,0.9955425266492233,0.00445747335077665,5.408705749252111, Yes,correct
+INF-088,presupposition,change_of_state,The children stopped shouting.,The children were shouting.,Yes,False,,mistral:7b,few_shot,Yes,0.9995527009406494,0.00044729905935063206,7.711835751349893, Yes,correct
+INF-089,presupposition,negated_change_of_state,The children did not stop shouting.,The children were shouting.,Yes,False,,mistral:7b,few_shot,Yes,0.999951544535309,4.845546469114574e-05,9.934816979026229, Yes,correct
+INF-090,presupposition,emotive_factive,It surprised everyone that the team lost.,The team lost.,Yes,False,,mistral:7b,few_shot,Yes,0.9999996436367851,3.5636321495120546e-07,14.847315003132577, Yes,correct
+INF-091,presupposition,non_factive_verb,John claims that the earth is flat.,The earth is flat.,No,False,,mistral:7b,few_shot,No,9.903734065921304e-06,0.999990096265934,-11.522588789778615, No,correct
+INF-092,presupposition,non_factive_verb,Mary believes that it is raining.,It is raining.,No,False,,mistral:7b,few_shot,Yes,0.9988374200875659,0.0011625799124341458,6.755950424753847, Yes,factivity_overgeneralization
+INF-093,presupposition,non_factive_verb,David thinks the train is late.,The train is late.,No,False,,mistral:7b,few_shot,Yes,0.9996861227628034,0.00031387723719653705,8.066194686337777, Yes,factivity_overgeneralization
+INF-094,presupposition,non_factive_verb,Sarah hopes that she passed the test.,Sarah passed the test.,No,False,,mistral:7b,few_shot,No,0.17512786569667654,0.8248721343033234,-1.5497120173549486, No,correct
+INF-095,presupposition,counterfactive_verb,He pretended to be asleep.,He was asleep.,No,False,,mistral:7b,few_shot,No,1.4446153941738713e-06,0.9999985553846057,-13.447665990412625, No,correct
+INF-096,presupposition,counterfactive_verb,She falsely assumed the door was locked.,The door was locked.,No,False,,mistral:7b,few_shot,No,8.113649533679665e-05,0.9999188635046633,-9.419296554124474, No,correct
+INF-097,presupposition,conditional_filter,"If John used to smoke, he stopped last year.",John used to smoke.,No,False,,mistral:7b,few_shot,Yes,0.9999983395197348,1.6604802651555204e-06,13.308402020599338, Yes,negation_scope_failure
+INF-098,presupposition,modal_filter,"Perhaps Mary sold her house, and if so, she regrets it.",Mary sold her house.,No,False,,mistral:7b,few_shot,Yes,0.9999734290709648,2.6570929035128465e-05,10.535666261954285, Yes,negation_scope_failure
+INF-099,presupposition,explicit_cancellation,"John never smoked in his life, so he did not stop smoking.",John used to smoke.,No,False,,mistral:7b,few_shot,Yes,0.9099126906921721,0.0900873093078279,2.3125693471092785, Yes,negation_scope_failure
+INF-100,presupposition,explicit_cancellation,"I have no sister, so my sister does not live in Munich.",The speaker has a sister.,No,False,,mistral:7b,few_shot,No,0.00032973483852346994,0.9996702651614766,-8.016891956911516, No,correct
+INF-101,presupposition,non_factive_verb,The witness alleged that the suspect fled.,The suspect fled.,No,False,,mistral:7b,few_shot,Yes,0.9999975847793132,2.4152206867873354e-06,12.933717478118709, Yes,factivity_overgeneralization
+INF-102,presupposition,non_factive_verb,She dreamed that she won the lottery.,She won the lottery.,No,False,,mistral:7b,few_shot,No,5.30312530672552e-07,0.9999994696874693,-14.44979879336656, No,correct
+INF-103,presupposition,non_factive_verb,They rumored that the company went bankrupt.,The company went bankrupt.,No,False,,mistral:7b,few_shot,Yes,0.9982266668748176,0.001773333125182258,6.333119474333409, Yes,factivity_overgeneralization
+INF-104,presupposition,counterfactive_verb,He wished that he spoke French.,He speaks French.,No,False,,mistral:7b,few_shot,No,1.801952239522477e-07,0.9999998198047759,-15.529224816077743, No,correct
+INF-105,presupposition,suppositional,Suppose that Maria arrived early.,Maria arrived early.,No,False,,mistral:7b,few_shot,Yes,0.999939266019773,6.073398022690989e-05,9.708946474662518, Yes,factivity_overgeneralization
+INF-106,presupposition,conditional_filter,"If Anna has a brother, her brother is a pilot.",Anna has a brother.,No,False,,mistral:7b,few_shot,Yes,0.986314857942691,0.013685142057309063,4.2776649092194745," Yes
+
+Premise: If",negation_scope_failure
+INF-107,presupposition,conditional_filter,"If Peter broke the vase, he regrets breaking it.",Peter broke the vase.,No,False,,mistral:7b,few_shot,Yes,0.9993694676474875,0.0006305323525124293,7.368315360183954, Yes,negation_scope_failure
+INF-108,presupposition,disjunctive_filter,"Either Tom never smoked, or he stopped smoking last year.",Tom used to smoke.,No,False,,mistral:7b,few_shot,Yes,0.9995116455207453,0.0004883544792545993,7.623980550127742, Yes,negation_scope_failure
+INF-109,presupposition,explicit_cancellation,"The king of France did not visit Berlin, since there is no king of France.",There is a king of France.,No,False,,mistral:7b,few_shot,No,2.3632648477691763e-07,0.9999997636735153,-15.258051341552697, No,correct
+INF-110,presupposition,explicit_cancellation,"Anna did not open the window again, because she had never opened it.",Anna had opened the window before.,No,False,,mistral:7b,few_shot,Yes,0.9999779711461391,2.2028853860969265e-05,10.723135395690674, Yes,negation_scope_failure
+INF-111,presupposition,non_factive_verb,Lena said that the road was closed.,The road was closed.,No,False,,mistral:7b,few_shot,Yes,0.9999995844346593,4.1556534072000177e-07,14.693625561398687, Yes,factivity_overgeneralization
+INF-112,presupposition,non_factive_verb,Omar suspects that the milk is spoiled.,The milk is spoiled.,No,False,,mistral:7b,few_shot,Yes,0.9963525620764037,0.0036474379235963933,5.610076190558186, Yes,factivity_overgeneralization
+INF-113,presupposition,non_factive_verb,Nina denied that she took the key.,Nina took the key.,No,False,,mistral:7b,few_shot,No,0.12705495163752162,0.8729450483624783,-1.927252925176521, No,correct
+INF-114,presupposition,non_factive_verb,The report suggests that sales dropped.,Sales dropped.,No,False,,mistral:7b,few_shot,Yes,0.9998670028457386,0.00013299715426154745,8.92504982050198, Yes,factivity_overgeneralization
+INF-115,presupposition,non_factive_verb,They doubt that the bridge is safe.,The bridge is safe.,No,False,,mistral:7b,few_shot,No,1.2652994826781782e-07,0.9999998734700517,-15.882786685068462, No,correct
+INF-116,presupposition,implicative_failure,Mark failed to finish the marathon.,Mark finished the marathon.,No,False,,mistral:7b,few_shot,No,1.646098333715423e-07,0.9999998353901667,-15.619687644860143, No,correct
+INF-117,presupposition,implicative_failure,Sam forgot to lock the door.,Sam locked the door.,No,False,,mistral:7b,few_shot,No,1.391078958341653e-07,0.9999998608921041,-15.78801583679498, No,correct
+INF-118,presupposition,counterfactual_conditional,"If he had studied, he would have passed.",He studied.,No,True,counterfactual conditionals implicate the antecedent is false,mistral:7b,few_shot,No,3.22782669774569e-05,0.9999677217330225,-10.341084124407349, No,correct
+INF-119,presupposition,almost_construction,Anna almost won the race.,Anna won the race.,No,False,,mistral:7b,few_shot,No,4.2018822972554353e-07,0.9999995798117702,-14.682562639863873, No,correct
+INF-120,presupposition,exclusive_particle_neg,Only Alice solved the puzzle.,Bob solved the puzzle.,No,False,,mistral:7b,few_shot,No,3.8964703176383406e-07,0.9999996103529682,-14.758024164737108, No,correct
+INF-121,plausible_non_entailment,medical_plausibility,The runner collapsed right after crossing the finish line.,The runner was having a heart attack.,No,False,,mistral:7b,few_shot,No,0.2357564097452786,0.7642435902547213,-1.1760874638780392, No (The Premise does not necessarily,correct
+INF-122,plausible_non_entailment,physical_plausibility,The runner collapsed right after crossing the finish line.,The runner was exhausted.,No,False,,mistral:7b,few_shot,Yes,0.999999823657614,1.7634238593717554e-07,15.550838180713562, Yes,world_knowledge_overentailment
+INF-123,plausible_non_entailment,weather_script,Dark clouds gathered rapidly over the city.,It started raining heavily.,No,False,,mistral:7b,few_shot,Yes,0.7814915343913758,0.2185084656086242,1.2743795593008869, Yes,world_knowledge_overentailment
+INF-124,plausible_non_entailment,kitchen_script,She put the kettle on the stove and turned on the burner.,She made a cup of tea.,No,False,,mistral:7b,few_shot,Yes,0.9999077187033893,9.228129661071142e-05,9.290576788371352, Yes,world_knowledge_overentailment
+INF-125,plausible_non_entailment,physical_consequence,The glass slipped from her hand onto the tile floor.,The glass shattered into pieces.,No,False,,mistral:7b,few_shot,Yes,0.9995167058999395,0.0004832941000605942,7.634401775876542, Yes,world_knowledge_overentailment
+INF-126,plausible_non_entailment,causal_abduction,Smoke poured out of the kitchen window.,There was a fire in the kitchen.,No,False,,mistral:7b,few_shot,Yes,0.9999981013442438,1.8986557562646977e-06,13.174362520231012, Yes,world_knowledge_overentailment
+INF-127,plausible_non_entailment,emotional_script,The toddler dropped his ice cream cone on the sidewalk.,The toddler started crying.,No,False,,mistral:7b,few_shot,Yes,0.9754155684842956,0.024584431515704393,3.6807502268972936, Yes,world_knowledge_overentailment
+INF-128,plausible_non_entailment,emergency_script,The sirens wailed as the ambulance sped down the street.,Someone had been injured in an accident.,No,False,,mistral:7b,few_shot,Yes,0.9986753260742882,0.001324673925711766,6.625263391550625, Yes,world_knowledge_overentailment
+INF-129,plausible_non_entailment,weather_script,He forgot his umbrella on a stormy morning.,He got soaked on his way to work.,No,False,,mistral:7b,few_shot,Yes,0.9869500199455,0.013049980054499956,4.3258327944215, Yes,world_knowledge_overentailment
+INF-130,plausible_non_entailment,routine_script,She set her alarm for 6:00 AM before going to sleep.,She woke up at 6:00 AM.,No,False,,mistral:7b,few_shot,No,0.22316794712783752,0.7768320528721624,-1.247299564697847, No (The Premise does not guarantee,correct
+INF-131,plausible_non_entailment,driving_script,He stepped on the brake pedal suddenly.,The car came to a complete stop.,No,False,,mistral:7b,few_shot,Yes,0.9649383079403391,0.03506169205966094,3.3149550295441945, Yes,world_knowledge_overentailment
+INF-132,plausible_non_entailment,device_script,The battery on her phone reached zero percent.,Her phone turned off.,No,False,,mistral:7b,few_shot,Yes,0.999999789786479,2.1021352104672383e-07,15.375141845683576, Yes,world_knowledge_overentailment
+INF-133,plausible_non_entailment,culinary_plausibility,The chef added three chili peppers to the soup.,The soup tasted spicy.,No,False,,mistral:7b,few_shot,Yes,0.9813990544669596,0.01860094553304039,3.9657667456652743, Yes,world_knowledge_overentailment
+INF-134,plausible_non_entailment,food_spoilage,He left the milk out on the counter overnight.,The milk went sour.,No,False,,mistral:7b,few_shot,Yes,0.8928935778507324,0.10710642214926754,2.1206444603339833, Yes (assuming normal conditions for milk,world_knowledge_overentailment
+INF-135,plausible_non_entailment,social_abduction,The audience stood up and applauded loudly.,The audience enjoyed the performance.,No,False,,mistral:7b,few_shot,Yes,0.9999999174219806,8.25780194846378e-08,16.309522217188622, Yes,world_knowledge_overentailment
+INF-136,plausible_non_entailment,physiological_script,He stayed up until 4:00 AM playing video games.,He felt tired the next morning.,No,False,,mistral:7b,few_shot,Yes,0.9999998778277996,1.221722002693281e-07,15.91783418762168, Yes,world_knowledge_overentailment
+INF-137,plausible_non_entailment,physical_plausibility,The ice cubes were left in a bowl in the warm sun.,The ice cubes melted into water.,No,False,,mistral:7b,few_shot,Yes,0.9999987870272551,1.212972744838192e-06,13.622435184499626, Yes,world_knowledge_overentailment
+INF-138,plausible_non_entailment,physical_plausibility,He dropped a heavy dictionary onto his bare foot.,His foot hurt.,No,False,,mistral:7b,few_shot,Yes,0.9999999613338083,3.86661915386623e-08,17.068300183710676, Yes,world_knowledge_overentailment
+INF-139,plausible_non_entailment,infrastructure_abduction,The lights in the entire neighborhood went out at once.,There was a power outage.,No,False,,mistral:7b,few_shot,Yes,0.9999999125852125,8.74147876017441e-08,16.252601286653945, Yes,world_knowledge_overentailment
+INF-140,plausible_non_entailment,medical_plausibility,She took two aspirin tablets for her headache.,Her headache went away.,No,False,,mistral:7b,few_shot,No,0.4799277916585107,0.5200722083414893,-0.08033200558935127, No (The Premise does not guarantee,correct
+INF-141,plausible_non_entailment,diagnostic_abduction,The mechanic lifted the hood and examined the engine.,The car would not start.,No,False,,mistral:7b,few_shot,No,0.0777518726471916,0.9222481273528083,-2.473291669690873, No,correct
+INF-142,plausible_non_entailment,travel_script,The plane touched down smoothly on the runway.,The passengers unbuckled their seatbelts.,No,False,,mistral:7b,few_shot,No,0.0004455056292952786,0.9995544943707046,-7.715855070332726, No,correct
+INF-143,plausible_non_entailment,problem_solving_script,She locked her keys inside her car.,She called a locksmith.,No,False,,mistral:7b,few_shot,Yes,0.5680529936564986,0.4319470063435014,0.27391180284180305, Yes,world_knowledge_overentailment
+INF-144,plausible_non_entailment,physiological_script,He ate three large slices of pepperoni pizza.,He felt full.,No,False,,mistral:7b,few_shot,Yes,0.9999256462773829,7.435372261702816e-05,9.506602461001007, Yes,world_knowledge_overentailment
+INF-145,plausible_non_entailment,physical_consequence,The cat knocked the ceramic mug off the desk.,The mug broke.,No,False,,mistral:7b,few_shot,Yes,0.9503324109090967,0.04966758909090324,2.9514592402068316, Yes (assuming the mug was,world_knowledge_overentailment
+INF-146,plausible_non_entailment,medical_plausibility,He forgot to put sunscreen on at the beach.,He got a sunburn.,No,False,,mistral:7b,few_shot,Yes,0.9998902953834236,0.00010970461657643618,9.11760939728373, Yes,world_knowledge_overentailment
+INF-147,plausible_non_entailment,horticulture_script,She watered the houseplant every day for a month.,The plant grew healthy and green.,No,False,,mistral:7b,few_shot,No,0.08511332654892417,0.9148866734510758,-2.374816581439339, No (The Premise does not guarantee,correct
+INF-148,plausible_non_entailment,statistical_plausibility,He bought a lottery ticket at the gas station.,He did not win the jackpot.,No,False,,mistral:7b,few_shot,No,0.16696687361025664,0.8330331263897433,-1.6072779778255972, No (The Premise does not imply,correct
+INF-149,plausible_non_entailment,medical_script,The surgeon washed her hands and put on sterile gloves.,She was about to perform an operation.,No,False,,mistral:7b,few_shot,Yes,0.99907251203769,0.0009274879623099003,6.982102823863117, Yes,world_knowledge_overentailment
+INF-150,plausible_non_entailment,physical_plausibility,The child touched the hot stove.,The child burned his hand.,No,False,,mistral:7b,few_shot,Yes,0.95213128668913,0.04786871331086995,2.9902408072464146, Yes (assuming that touching a hot,world_knowledge_overentailment
+INF-151,plausible_non_entailment,event_entailment,The runner crossed the finish line before collapsing.,The runner finished the race.,Yes,False,,mistral:7b,few_shot,Yes,0.9999033693808399,9.663061916004919e-05,9.244518263150985, Yes,correct
+INF-152,plausible_non_entailment,hypernym_event,It rained heavily in the city all afternoon.,Precipitation fell in the city.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999099145601,9.008543991619669e-08,16.222507194459535, Yes,correct
+INF-153,plausible_non_entailment,lexical_entailment,She boiled water in the kettle.,The water reached its boiling point.,Yes,False,,mistral:7b,few_shot,Yes,0.9998348161565679,0.00016518384343202307,8.708286304220634, Yes,correct
+INF-154,plausible_non_entailment,manner_entailment,He flew from Berlin to Paris.,He traveled from Berlin to Paris.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999116048928,8.839510710352037e-08,16.24144912994723, Yes,correct
+INF-155,plausible_non_entailment,factive_temporal,The glass shattered when it hit the floor.,The glass hit the floor.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999114406771,8.855932285163827e-08,16.239593106225982, Yes,correct
+INF-156,plausible_non_entailment,logical_equivalence,Every student in the class failed the exam.,No student in the class passed the exam.,Yes,False,,mistral:7b,few_shot,Yes,0.9999995026365349,4.973634651769291e-07,14.513944262505651, Yes,correct
+INF-157,plausible_non_entailment,presupposition_existence,Firefighters extinguished the blaze in the kitchen.,There was a fire in the kitchen.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999504170098,4.958299024124578e-08,16.819617951134017, Yes,correct
+INF-158,plausible_non_entailment,factive_temporal,The toddler cried after dropping his cone.,The toddler dropped his cone.,Yes,False,,mistral:7b,few_shot,Yes,0.999999535899073,4.641009269731139e-07,14.583163329243822, Yes,correct
+INF-159,plausible_non_entailment,definite_existence,She blew out all five candles on the cake.,There were five candles on the cake.,Yes,False,,mistral:7b,few_shot,Yes,0.9999984891820557,1.510817944289161e-06,13.402857858016985, Yes,correct
+INF-160,plausible_non_entailment,intersective_entailment,The ambulance transported two injured passengers.,Two passengers were injured.,Yes,False,,mistral:7b,few_shot,Yes,0.9989497145723306,0.0010502854276694838,6.85764247851378, Yes,correct
+INF-161,plausible_non_entailment,adjunct_drop,He arrived at work completely soaked.,He arrived at work.,Yes,False,,mistral:7b,few_shot,Yes,0.9999996061381823,3.9386181775447335e-07,14.747265311661153," Yes
+
+Premise: He",correct
+INF-162,plausible_non_entailment,passive_entailment,The customer paid the bill in cash.,The bill was paid.,Yes,False,,mistral:7b,few_shot,Yes,0.9999989352981329,1.0647018671579416e-06,13.752814670231011, Yes,correct
+INF-163,plausible_non_entailment,lexical_presupposition,She woke up at 6:00 AM.,She was asleep before 6:00 AM.,Yes,False,,mistral:7b,few_shot,Yes,0.9999780938648903,2.190613510954821e-05,10.728721912010704, Yes,correct
+INF-164,plausible_non_entailment,aspectual_presupposition,The car stopped completely at the red light.,The car was moving before it stopped.,Yes,False,,mistral:7b,few_shot,Yes,0.9987278604240417,0.0012721395759583384,6.66578214112464, Yes,correct
+INF-165,plausible_non_entailment,aspectual_presupposition,His phone turned off automatically.,His phone was on before it turned off.,Yes,False,,mistral:7b,few_shot,Yes,0.8691093099322781,0.130890690067722,1.893106357629926, Yes,correct
+INF-166,plausible_non_entailment,conjunct_entailment,Heavy rain fell on the city after dark clouds gathered rapidly.,Dark clouds gathered over the city.,Yes,False,,mistral:7b,few_shot,Yes,0.9999992432848681,7.567151318759765e-07,14.094278209537414, Yes,correct
+INF-167,plausible_non_entailment,conjunct_entailment,She made a cup of tea after putting the kettle on the stove.,She put the kettle on the stove.,Yes,False,,mistral:7b,few_shot,Yes,0.9999990800648163,9.199351836380003e-07,13.898961702017008, Yes,correct
+INF-168,plausible_non_entailment,conjunct_entailment,The glass slipped from her hand and shattered on the tile floor.,The glass shattered.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999391408491,6.085915086713269e-08,16.614703583948224, Yes,correct
+INF-169,plausible_non_entailment,lexical_complement,The student passed the final exam.,The student did not fail the final exam.,Yes,False,,mistral:7b,few_shot,Yes,0.9999991360995772,8.639004227910257e-07,13.961807462282788, Yes,correct
+INF-170,plausible_non_entailment,hypernym_event,He got soaked on his way to work.,He got wet on his way to work.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999312312947,6.876870538927747e-08,16.492516990248145, Yes,correct
+INF-171,plausible_non_entailment,adjunct_drop,She set her alarm for 6:00 AM.,She set an alarm.,Yes,False,,mistral:7b,few_shot,Yes,0.9999998424715739,1.5752842613674028e-07,15.663659754029581, Yes,correct
+INF-172,plausible_non_entailment,temporal_entailment,Her phone turned off after its battery reached zero percent.,The battery on her phone reached zero percent.,Yes,False,,mistral:7b,few_shot,Yes,0.9999995503666969,4.496333031629402e-07,14.614833018605477, Yes,correct
+INF-173,plausible_non_entailment,lexical_entailment,He stayed up until 4:00 AM.,He did not go to bed before 4:00 AM.,Yes,False,,mistral:7b,few_shot,Yes,0.9999932165874079,6.783412591966218e-06,11.901023467057097, Yes,correct
+INF-174,plausible_non_entailment,event_entailment,He dropped a heavy dictionary onto his bare foot.,The dictionary fell.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999744108197,2.5589180338720693e-08,17.48109619222917, Yes,correct
+INF-175,plausible_non_entailment,adjunct_drop,The lights in the entire neighborhood went out at once.,The lights in the neighborhood went out.,Yes,False,,mistral:7b,few_shot,Yes,0.9999992881532211,7.118467789164336e-07,14.155402434996924, Yes,correct
+INF-176,plausible_non_entailment,presupposition_existence,She took two aspirin tablets for her headache.,She had a headache.,Yes,False,,mistral:7b,few_shot,Yes,0.9999999638413963,3.615860364923193e-08,17.13535088190458, Yes,correct
+INF-177,plausible_non_entailment,synonym,The plane touched down smoothly on the runway.,The plane landed.,Yes,False,,mistral:7b,few_shot,Yes,0.9999997266793629,2.7332063721972045e-07,15.11261996231049, Yes,correct
+INF-178,plausible_non_entailment,locative_entailment,She locked her keys inside her car.,Her keys were in the car.,Yes,False,,mistral:7b,few_shot,Yes,0.9995276720927982,0.0004723279072018396,7.657364655446882, Yes,correct
+INF-179,plausible_non_entailment,implicative,He forgot to put sunscreen on at the beach.,He did not put sunscreen on.,Yes,False,,mistral:7b,few_shot,Yes,0.9999996916574121,3.0834258789872e-07,14.992054065403236, Yes,correct
+INF-180,plausible_non_entailment,presupposition_existence,The child touched the hot stove.,The stove was hot.,Yes,False,,mistral:7b,few_shot,Yes,0.9999989952940118,1.0047059882177673e-06,13.810814603584607, Yes,correct
+INF-001,lexical_entailment,hypernym,The customer bought a sedan.,The customer bought a car.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-002,lexical_entailment,hypernym,A sparrow landed on the fence.,A bird landed on the fence.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-003,lexical_entailment,hypernym,The chef sliced a carrot.,The chef sliced a vegetable.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-004,lexical_entailment,hypernym,She wore a silk kimono.,She wore clothing.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-005,lexical_entailment,verb_entailment,The train arrived at midnight.,The train arrived.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that the train arrived at midnight, which implies that the train arrived at some point before the specified time. Therefore, the train did indeed arrive.",correct
+INF-006,lexical_entailment,manner_verb,Maria whispered the secret.,Maria spoke the secret.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Whispering is a form of speaking, so if Maria whispered the secret, she did indeed speak the secret.",correct
+INF-007,lexical_entailment,manner_verb,The athlete sprinted to the gate.,The athlete moved to the gate.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-008,lexical_entailment,verb_entailment,The glass shattered on the floor.,The glass broke on the floor.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-009,lexical_entailment,manner_verb,He devoured the sandwich.,He ate the sandwich.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-010,lexical_entailment,manner_verb,The baby giggled loudly.,The baby laughed loudly.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The words ""giggled"" and ""laughed"" are synonyms in this context, both referring to a happy, lighthearted sound made by a baby. So, if the baby giggled loudly, it also laughed loudly.",correct
+INF-011,lexical_entailment,manner_verb,She glanced at the clock.,She looked at the clock.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The word ""glanced"" implies a brief, quick look, and the object of that look is typically a clock when the phrase ""she glanced at the clock"" is used. Therefore, it can be inferred that she looked at the clock.",correct
+INF-012,lexical_entailment,verb_entailment,The guard murdered the prisoner.,The guard killed the prisoner.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-013,lexical_entailment,synonym,They purchased the old factory.,They bought the old factory.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-014,lexical_entailment,gradable_entailment,The water is boiling.,The water is hot.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Boiling water is always hot. The act of boiling implies that the water has reached a temperature high enough to cause bubbles to form and rise, which is a characteristic of hot water.",correct
+INF-015,lexical_entailment,gradable_entailment,The hallway is freezing.,The hallway is cold.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-016,lexical_entailment,definition,The box is completely empty.,There is nothing inside the box.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-017,lexical_entailment,quantifier,Every student passed the exam.,Some students passed the exam.,Yes,True,"existential import of ""every""",mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-018,lexical_entailment,quantifier,None of the doors were locked.,Every door was unlocked.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-019,lexical_entailment,quantifier,Both brothers attended the lecture.,Two brothers attended the lecture.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-020,lexical_entailment,causative_alternation,The chef melted the butter.,The butter melted.,Yes,False,,mistral:7b,cot,Yes,,,," The chef's action of melting the butter implies that the butter itself has undergone the process of melting.
+Final Answer: Yes",correct
+INF-021,lexical_entailment,hypernym,She is a pediatrician.,She is a doctor.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-022,lexical_entailment,hypernym,The cat chased a mouse.,The cat chased a rodent.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-023,lexical_entailment,intersective_mod,He rode a tandem bicycle.,He rode a bicycle.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: A tandem bicycle is still a type of bicycle, so if someone rode a tandem bicycle, they did indeed ride a bicycle.",correct
+INF-024,lexical_entailment,intersective_mod,She wears a red coat.,She wears a coat.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-025,lexical_entailment,intersective_mod,They live in a brick apartment.,They live in an apartment.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-026,lexical_entailment,intersective_mod,The wooden chair broke.,The chair broke.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-027,lexical_entailment,subsective_mod,A tall stranger entered the room.,A stranger entered the room.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-028,lexical_entailment,downward_monotone,The customer did not buy a car.,The customer did not buy a sedan.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-029,lexical_entailment,negated_hypernym,The customer did not buy a sedan.,The customer did not buy a car.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,negation_scope_failure
+INF-030,lexical_entailment,downward_monotone,No birds landed on the fence.,No sparrows landed on the fence.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: If no birds landed on the fence, it implies that no specific type of bird landed on the fence, including sparrows. The Hypothesis is a specific case of the Premise.",correct
+INF-031,lexical_entailment,negated_hypernym,No sparrows landed on the fence.,No birds landed on the fence.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,negation_scope_failure
+INF-032,lexical_entailment,downward_monotone,She never eats vegetables.,She never eats carrots.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-033,lexical_entailment,negated_hypernym,She never eats carrots.,She never eats vegetables.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The premise states that she never eats carrots, not that she never eats any vegetables. While she might not eat carrots, it does not necessarily mean she never eats vegetables.",correct
+INF-034,lexical_entailment,reverse_hypernym,The customer bought a car.,The customer bought a sedan.,No,False,,mistral:7b,cot,No,,,, Final Answer: No. The Premise does not specify that the car bought by the customer was a sedan. It could be any type of car.,correct
+INF-035,lexical_entailment,reverse_hypernym,A bird landed on the fence.,A sparrow landed on the fence.,No,False,,mistral:7b,cot,No,,,," The Hypothesis does not follow from the Premise. The Premise only states that a bird landed on the fence, but it does not specify that the bird was a sparrow. Therefore, it is possible that a sparrow landed on the fence, but it is also possible that another type of bird landed on the fence.
+
+Final Answer: No",correct
+INF-036,lexical_entailment,reverse_hypernym,She planted a tree in the yard.,She planted an oak in the yard.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise does not specify the type of tree she planted, so it's not possible to infer that she planted an oak.",correct
+INF-037,lexical_entailment,reverse_hypernym,He plays a musical instrument.,He plays the violin.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The Premise does not specify which musical instrument he plays, so it does not follow that he plays the violin.",correct
+INF-038,lexical_entailment,reverse_hypernym,The thief stole a gemstone.,The thief stole a sapphire.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that the thief stole a gemstone, but it does not specify that the gemstone was a sapphire. Therefore, it is not necessarily true that the thief stole a sapphire.",correct
+INF-039,lexical_entailment,reverse_hypernym,A snake slithered across the path.,A cobra slithered across the path.,No,False,,mistral:7b,cot,No,,,," The Hypothesis does not follow from the Premise. The Premise only states that a snake slithered across the path, but it does not specify the type of snake. Therefore, it is not necessarily a cobra.
+
+Final Answer: No",correct
+INF-040,lexical_entailment,non_intersective_mod,He is an alleged thief.,He is a thief.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, if 'alleged' means 'accused but not proven', then 'alleged thief' implies that he might be a thief. Therefore, if he is an alleged thief, it follows that he could be a thief.",upward_monotonicity_bias
+INF-041,lexical_entailment,privative_mod,It is a fake diamond.,It is a diamond.,No,False,,mistral:7b,cot,No,,,, Final Answer: No,correct
+INF-042,lexical_entailment,privative_mod,That is a toy gun.,That is a gun.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that the object is a toy gun, which means it is a replica or imitation of a gun, but not a real gun. Therefore, it is not a gun in the sense that the Hypothesis suggests.",correct
+INF-043,lexical_entailment,reverse_manner,He ate the sandwich.,He devoured the sandwich.,No,False,,mistral:7b,cot,No,,,," The term ""devour"" implies a rapid and voracious consumption, which is not necessarily implied in ""He ate the sandwich."" Therefore, the Hypothesis does not follow from the Premise.
+
+Final Answer: No",correct
+INF-044,lexical_entailment,reverse_manner,She looked at the clock.,She glanced at the clock.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: The words ""looked"" and ""glanced"" both imply a visual inspection, but ""glanced"" suggests a quick, casual look, while ""looked"" is more general. However, since ""looked"" does not exclude the possibility of a quick glance, the hypothesis can be inferred from the premise.",upward_monotonicity_bias
+INF-045,lexical_entailment,reverse_verb,The guard killed the prisoner.,The guard murdered the prisoner.,No,False,,mistral:7b,cot,No,,,," The term ""killed"" implies that the guard caused the death of the prisoner, but it does not necessarily mean that the death was premeditated or malicious, which is the definition of murder. Therefore, the Hypothesis does not follow from the Premise.
+
+Final Answer: No",correct
+INF-046,lexical_entailment,reverse_verb,The glass broke on the floor.,The glass shattered on the floor.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: The term ""broke"" implies that the glass was broken into pieces, which is synonymous with ""shattered"". Therefore, if the glass broke on the floor, it also shattered on the floor.",upward_monotonicity_bias
+INF-047,lexical_entailment,reverse_gradable,The water is hot.,The water is boiling.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. While hot water can be boiling, it's not necessarily the case. Boiling water is water that is at its boiling point, which is 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure. The statement ""The water is hot"" does not guarantee that it is boiling.",correct
+INF-048,lexical_entailment,reverse_gradable,The soup is warm.,The soup is hot.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. While warm and hot are related terms, a soup being warm does not necessarily mean it is hot. Warm typically refers to a temperature that is comfortable to touch, while hot is significantly hotter. Therefore, the soup could be warm but not hot.",correct
+INF-049,lexical_entailment,reverse_quantifier,Some students passed the exam.,Every student passed the exam.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The premise states that some students passed, but it does not necessarily mean that every student passed. There could be students who did not pass.",correct
+INF-050,lexical_entailment,reverse_quantifier,Most of the doors were locked.,All of the doors were locked.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The premise states that most, but not all, of the doors were locked. Therefore, it is possible that some doors were not locked.",correct
+INF-051,lexical_entailment,reverse_intersective,He rode a bicycle.,He rode a tandem bicycle.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise only states that he rode a bicycle, not a specific type like a tandem bicycle. Therefore, it does not follow that he rode a tandem bicycle.",correct
+INF-052,lexical_entailment,reverse_intersective,She wears a coat.,She wears a red coat.,No,False,,mistral:7b,cot,No,,,, Final Answer: No. The Premise does not specify the color of the coat she wears.,correct
+INF-053,lexical_entailment,privative_mod,She is a former teacher.,She is a teacher.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. A former teacher is someone who was a teacher at some point in the past, but is not necessarily a teacher currently.",correct
+INF-054,lexical_entailment,privative_mod,It is a stuffed lion.,It is a lion.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, a stuffed lion is still a lion.",upward_monotonicity_bias
+INF-055,lexical_entailment,non_intersective_mod,He is a would-be author.,He is an author.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. A would-be author is someone who aspires to be an author, but has not yet achieved that status. Therefore, being a would-be author does not necessarily mean someone is already an author.",correct
+INF-056,lexical_entailment,co_hyponym,She baked sourdough.,She baked rye bread.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The Premise states that she baked sourdough, not rye bread.",correct
+INF-057,lexical_entailment,co_hyponym,He plays the violin.,He plays the cello.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that he plays the violin, but it does not imply or suggest that he plays the cello. The two statements are independent of each other.",correct
+INF-058,lexical_entailment,negated_quantifier,Not every student passed the exam.,No student passed the exam.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The premise states that not every student passed, but it does not rule out the possibility that some students did pass. Therefore, it is not necessarily true that no student passed the exam.",correct
+INF-059,lexical_entailment,reverse_hypernym,The museum displays art.,The museum displays sculptures.,No,False,,mistral:7b,cot,No,,,," The Premise does not necessarily imply that the museum displays sculptures. While the museum may display art, which can include sculptures, the Premise does not specify the type of art being displayed.
+
+Final Answer: No",correct
+INF-060,lexical_entailment,reverse_hypernym,He drank wine.,He drank merlot.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The Premise does not specify the type of wine he drank, only that he drank wine. Therefore, it is not necessarily true that he drank merlot.",correct
+INF-061,presupposition,change_of_state,John stopped smoking last year.,John used to smoke.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-062,presupposition,negated_change_of_state,John did not stop smoking last year.,John used to smoke.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-063,presupposition,question_projection,Did John stop smoking last year?,John used to smoke.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-064,presupposition,factive_verb,Mary regretted selling her house.,Mary sold her house.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Regretting something typically implies that the action has already been performed. In this case, Mary regretting selling her house suggests that she did indeed sell her house.",correct
+INF-065,presupposition,negated_factive,Mary did not regret selling her house.,Mary sold her house.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, the Hypothesis does not follow from the Premise. The Premise states that Mary did not regret selling her house, but it does not necessarily mean that she sold her house in the first place.",correct
+INF-066,presupposition,definite_description,The king of France visited Berlin.,There is a king of France.,Yes,True,Russell vs Strawson on definite descriptions,mistral:7b,cot,Yes,,,," Final Answer: Yes, the existence of a king of France is implied by the premise, as it assumes that there is a king of France who visited Berlin.",correct
+INF-067,presupposition,possessive,My sister lives in Munich.,The speaker has a sister.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-068,presupposition,negated_possessive,My sister does not live in Munich.,The speaker has a sister.,Yes,False,,mistral:7b,cot,Invalid,,,," The Hypothesis does not follow from the Premise. The Premise only states that the speaker's sister does not live in Munich, it does not necessarily imply that the speaker has a sister.",format_error
+INF-069,presupposition,iterative_verb,Liam returned to London.,Liam had been in London before.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-070,presupposition,negated_iterative,Liam did not return to London.,Liam had been in London before.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: The premise states that Liam did not return to London, which implies that he was previously in London (otherwise, there would be no need for a return).",correct
+INF-071,presupposition,cleft,It was Peter who broke the vase.,Someone broke the vase.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-072,presupposition,negated_cleft,It was not Peter who broke the vase.,Someone broke the vase.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-073,presupposition,temporal_clause,"After finishing the report, Elena went home.",Elena finished the report.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-074,presupposition,focus_particle,Even Mark passed the difficult test.,Other people passed the difficult test.,Yes,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise only states that Mark passed the difficult test, not that other people did. It does not follow that other people passed the test.",presupposition_projection_failure
+INF-075,presupposition,exclusive_particle,Only Alice solved the puzzle.,Alice solved the puzzle.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-076,presupposition,implicative,Mark managed to finish the marathon.,Finishing the marathon required effort.,Yes,True,"""managed"" conveys difficulty as implicature, not entailment",mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: The act of managing to finish a marathon implies that effort was required, as running a marathon is a physically demanding task.",correct
+INF-077,presupposition,negated_implicative,Mark did not manage to finish the marathon.,Mark tried to finish the marathon.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: If Mark did not manage to finish the marathon, it implies that he attempted to do so but was unsuccessful. Therefore, it can be inferred that he tried to finish the marathon.",correct
+INF-078,presupposition,aspectual_verb,The snow continued to fall.,Snow was falling before.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that the snow continued to fall, which implies that it was falling before the point in time the premise refers to.",correct
+INF-079,presupposition,negated_aspectual,The snow did not continue to fall.,Snow was falling before.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-080,presupposition,quantifier_presup,Both of his cats are asleep.,He has two cats.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that both of his cats are asleep. This implies that he has at least two cats since we cannot talk about 'both' of something if there is only one.",correct
+INF-081,presupposition,quantifier_presup,Neither of her parents speaks German.,She has two parents.,Yes,False,,mistral:7b,cot,No,,,," The Hypothesis does not follow from the Premise. The Premise only states that neither of her parents speak German, it does not specify the number of parents she has. Therefore, it is possible that she has two parents, but it is also possible that she has fewer or more than two parents.
+
+Final Answer: No",presupposition_projection_failure
+INF-082,presupposition,factive_speech_act,I apologize for arriving late.,The speaker arrived late.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-083,presupposition,factive_verb,She criticized him for lying.,He lied.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-084,presupposition,factive_verb,They celebrated winning the cup.,They won the cup.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-085,presupposition,possessive,Her brother is a pilot.,She has a brother.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-086,presupposition,negated_possessive,Her brother is not a pilot.,She has a brother.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes. The premise does not state or imply that she doesn't have a brother. It only states that her brother is not a pilot. Therefore, it is possible for her to have a brother.",correct
+INF-087,presupposition,change_of_state,Ben started exercising in January.,Ben was not exercising right before January.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-088,presupposition,change_of_state,The children stopped shouting.,The children were shouting.,Yes,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that the children stopped shouting, which implies that they were shouting before they stopped. However, it does not necessarily mean that they were shouting at the exact moment the Premise occurred. Therefore, the Hypothesis is not a logical conclusion from the Premise.",presupposition_projection_failure
+INF-089,presupposition,negated_change_of_state,The children did not stop shouting.,The children were shouting.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, if we assume that the children were shouting before they didn't stop doing so, then the hypothesis follows from the premise.",correct
+INF-090,presupposition,emotive_factive,It surprised everyone that the team lost.,The team lost.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-091,presupposition,non_factive_verb,John claims that the earth is flat.,The earth is flat.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The claim made by John does not necessarily make the earth flat. It only means that John believes the earth is flat, but this belief does not equate to the earth being flat in reality.",correct
+INF-092,presupposition,non_factive_verb,Mary believes that it is raining.,It is raining.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that Mary believes it is raining, which implies that according to Mary's belief, it is indeed raining.",factivity_overgeneralization
+INF-093,presupposition,non_factive_verb,David thinks the train is late.,The train is late.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that David thinks the train is late, which implies that he believes the train is running behind schedule. Therefore, if David's belief is true, then the train is indeed late.",factivity_overgeneralization
+INF-094,presupposition,non_factive_verb,Sarah hopes that she passed the test.,Sarah passed the test.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The Premise states that Sarah hopes she passed the test, which means she is optimistically expecting that she might have passed, but it does not necessarily mean she actually did pass the test.",correct
+INF-095,presupposition,counterfactive_verb,He pretended to be asleep.,He was asleep.,No,False,,mistral:7b,cot,No,,,, Final Answer: No. Pretending to be asleep does not mean one is actually asleep.,correct
+INF-096,presupposition,counterfactive_verb,She falsely assumed the door was locked.,The door was locked.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The premise states that she falsely assumed the door was locked, which means that the door was not actually locked. Therefore, the door was not locked.",correct
+INF-097,presupposition,conditional_filter,"If John used to smoke, he stopped last year.",John used to smoke.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,negation_scope_failure
+INF-098,presupposition,modal_filter,"Perhaps Mary sold her house, and if so, she regrets it.",Mary sold her house.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, if Mary sold her house, then she regrets it is given in the Premise. However, the Premise also suggests that Mary might not have sold her house, so it does not necessarily mean that Mary sold her house.",negation_scope_failure
+INF-099,presupposition,explicit_cancellation,"John never smoked in his life, so he did not stop smoking.",John used to smoke.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The Premise states that John never smoked in his life, which implies he has never started or stopped smoking. Therefore, the Hypothesis that John used to smoke is not supported by the given information.",correct
+INF-100,presupposition,explicit_cancellation,"I have no sister, so my sister does not live in Munich.",The speaker has a sister.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The premise states that the speaker has no sister, so it is not possible for the speaker to have a sister.",correct
+INF-101,presupposition,non_factive_verb,The witness alleged that the suspect fled.,The suspect fled.,No,False,,mistral:7b,cot,Yes,,,," The Hypothesis follows from the Premise. If a witness alleges that the suspect fled, it implies that the suspect indeed fled according to the allegation.
+
+Final Answer: Yes",factivity_overgeneralization
+INF-102,presupposition,non_factive_verb,She dreamed that she won the lottery.,She won the lottery.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that she dreamed about winning the lottery, not that she actually won it. Dreams do not correspond to reality.",correct
+INF-103,presupposition,non_factive_verb,They rumored that the company went bankrupt.,The company went bankrupt.,No,False,,mistral:7b,cot,Yes,,,," The Hypothesis follows from the Premise. If a company is rumored to have gone bankrupt, it implies that the company might have indeed gone bankrupt. However, it's important to note that rumors are not always true, so the Hypothesis could be false if the rumor is unfounded. But given the normal sense of the Premise, the Hypothesis is a possible conclusion.
+
+Final Answer: Yes",factivity_overgeneralization
+INF-104,presupposition,counterfactive_verb,He wished that he spoke French.,He speaks French.,No,False,,mistral:7b,cot,No,,,, Final Answer: No. Wishing that one speaks a language does not imply that one actually speaks it.,correct
+INF-105,presupposition,suppositional,Suppose that Maria arrived early.,Maria arrived early.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,factivity_overgeneralization
+INF-106,presupposition,conditional_filter,"If Anna has a brother, her brother is a pilot.",Anna has a brother.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The Premise states that if Anna has a brother, then her brother is a pilot. The Hypothesis is that Anna has a brother. Since the existence of a brother is a prerequisite for the brother to be a pilot, if the brother exists (as stated in the Hypothesis), then the Premise is true and the brother must be a pilot. Therefore, the Hypothesis follows from the Premise.",negation_scope_failure
+INF-107,presupposition,conditional_filter,"If Peter broke the vase, he regrets breaking it.",Peter broke the vase.,No,False,,mistral:7b,cot,Yes,,,," If the premise states that if Peter broke the vase, he regrets doing so, then it implies that when Peter breaks the vase, he regrets it. Therefore, if we know that Peter regrets breaking the vase, it means he must have broken the vase.
+
+Final Answer: Yes",negation_scope_failure
+INF-108,presupposition,disjunctive_filter,"Either Tom never smoked, or he stopped smoking last year.",Tom used to smoke.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: If Tom never smoked, then he did not use to smoke. However, if Tom stopped smoking last year, he used to smoke before that year. Therefore, the Hypothesis follows from the Premise.",negation_scope_failure
+INF-109,presupposition,explicit_cancellation,"The king of France did not visit Berlin, since there is no king of France.",There is a king of France.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The premise states that there is no king of France, which contradicts the hypothesis that there is a king of France. Therefore, the hypothesis does not follow from the premise.",correct
+INF-110,presupposition,explicit_cancellation,"Anna did not open the window again, because she had never opened it.",Anna had opened the window before.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,negation_scope_failure
+INF-111,presupposition,non_factive_verb,Lena said that the road was closed.,The road was closed.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,factivity_overgeneralization
+INF-112,presupposition,non_factive_verb,Omar suspects that the milk is spoiled.,The milk is spoiled.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, if Omar suspects that the milk is spoiled, it implies that he believes the milk might be in an undesirable state, which is typically associated with spoiled milk. However, it's important to note that his suspicion does not necessarily mean the milk is definitely spoiled, as he could be mistaken. But in this context, the Hypothesis follows from the Premise.",factivity_overgeneralization
+INF-113,presupposition,non_factive_verb,Nina denied that she took the key.,Nina took the key.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The premise states that Nina denied taking the key, which means she asserted that she did not take it. Therefore, it is not necessarily true that she took the key.",correct
+INF-114,presupposition,non_factive_verb,The report suggests that sales dropped.,Sales dropped.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,factivity_overgeneralization
+INF-115,presupposition,non_factive_verb,They doubt that the bridge is safe.,The bridge is safe.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The premise states that they doubt the bridge is safe, which means they have reason to believe it might not be. Therefore, it is not the case that the bridge is safe.",correct
+INF-116,presupposition,implicative_failure,Mark failed to finish the marathon.,Mark finished the marathon.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. If Mark failed to finish the marathon, it means he did not complete it, so he did not finish the marathon.",correct
+INF-117,presupposition,implicative_failure,Sam forgot to lock the door.,Sam locked the door.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. The Hypothesis does not follow from the Premise. Forgetting to do something implies that the action was not performed, so Sam did not lock the door.",correct
+INF-118,presupposition,counterfactual_conditional,"If he had studied, he would have passed.",He studied.,No,True,counterfactual conditionals implicate the antecedent is false,mistral:7b,cot,No,,,," If he had studied and passed, then he studied. However, the Premise only states that if he had studied, he would have passed, not that he actually did study. Therefore, the Hypothesis does not follow from the Premise.
+
+Final Answer: No",correct
+INF-119,presupposition,almost_construction,Anna almost won the race.,Anna won the race.,No,False,,mistral:7b,cot,No,,,," Final Answer: No. If Anna almost won the race, it means she came very close to winning but did not actually win.",correct
+INF-120,presupposition,exclusive_particle_neg,Only Alice solved the puzzle.,Bob solved the puzzle.,No,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that only Alice solved the puzzle, which implies that no one other than Alice solved it. Therefore, Bob did not solve the puzzle.",correct
+INF-121,plausible_non_entailment,medical_plausibility,The runner collapsed right after crossing the finish line.,The runner was having a heart attack.,No,False,,mistral:7b,cot,No,,,," The Premise does not necessarily imply that the runner was having a heart attack. While collapsing can be a symptom of a heart attack, there could be other reasons for a runner to collapse, such as exhaustion, dehydration, or injury. Final Answer: No",correct
+INF-122,plausible_non_entailment,physical_plausibility,The runner collapsed right after crossing the finish line.,The runner was exhausted.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Collapsing after exerting oneself, such as in a race, is often a sign of exhaustion. Therefore, if the runner collapsed right after crossing the finish line, it is reasonable to infer that the runner was exhausted.",world_knowledge_overentailment
+INF-123,plausible_non_entailment,weather_script,Dark clouds gathered rapidly over the city.,It started raining heavily.,No,False,,mistral:7b,cot,No,,,," Dark clouds gathering over a city often indicate rain. However, the Premise does not explicitly state that it started raining. Therefore, the Hypothesis does not follow from the Premise.
+
+Final Answer: No",correct
+INF-124,plausible_non_entailment,kitchen_script,She put the kettle on the stove and turned on the burner.,She made a cup of tea.,No,False,,mistral:7b,cot,No,,,," The Hypothesis does not necessarily follow from the Premise. While it is likely that she made a cup of tea, the Premise only states that she put the kettle on the stove and turned on the burner, not that she filled the kettle with water, waited for it to boil, and then poured the water into a cup to make tea. Final Answer: No.",correct
+INF-125,plausible_non_entailment,physical_consequence,The glass slipped from her hand onto the tile floor.,The glass shattered into pieces.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: When a glass slips from a hand and falls onto a hard surface like tile, it is likely to shatter into pieces due to the impact. However, it's not guaranteed that it will always shatter, but it's a common outcome in such a scenario.",world_knowledge_overentailment
+INF-126,plausible_non_entailment,causal_abduction,Smoke poured out of the kitchen window.,There was a fire in the kitchen.,No,False,,mistral:7b,cot,Yes,,,," Smoke is typically a byproduct of fire. Therefore, if smoke is pouring out of a kitchen window, it is reasonable to infer that there was a fire in the kitchen.
+
+Final Answer: Yes",world_knowledge_overentailment
+INF-127,plausible_non_entailment,emotional_script,The toddler dropped his ice cream cone on the sidewalk.,The toddler started crying.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: When a toddler drops his ice cream cone, it is likely that he will start crying, as ice cream is often a favorite treat for toddlers and dropping it can be an upsetting event for them. However, it is not guaranteed that the toddler will cry, so the Hypothesis does not strictly follow from the Premise, but it is a common inference.",world_knowledge_overentailment
+INF-128,plausible_non_entailment,emergency_script,The sirens wailed as the ambulance sped down the street.,Someone had been injured in an accident.,No,False,,mistral:7b,cot,No,,,," The sirens on an ambulance are typically used when there is an emergency, such as someone being injured in an accident. However, the Premise does not explicitly state that someone was injured, only that the sirens were wailing as the ambulance sped down the street. Therefore, the Hypothesis does not follow from the Premise.
+
+Final Answer: No",correct
+INF-129,plausible_non_entailment,weather_script,He forgot his umbrella on a stormy morning.,He got soaked on his way to work.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: If he forgot his umbrella on a stormy morning, it is likely that he would get soaked on his way to work, as he would not have protection from the rain.",world_knowledge_overentailment
+INF-130,plausible_non_entailment,routine_script,She set her alarm for 6:00 AM before going to sleep.,She woke up at 6:00 AM.,No,False,,mistral:7b,cot,No,,,," If she set her alarm for 6:00 AM before going to sleep, it does not necessarily mean that she woke up at 6:00 AM. The alarm could have rung, but she might have slept through it or turned it off. However, it is possible that she woke up at 6:00 AM, but the Premise does not guarantee this.
+
+Final Answer: No",correct
+INF-131,plausible_non_entailment,driving_script,He stepped on the brake pedal suddenly.,The car came to a complete stop.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: When someone steps on the brake pedal suddenly, it causes the car to slow down and eventually come to a complete stop, assuming the car's brakes are functioning properly.",world_knowledge_overentailment
+INF-132,plausible_non_entailment,device_script,The battery on her phone reached zero percent.,Her phone turned off.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that the battery on her phone reached zero percent. This implies that the phone no longer has any power, which typically results in the phone turning off.",world_knowledge_overentailment
+INF-133,plausible_non_entailment,culinary_plausibility,The chef added three chili peppers to the soup.,The soup tasted spicy.,No,False,,mistral:7b,cot,No,,,," The addition of chili peppers to a soup typically results in a spicy taste. Therefore, it is likely that the soup tasted spicy. However, the Premise does not explicitly state that the soup was tasted after the addition of the chili peppers, so it is not definitively true that the soup tasted spicy.
+
+Final Answer: No",correct
+INF-134,plausible_non_entailment,food_spoilage,He left the milk out on the counter overnight.,The milk went sour.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Leaving milk out overnight can cause it to spoil and go sour due to bacterial growth. Therefore, if the milk was left out overnight, it is likely to have gone sour.",world_knowledge_overentailment
+INF-135,plausible_non_entailment,social_abduction,The audience stood up and applauded loudly.,The audience enjoyed the performance.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: When an audience stands up and applauds loudly, it is typically a sign of appreciation or enjoyment of a performance.",world_knowledge_overentailment
+INF-136,plausible_non_entailment,physiological_script,He stayed up until 4:00 AM playing video games.,He felt tired the next morning.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Playing video games until 4:00 AM implies that he was awake for an extended period, which typically leads to fatigue, causing him to feel tired the next morning.",world_knowledge_overentailment
+INF-137,plausible_non_entailment,physical_plausibility,The ice cubes were left in a bowl in the warm sun.,The ice cubes melted into water.,No,False,,mistral:7b,cot,Yes,,,," The ice cubes, when left in a warm sun, will eventually melt due to the heat. Therefore, the ice cubes melting into water is a likely outcome.
+Final Answer: Yes",world_knowledge_overentailment
+INF-138,plausible_non_entailment,physical_plausibility,He dropped a heavy dictionary onto his bare foot.,His foot hurt.,No,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,world_knowledge_overentailment
+INF-139,plausible_non_entailment,infrastructure_abduction,The lights in the entire neighborhood went out at once.,There was a power outage.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The phrase ""The lights in the entire neighborhood went out at once"" implies that a lack of electricity caused all the lights to stop functioning. This is the definition of a power outage.",world_knowledge_overentailment
+INF-140,plausible_non_entailment,medical_plausibility,She took two aspirin tablets for her headache.,Her headache went away.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: If someone takes aspirin for a headache, it is generally assumed that the purpose of taking aspirin is to alleviate the headache. Aspirin is a common pain reliever, and if the correct dosage is taken, it should help reduce the pain associated with a headache. Therefore, if she took two aspirin tablets for her headache, it is reasonable to infer that her headache went away. However, it's important to note that individual responses to medication can vary, and there may be exceptions.",world_knowledge_overentailment
+INF-141,plausible_non_entailment,diagnostic_abduction,The mechanic lifted the hood and examined the engine.,The car would not start.,No,False,,mistral:7b,cot,No,,,," The Hypothesis does not follow from the Premise. Lifting the hood and examining the engine does not necessarily mean that the car would not start. The mechanic might be performing routine maintenance or diagnosing a problem, but the Premise does not indicate that the car is unable to start.
+
+Final Answer: No",correct
+INF-142,plausible_non_entailment,travel_script,The plane touched down smoothly on the runway.,The passengers unbuckled their seatbelts.,No,False,,mistral:7b,cot,No,,,," The Premise describes the landing of the plane, but it does not specify whether the passengers unbuckled their seatbelts after landing. Therefore, the Hypothesis does not follow from the Premise.
+
+Final Answer: No",correct
+INF-143,plausible_non_entailment,problem_solving_script,She locked her keys inside her car.,She called a locksmith.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: If someone locks their keys inside their car, they would typically need to call a locksmith to gain access to the car again. Therefore, it is a reasonable inference that she called a locksmith.",world_knowledge_overentailment
+INF-144,plausible_non_entailment,physiological_script,He ate three large slices of pepperoni pizza.,He felt full.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Eating three large slices of pepperoni pizza would typically make a person feel full. However, it's important to note that the feeling of fullness can vary among individuals due to factors such as appetite, metabolism, and portion size. In this case, given the amount of food consumed, it's reasonable to infer that he felt full.",world_knowledge_overentailment
+INF-145,plausible_non_entailment,physical_consequence,The cat knocked the ceramic mug off the desk.,The mug broke.,No,False,,mistral:7b,cot,No,,,," The cat knocking the mug off the desk could potentially cause the mug to break, given that ceramic mugs are fragile and could break when dropped. However, the Premise does not guarantee that the mug broke, as it could have landed in a way that it didn't break. Final Answer: No",correct
+INF-146,plausible_non_entailment,medical_plausibility,He forgot to put sunscreen on at the beach.,He got a sunburn.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes, if he forgot to put sunscreen on at the beach, it is likely that he got a sunburn. However, the Premise does not guarantee it, as other factors like the intensity of the sun, duration of exposure, and individual skin sensitivity can also influence whether or not a sunburn occurs.",world_knowledge_overentailment
+INF-147,plausible_non_entailment,horticulture_script,She watered the houseplant every day for a month.,The plant grew healthy and green.,No,False,,mistral:7b,cot,No,,,," The Hypothesis does not necessarily follow from the Premise. While watering a plant every day for a month can contribute to its growth, it does not guarantee that the plant will grow healthy and green. Other factors such as sunlight, soil quality, and temperature also play significant roles in a plant's health.
+
+Final Answer: No",correct
+INF-148,plausible_non_entailment,statistical_plausibility,He bought a lottery ticket at the gas station.,He did not win the jackpot.,No,False,,mistral:7b,cot,No,,,," The Hypothesis does not follow from the Premise. The Premise only states that he bought a lottery ticket, not that he won or lost. Therefore, it is possible that he won the jackpot, but the Premise does not provide enough information to confirm or deny this.
+
+Final Answer: No",correct
+INF-149,plausible_non_entailment,medical_script,The surgeon washed her hands and put on sterile gloves.,She was about to perform an operation.,No,False,,mistral:7b,cot,No,,,," The Premise does not necessarily imply that she was about to perform an operation. While it is common for surgeons to wash their hands and put on sterile gloves before an operation, it is also possible for them to do so in other situations, such as before handling a patient's wound or during a procedure that requires aseptic technique.
+
+Final Answer: No",correct
+INF-150,plausible_non_entailment,physical_plausibility,The child touched the hot stove.,The child burned his hand.,No,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+Reasoning: Touching a hot stove can cause burns on a person's hand, so if a child touched a hot stove, it is likely that he burned his hand. However, in this context, since we are assuming the stove is hot, it can be inferred that the child burned his hand.",world_knowledge_overentailment
+INF-151,plausible_non_entailment,event_entailment,The runner crossed the finish line before collapsing.,The runner finished the race.,Yes,False,,mistral:7b,cot,Yes,,,," The runner crossed the finish line, which is the final point of a race. Therefore, the runner finished the race.
+
+Final Answer: Yes",correct
+INF-152,plausible_non_entailment,hypernym_event,It rained heavily in the city all afternoon.,Precipitation fell in the city.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-153,plausible_non_entailment,lexical_entailment,She boiled water in the kettle.,The water reached its boiling point.,Yes,False,,mistral:7b,cot,Yes,,,," The Hypothesis follows from the Premise. Boiling water in a kettle implies that the water has reached its boiling point.
+
+Final Answer: Yes",correct
+INF-154,plausible_non_entailment,manner_entailment,He flew from Berlin to Paris.,He traveled from Berlin to Paris.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-155,plausible_non_entailment,factive_temporal,The glass shattered when it hit the floor.,The glass hit the floor.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-156,plausible_non_entailment,logical_equivalence,Every student in the class failed the exam.,No student in the class passed the exam.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-157,plausible_non_entailment,presupposition_existence,Firefighters extinguished the blaze in the kitchen.,There was a fire in the kitchen.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-158,plausible_non_entailment,factive_temporal,The toddler cried after dropping his cone.,The toddler dropped his cone.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-159,plausible_non_entailment,definite_existence,She blew out all five candles on the cake.,There were five candles on the cake.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-160,plausible_non_entailment,intersective_entailment,The ambulance transported two injured passengers.,Two passengers were injured.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-161,plausible_non_entailment,adjunct_drop,He arrived at work completely soaked.,He arrived at work.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that he arrived at work, so it implies that he indeed arrived at work. The rest of the sentence (being soaked) is not relevant to the hypothesis.",correct
+INF-162,plausible_non_entailment,passive_entailment,The customer paid the bill in cash.,The bill was paid.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-163,plausible_non_entailment,lexical_presupposition,She woke up at 6:00 AM.,She was asleep before 6:00 AM.,Yes,False,,mistral:7b,cot,Yes,,,," If someone wakes up at 6:00 AM, it implies that they were asleep before that time. Final Answer: Yes",correct
+INF-164,plausible_non_entailment,aspectual_presupposition,The car stopped completely at the red light.,The car was moving before it stopped.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The Premise states that the car stopped completely at the red light, which implies that it was moving before it stopped.",correct
+INF-165,plausible_non_entailment,aspectual_presupposition,His phone turned off automatically.,His phone was on before it turned off.,Yes,False,,mistral:7b,cot,No,,,," Final Answer: No
+
+The Premise states that his phone turned off automatically, which does not necessarily imply that the phone was on before it turned off. The phone could have been off and then turned on automatically, or it could have been on and then turned off automatically. However, the Premise does not provide information to support the Hypothesis that the phone was on before it turned off.",overly_strict_on_control
+INF-166,plausible_non_entailment,conjunct_entailment,Heavy rain fell on the city after dark clouds gathered rapidly.,Dark clouds gathered over the city.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-167,plausible_non_entailment,conjunct_entailment,She made a cup of tea after putting the kettle on the stove.,She put the kettle on the stove.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-168,plausible_non_entailment,conjunct_entailment,The glass slipped from her hand and shattered on the tile floor.,The glass shattered.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-169,plausible_non_entailment,lexical_complement,The student passed the final exam.,The student did not fail the final exam.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-170,plausible_non_entailment,hypernym_event,He got soaked on his way to work.,He got wet on his way to work.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-171,plausible_non_entailment,adjunct_drop,She set her alarm for 6:00 AM.,She set an alarm.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-172,plausible_non_entailment,temporal_entailment,Her phone turned off after its battery reached zero percent.,The battery on her phone reached zero percent.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-173,plausible_non_entailment,lexical_entailment,He stayed up until 4:00 AM.,He did not go to bed before 4:00 AM.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-174,plausible_non_entailment,event_entailment,He dropped a heavy dictionary onto his bare foot.,The dictionary fell.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-175,plausible_non_entailment,adjunct_drop,The lights in the entire neighborhood went out at once.,The lights in the neighborhood went out.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-176,plausible_non_entailment,presupposition_existence,She took two aspirin tablets for her headache.,She had a headache.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-177,plausible_non_entailment,synonym,The plane touched down smoothly on the runway.,The plane landed.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-178,plausible_non_entailment,locative_entailment,She locked her keys inside her car.,Her keys were in the car.,Yes,False,,mistral:7b,cot,Yes,,,," Final Answer: Yes
+
+The premise states that she locked her keys inside her car, which implies that the keys were indeed in the car before they were locked inside.",correct
+INF-179,plausible_non_entailment,implicative,He forgot to put sunscreen on at the beach.,He did not put sunscreen on.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct
+INF-180,plausible_non_entailment,presupposition_existence,The child touched the hot stove.,The stove was hot.,Yes,False,,mistral:7b,cot,Yes,,,, Final Answer: Yes,correct

@@ -1,0 +1,5 @@
+scope,n,always_yes_acc,always_no_acc
+overall,180,0.5,0.5
+lexical_entailment,60,0.5,0.5
+presupposition,60,0.5,0.5
+plausible_non_entailment,60,0.5,0.5

@@ -1,0 +1,4 @@
+model,strategy,n_samples,accuracy,acc_ci_low,acc_ci_high,macro_f1,balanced_accuracy,false_positive_rate,false_negative_rate,invalid_rate,acc_excl_contested,acc_lexical,f1_lexical,bacc_lexical,acc_presupposition,f1_presupposition,bacc_presupposition,acc_plausible_non_ent,f1_plausible_non_ent,bacc_plausible_non_ent
+mixtral:8x7b,cot,180,0.7667,0.7,0.8222,0.7631,0.7667,0.3556,0.1111,0.0,0.7614,0.9,0.8996,0.9,0.7167,0.716,0.7167,0.6833,0.6622,0.6833
+mixtral:8x7b,few_shot,180,0.8556,0.8056,0.9056,0.8572,0.8556,0.2,0.0778,0.0056,0.8523,0.9,0.906,0.9,0.8333,0.8333,0.8333,0.8333,0.8316,0.8333
+mixtral:8x7b,zero_shot,180,0.7778,0.7165,0.8333,0.8006,0.7778,0.2556,0.0556,0.0667,0.7727,0.8833,0.8885,0.8833,0.7667,0.794,0.7667,0.6833,0.7007,0.6833

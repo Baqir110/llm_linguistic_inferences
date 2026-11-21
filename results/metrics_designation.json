@@ -1,0 +1,33 @@
+{
+  "primary": [
+    "model",
+    "strategy",
+    "n_samples",
+    "accuracy",
+    "acc_ci_low",
+    "acc_ci_high",
+    "macro_f1",
+    "balanced_accuracy",
+    "acc_lexical",
+    "f1_lexical",
+    "bacc_lexical",
+    "acc_presupposition",
+    "f1_presupposition",
+    "bacc_presupposition",
+    "acc_plausible_non_ent",
+    "f1_plausible_non_ent",
+    "bacc_plausible_non_ent"
+  ],
+  "exploratory": [
+    "model",
+    "strategy",
+    "false_positive_rate",
+    "false_negative_rate",
+    "invalid_rate",
+    "acc_excl_contested",
+    "error_attribution",
+    "robustness_consistency",
+    "logprob_margin"
+  ],
+  "note": "Primary metrics are pre-registered for main comparisons; exploratory metrics are diagnostic and should be interpreted cautiously."
+}

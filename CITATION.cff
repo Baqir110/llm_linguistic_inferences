@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+title: "Evaluating Large Language Models on Simple Linguistic Inferences"
+type: software
+authors:
+  - family-names: "Baqir"
+    given-names: "Muhammad"
+date-released: "2026-05-21"
+version: "0.1.0"
+license: MIT
+repository-code: "local project submission"
+preferred-citation:
+  type: report
+  title: "Evaluating Large Language Models on Simple Linguistic Inferences"
+  authors:
+    - family-names: "Baqir"
+      given-names: "Muhammad"
+  year: 2026
+  institution: "University of Bamberg"

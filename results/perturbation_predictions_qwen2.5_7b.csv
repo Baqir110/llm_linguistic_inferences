@@ -1,0 +1,110 @@
+base_id,premise,hypothesis,gold_label,model,strategy,predicted_label,prob_yes,prob_no,logprob_margin,raw_output
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999983526191,1.6473809174154133e-09,20.224079131296605,Yes
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999985902,1.4097999459978357e-09,20.379818023483814,Yes
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999982109185,1.7890815973071076e-09,20.141563421102344,Yes
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999997755493,2.24450631946352e-10,22.217365334947253,Yes
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,qwen2.5:7b,zero_shot,No,1.0978137045507462e-05,0.9999890218629545,-11.419593826067395,No
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,qwen2.5:7b,zero_shot,Yes,0.8804962473048383,0.11950375269516175,1.9971378917371674,Yes
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,qwen2.5:7b,zero_shot,Yes,0.9966721545161723,0.0033278454838277893,5.702096791162169,Yes
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,qwen2.5:7b,zero_shot,No,6.221615259456694e-09,0.9999999937783848,-18.89523626967126,No
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,qwen2.5:7b,zero_shot,Yes,0.9999998792628836,1.2073711634287184e-07,15.929650126322572,Yes
+INF-042,That is a toy pistol.,That is a pistol.,No,qwen2.5:7b,zero_shot,No,0.07457085221536477,0.9254291477846351,-2.518507863590124,No
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999975763467,2.4236532610203356e-09,19.837989820681003,Yes
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999727211398282,2.727886017185787e-05,10.509371229186211,Yes
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,qwen2.5:7b,zero_shot,Yes,0.99999999849435,1.5056499956148778e-09,20.314041139703892,Yes
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999948324434,5.167556525601675e-09,19.080865880590164,Yes
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,qwen2.5:7b,zero_shot,Yes,0.7493571519101794,0.25064284808982074,1.095186698348609,Yes
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,qwen2.5:7b,zero_shot,Yes,0.999999999655325,3.4467486259837893e-10,21.78841957016736,Yes
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,qwen2.5:7b,zero_shot,No,5.788064648869763e-07,0.9999994211935352,-14.362297093978732,No
+INF-095,He feigned being asleep.,He was asleep.,No,qwen2.5:7b,zero_shot,No,5.186521338294029e-11,0.9999999999481348,-23.68237281280218,No
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,qwen2.5:7b,zero_shot,No,0.0010463773579405635,0.9989536226420594,-6.861374290356266,No
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,qwen2.5:7b,zero_shot,No,1.946747308661815e-09,0.9999999980532528,-20.05710590200322,No
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,qwen2.5:7b,zero_shot,No,2.9604851479325016e-10,0.9999999997039515,-21.940497773410247,No
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,qwen2.5:7b,zero_shot,No,2.1257867055847412e-10,0.9999999997874214,-22.271708981471118,No
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,qwen2.5:7b,zero_shot,No,5.0066800061145864e-09,0.99999999499332,-19.112492809938267,No
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,qwen2.5:7b,zero_shot,No,4.3448280891181607e-07,0.9999995655171912,-14.649109023761001,No
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,qwen2.5:7b,zero_shot,No,0.000489577743635325,0.9995104222563646,-7.62147758843465,No
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,qwen2.5:7b,zero_shot,No,9.053275259447044e-09,0.9999999909467249,-18.520139228532667,No
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,qwen2.5:7b,zero_shot,No,1.2459346455686863e-10,0.9999999998754066,-22.80596496221572,No
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,qwen2.5:7b,zero_shot,No,2.433331478799838e-09,0.9999999975666685,-19.834004537164187,No
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999933207282,6.679271658223484e-09,18.824256881863214,Yes
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,qwen2.5:7b,zero_shot,Yes,0.9999999946428726,5.357127316385435e-09,19.044837948613825,Yes
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,qwen2.5:7b,few_shot,Yes,0.9999999853452548,1.4654745312224278e-08,18.038501627179567,Yes
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,qwen2.5:7b,few_shot,Yes,0.9999999936426927,6.357307383850253e-09,18.873660910201462,Yes
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,qwen2.5:7b,few_shot,Yes,0.9999999483596751,5.164032479716136e-08,16.778962929704484,Yes
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,qwen2.5:7b,few_shot,Yes,0.9999999903562425,9.643757471062756e-09,18.456955015468473,Yes
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,qwen2.5:7b,few_shot,No,0.024656716954022367,0.9753432830459775,-3.677740137772773,No
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,qwen2.5:7b,few_shot,Yes,0.9769284461103588,0.02307155388964123,3.745812985646719,Yes
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,qwen2.5:7b,few_shot,Yes,0.9999934434263946,6.556573605476765e-06,11.935035851106118,Yes
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,qwen2.5:7b,few_shot,No,1.5532399711096435e-10,0.999999999844676,-22.585507876557884,No
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,qwen2.5:7b,few_shot,Yes,0.9999999779788753,2.202112466370577e-08,17.63126361028898,Yes
+INF-042,That is a toy pistol.,That is a pistol.,No,qwen2.5:7b,few_shot,Yes,0.8265808434937806,0.17341915650621942,1.56158619268827,Yes
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,qwen2.5:7b,few_shot,Yes,0.999999928067267,7.1932732997296e-08,16.44753434662062,Yes
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,qwen2.5:7b,few_shot,Yes,0.9999798709958183,2.0129004181762216e-05,10.813328659690493,Yes
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,qwen2.5:7b,few_shot,Yes,0.9999998575954693,1.4240453071732452e-07,15.764593879234996,Yes
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,qwen2.5:7b,few_shot,Yes,0.9999994493699268,5.506300732056971e-07,14.41220207612776,Yes
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,qwen2.5:7b,few_shot,Yes,0.9677443297362296,0.032255670263770346,3.4012740802975605,Yes
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,qwen2.5:7b,few_shot,Yes,0.999999975751155,2.424884491300461e-08,17.534896828901953,Yes
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,qwen2.5:7b,few_shot,No,1.7634699753382417e-09,0.99999999823653,-20.15598239024307,No
+INF-095,He feigned being asleep.,He was asleep.,No,qwen2.5:7b,few_shot,No,5.178082020560667e-10,0.9999999994821918,-21.38141620801778,No
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,qwen2.5:7b,few_shot,No,3.297398252129243e-07,0.9999996702601747,-14.92496157214908,No
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,qwen2.5:7b,few_shot,No,5.295483047835597e-09,0.9999999947045168,-19.056411629594084,No
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,qwen2.5:7b,few_shot,No,2.2307304600569514e-10,0.9999999997769269,-22.22352183731795,No
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,qwen2.5:7b,few_shot,No,2.0611545758817645e-09,0.9999999979388454,-19.999999535361493,No
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,qwen2.5:7b,few_shot,No,1.8269657185309504e-10,0.9999999998173035,-22.423194416341463,No
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,qwen2.5:7b,few_shot,No,6.626799063253566e-10,0.9999999993373201,-21.134729037552823,No
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,qwen2.5:7b,few_shot,No,3.0273182420249917e-07,0.9999996972681758,-15.010418189248295,No
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,qwen2.5:7b,few_shot,No,2.4668489621362767e-10,0.9999999997533151,-22.12290931731373,No
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,qwen2.5:7b,few_shot,No,7.621491743806153e-11,0.9999999999237852,-23.297463905415878,No
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,qwen2.5:7b,few_shot,No,1.945500229320274e-10,0.9999999998054501,-22.36033179843129,No
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,qwen2.5:7b,few_shot,Yes,0.999999753940943,2.4605905691979873e-07,15.21769401498719,Yes
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,qwen2.5:7b,few_shot,Yes,0.9999999692288991,3.0771100891239064e-08,17.29668983941056,Yes
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,qwen2.5:7b,cot,Yes,,,,"A sedan is a type of automobile. Therefore, if a shopper purchased a sedan, it must be true that they purchased an automobile. Final Answer: Yes"
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,qwen2.5:7b,cot,Yes,,,,"A finch is a type of bird. Therefore, if a finch perched on the railing, it must be true that a bird perched on the railing. Final Answer: Yes"
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,qwen2.5:7b,cot,Yes,,,,"A carrot is a type of vegetable. Therefore, if the cook chopped a carrot, it must be true that the cook chopped a vegetable. Final Answer: Yes"
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,qwen2.5:7b,cot,Yes,,,,"The premise states that the locomotive arrived at midnight, which directly implies that the locomotive arrived. 
+Final Answer: Yes"
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,qwen2.5:7b,cot,No,,,,"Murmuring implies a lower volume of speech than speaking. Therefore, if Elena murmured the secret, it does not necessarily mean she spoke it. Final Answer: No"
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,qwen2.5:7b,cot,No,,,,"The shopper not purchasing an automobile does not necessarily mean they did not purchase a sedan, as a sedan is a type of automobile. Final Answer: No"
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,qwen2.5:7b,cot,Yes,,,,"If the shopper did not purchase a sedan, and a sedan is a type of automobile, then the shopper did not purchase an automobile. 
+Final Answer: Yes"
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,qwen2.5:7b,cot,No,,,,"An automobile can be a variety of vehicle types, not necessarily a sedan. 
+Final Answer: No"
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,qwen2.5:7b,cot,Yes,,,,"A counterfeit diamond is still a diamond in the sense that it is a fake or imitation of a diamond. Therefore, if it is a counterfeit diamond, it must be a diamond. 
+Final Answer: Yes"
+INF-042,That is a toy pistol.,That is a pistol.,No,qwen2.5:7b,cot,Yes,,,,"A toy pistol is a type of pistol. 
+Therefore, if it is a toy pistol, it must be a pistol. Final Answer: Yes"
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,qwen2.5:7b,cot,Yes,,,,"If Daniel quit smoking last year, it implies that he used to smoke before quitting. 
+Therefore, the hypothesis that Daniel used to smoke must be true. 
+
+Final Answer: Yes"
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,qwen2.5:7b,cot,Yes,,,,"The premise states that Daniel did not quit smoking last year, which implies he was smoking before that time. Therefore, he used to smoke. 
+Final Answer: Yes"
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,qwen2.5:7b,cot,Yes,,,,"Hannah regretted selling her apartment implies that she did sell her apartment. 
+Final Answer: Yes"
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,qwen2.5:7b,cot,Yes,,,,"Hannah did not regret selling her apartment, which implies she did sell it. Therefore, the hypothesis that Hannah sold her apartment must be true. Final Answer: Yes"
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,qwen2.5:7b,cot,Yes,,,,"The premise states that Lucas returned to Vienna, which implies he was not in Vienna at the moment of returning but was there previously. 
+Therefore, Lucas had to have been in Vienna before returning there. Final Answer: Yes"
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,qwen2.5:7b,cot,Yes,,,,"The premise states that Thomas shattered the vase, which means someone (Thomas) did indeed shatter the vase. 
+Therefore, the hypothesis that someone shattered the vase must be true given the premise. Final Answer: Yes"
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,qwen2.5:7b,cot,No,,,,"The premise states that Daniel claims the earth is flat, but it does not confirm the truth of the claim. The hypothesis directly asserts that the earth is flat. 
+Final Answer: No"
+INF-095,He feigned being asleep.,He was asleep.,No,qwen2.5:7b,cot,No,,,,"Feigning being asleep means pretending to be asleep, not actually being asleep. Therefore, the hypothesis that he was actually asleep does not follow from the premise. Final Answer: No"
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,qwen2.5:7b,cot,No,,,,"The premise states a conditional relationship, but does not assert that the condition (Daniel used to smoke) is true. Therefore, the hypothesis could be false even if the premise is true. Final Answer: No."
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,qwen2.5:7b,cot,No,,,,"The premise states that Daniel never smoked, which directly contradicts the hypothesis that he used to smoke. 
+Final Answer: No"
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,qwen2.5:7b,cot,No,,,,"The premise only states that the sprinter collapsed after finishing, which could be due to various reasons. Myocardial infarction is a specific medical condition. Not all collapses are due to a myocardial infarction. 
+Final Answer: No"
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,qwen2.5:7b,cot,No,,,,"The premise indicates that storm clouds gathered swiftly, which suggests an impending storm but does not specify the outcome. Heavy rain is a possible result, but it is not guaranteed. Final Answer: No"
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,qwen2.5:7b,cot,No,,,,"Placing a kettle on the stove and lighting the burner suggests heating water, which is a step in brewing tea, but it does not necessarily mean she intended to brew tea. Final Answer: No"
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,qwen2.5:7b,cot,No,,,,"The premise states that the tumbler hit a stone floor, which could result in shattering but does not guarantee it. Final Answer: No"
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,qwen2.5:7b,cot,No,,,,"Smoke billowing out of a kitchen window is a strong indicator of a fire, but it could also be due to other causes like a cooking accident or a malfunctioning appliance. Final Answer: No"
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,qwen2.5:7b,cot,No,,,,"The premise describes an ambulance racing, which could be for various reasons, not necessarily a crash. The siren's sound does not indicate a crash. 
+Final Answer: No"
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,qwen2.5:7b,cot,No,,,,"The abrupt pressing of the brake pedal could result in the vehicle stopping, but it does not necessarily mean the vehicle came to a full stop. The vehicle could have slowed down significantly but not stopped completely. Final Answer: No"
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,qwen2.5:7b,cot,No,,,,"The premise states that the cat knocked the cup off the desk but does not specify what happened to the cup after it was knocked off. 
+Final Answer: No"
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,qwen2.5:7b,cot,Yes,,,,"The sprinter crossed the finish line, which means the race was completed. Therefore, the sprinter finished the race. 
+Final Answer: Yes"
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,qwen2.5:7b,cot,Yes,,,,"If every pupil failed the test, then it must be true that no pupil passed the test. 
+Final Answer: Yes"

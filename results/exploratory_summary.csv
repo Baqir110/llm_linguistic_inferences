@@ -1,0 +1,16 @@
+model,strategy,false_positive_rate,false_negative_rate,invalid_rate,acc_excl_contested
+llama3:latest,cot,0.5333,0.1889,0.0444,0.5966
+llama3:latest,few_shot,0.3889,0.0667,0.0,0.767
+llama3:latest,zero_shot,0.6222,0.0222,0.0,0.6705
+mistral:7b,cot,0.4222,0.0444,0.0056,0.7557
+mistral:7b,few_shot,0.5111,0.0111,0.0,0.7386
+mistral:7b,zero_shot,0.5778,0.0444,0.0,0.6875
+mixtral:8x7b,cot,0.3556,0.1111,0.0,0.7614
+mixtral:8x7b,few_shot,0.2,0.0778,0.0056,0.8523
+mixtral:8x7b,zero_shot,0.2556,0.0556,0.0667,0.7727
+openai/gpt-oss-20b,cot,0.0889,0.0444,0.0278,0.9148
+openai/gpt-oss-20b,few_shot,0.2667,0.0444,0.4778,0.358
+openai/gpt-oss-20b,zero_shot,0.0111,0.0444,0.5333,0.4432
+qwen2.5:7b,cot,0.1444,0.0556,0.0,0.8977
+qwen2.5:7b,few_shot,0.1333,0.0556,0.0,0.9034
+qwen2.5:7b,zero_shot,0.1889,0.0778,0.0,0.8636

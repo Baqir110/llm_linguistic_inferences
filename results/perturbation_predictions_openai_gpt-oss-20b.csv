@@ -1,0 +1,136 @@
+base_id,premise,hypothesis,gold_label,model,strategy,predicted_label,prob_yes,prob_no,logprob_margin,raw_output
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-042,That is a toy pistol.,That is a pistol.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-095,He feigned being asleep.,He was asleep.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,openai/gpt-oss-20b,zero_shot,Invalid,,,,
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-042,That is a toy pistol.,That is a pistol.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-095,He feigned being asleep.,He was asleep.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,openai/gpt-oss-20b,few_shot,Invalid,,,,
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that the shopper bought a sedan, which is a specific category of vehicle. Since a sedan is a type of automobile, the purchase of a sedan necessarily implies the purchase of an automobile. Therefore, the hypothesis must be true whenever the premise is true.  
+
+Final Answer: Yes"
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that a finch, which is a specific type of bird, is perched on the railing. Since a finch is a bird, the fact that a finch is perched implies that some bird is perched. Therefore the hypothesis must be true.  
+
+Final Answer: Yes"
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that the cook chopped a carrot. A carrot is a type of vegetable. Therefore, if the cook chopped a carrot, it follows that the cook chopped a vegetable.  
+Final Answer: Yes"
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that the locomotive arrived at a specific time (midnight). This necessarily means that the locomotive did arrive, regardless of the time. Therefore, the hypothesis that the locomotive arrived follows from the premise.  
+
+Final Answer: Yes"
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"Elena murmured the secret means she said it in a low voice, which is a form of speaking. Therefore, it must be true that she spoke the secret.  
+Final Answer: Yes"
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states the shopper bought no automobile at all. A sedan is a specific kind of automobile, so if no automobile was bought, a sedan could not have been bought. Thus the hypothesis must be true.  
+
+Final Answer: Yes"
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only rules out buying a sedan, which is a specific kind of automobile. It does not exclude the possibility of buying other automobile types (e.g., SUV, truck). Therefore, we cannot conclude that the shopper bought no automobile at all.  
+
+Final Answer: No"
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that the shopper bought an automobile, which could be any type of car. It does not specify that the car was a sedan, so the hypothesis is not guaranteed.  
+Final Answer: No"
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,openai/gpt-oss-20b,cot,No,,,,"The premise states the object is a counterfeit diamond, meaning it is a fake, not a genuine diamond. Therefore, it cannot be concluded that it is a real diamond.  
+Final Answer: No"
+INF-042,That is a toy pistol.,That is a pistol.,No,openai/gpt-oss-20b,cot,Yes,,,,"The premise states the object is a toy pistol, which is a specific kind of pistol. Therefore, it must also be a pistol.  
+Final Answer: Yes"
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that Daniel stopped smoking last year, which implies he was smoking before that. Therefore, he must have used to smoke.  
+Final Answer: Yes"
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that Daniel did not stop smoking last year, which presupposes that he was smoking before that time. Therefore, it must be true that he used to smoke.  
+Final Answer: Yes"
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise says Hannah regretted selling her apartment, which presupposes that she actually sold it. Therefore the hypothesis that she sold her apartment must be true.  
+Final Answer: Yes"
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that Hannah did not regret *selling* her apartment, which presupposes that she actually performed the sale. If she had not sold it, the action of selling would not exist to be regretted or not regretted. Therefore the hypothesis that she sold her apartment must be true.  
+
+Final Answer: Yes"
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that Lucas “returned” to Vienna, which by definition means he had been there previously. Therefore the hypothesis that Lucas had been in Vienna before must be true.  
+
+Final Answer: Yes"
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that Thomas shattered the vase, which is a specific instance of someone shattering it. Therefore, it is necessarily true that someone shattered the vase.  
+Final Answer: Yes"
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that Daniel makes the claim; it does not assert the claim’s truth. Therefore we cannot conclude that the earth is flat.  
+Final Answer: No"
+INF-095,He feigned being asleep.,He was asleep.,No,openai/gpt-oss-20b,cot,No,,,,"The premise says he pretended to be asleep, which explicitly indicates he was not actually asleep. Therefore the hypothesis that he was asleep does not logically follow.  
+
+Final Answer: No"
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states a conditional: if Daniel used to smoke, then he quit last year. It does not assert that Daniel actually used to smoke. Therefore, we cannot conclude that he used to smoke.  
+Final Answer: No"
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,openai/gpt-oss-20b,cot,No,,,,"The premise states that Daniel never smoked, so he could not have quit. Therefore he never smoked in the past. The hypothesis claims he used to smoke, which contradicts the premise.  
+Final Answer: No"
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that the sprinter collapsed after finishing; it does not specify the cause. A myocardial infarction is one possible cause, but many other causes could explain the collapse. Therefore the hypothesis does not logically follow from the premise.  
+
+Final Answer: No"
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that storm clouds gathered quickly over the town. This does not guarantee that rain started, let alone that it was heavy; clouds can gather without precipitating. Therefore the hypothesis does not logically follow from the premise.  
+
+Final Answer: No"
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,openai/gpt-oss-20b,cot,No,,,,"She put the kettle on the stove and lit the burner, which prepares water for boiling, but the premise does not specify that she actually poured the water into a cup, added tea leaves or tea bags, or finished the brewing process. The action could be for any purpose that requires boiling water, not exclusively tea. Therefore the hypothesis does not logically follow from the premise.  
+
+Final Answer: No"
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that the tumbler fell onto a stone floor. It does not specify any damage or breakage. Therefore, the hypothesis that it shattered is not a necessary consequence of the premise.  
+
+Final Answer: No"
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that smoke was coming out of the kitchen window; it does not specify the cause. Smoke can result from cooking, a malfunctioning appliance, or other non‑fire sources. Therefore, the hypothesis that there was a fire does not logically follow.  
+
+Final Answer: No"
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only tells us that an ambulance was speeding down the avenue with sirens. Ambulances can be dispatched for many reasons—medical emergencies, heart attacks, accidents, etc. The text does not specify a crash or injury, so we cannot be certain that someone was hurt in a crash.  
+Final Answer: No"
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that the brake pedal was pressed abruptly, indicating a sudden application of brakes. This action may slow the vehicle but does not guarantee it stops completely; the vehicle could still be moving after the abrupt braking. Therefore, the hypothesis that the vehicle came to a full stop does not necessarily follow.  
+
+Final Answer: No"
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,openai/gpt-oss-20b,cot,No,,,,"The premise only states that the cat knocked the cup off the desk, implying it fell. It does not say the cup broke or that it shattered on impact. Since a porcelain cup could survive a fall, the hypothesis is not guaranteed.  
+Final Answer: No"
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that the sprinter crossed the finish line, which is the defining action of finishing a race. Since the sprinter did cross the line before collapsing, it must have completed the race.  
+Final Answer: Yes"
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,openai/gpt-oss-20b,cot,Yes,,,,"The premise states that every pupil in the room failed the test, meaning each pupil did not pass. If all pupils failed, then it is impossible for any pupil to have passed. Therefore, the hypothesis that no pupil in the room passed the test must be true.  
+
+Final Answer: Yes"

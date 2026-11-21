@@ -1,0 +1,4 @@
+model,strategy,pairs,consistency_rate,joint_accuracy,acc_original,acc_perturbed
+qwen2.5:7b,cot,30,0.8667,0.7667,0.8333,0.8333
+qwen2.5:7b,few_shot,30,0.8333,0.8,0.9,0.8667
+qwen2.5:7b,zero_shot,30,0.8667,0.8,0.8333,0.9

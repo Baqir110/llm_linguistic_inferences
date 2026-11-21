@@ -1,0 +1,16 @@
+model,strategy,factivity_overgeneralization,false_positive_other,format_error,lexical_entailment_failure,negation_scope_failure,overly_strict_on_control,presupposition_projection_failure,sibling_term_confusion,upward_monotonicity_bias,world_knowledge_overentailment
+llama3:latest,cot,9,0,8,5,6,3,5,0,8,29
+llama3:latest,few_shot,5,0,0,2,9,2,2,0,5,16
+llama3:latest,zero_shot,10,0,0,1,8,0,1,0,10,28
+mistral:7b,cot,8,0,1,0,8,1,3,0,4,18
+mistral:7b,few_shot,8,0,0,0,9,0,1,0,6,23
+mistral:7b,zero_shot,8,0,0,0,9,1,3,0,7,28
+mixtral:8x7b,cot,6,0,0,0,7,2,5,0,5,17
+mixtral:8x7b,few_shot,3,0,1,0,5,2,3,0,4,8
+mixtral:8x7b,zero_shot,4,0,12,0,4,2,3,0,5,10
+openai/gpt-oss-20b,cot,0,0,5,0,3,0,1,0,2,6
+openai/gpt-oss-20b,few_shot,12,1,86,2,4,1,0,1,5,2
+openai/gpt-oss-20b,zero_shot,0,0,96,1,2,1,0,0,0,1
+qwen2.5:7b,cot,3,0,0,1,2,0,2,0,6,4
+qwen2.5:7b,few_shot,3,0,0,0,2,0,3,0,5,4
+qwen2.5:7b,zero_shot,3,0,0,1,4,0,3,0,7,6

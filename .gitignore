@@ -1,0 +1,16 @@
+# Secrets
+apikeys.env
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local run caches (large/resumable)
+results/.cache_*.jsonl
+
+# OS/editor
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+model,strategy,pairs,consistency_rate,joint_accuracy,acc_original,acc_perturbed
+mistral:7b,cot,30,0.9667,0.8,0.8333,0.8
+mistral:7b,few_shot,30,0.9667,0.6333,0.6333,0.6667
+mistral:7b,zero_shot,30,0.9667,0.6667,0.6667,0.7

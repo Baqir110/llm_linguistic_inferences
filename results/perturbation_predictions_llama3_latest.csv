@@ -1,0 +1,151 @@
+base_id,premise,hypothesis,gold_label,model,strategy,predicted_label,prob_yes,prob_no,logprob_margin,raw_output
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,llama3:latest,zero_shot,Yes,0.9999885818088434,1.1418191156533483e-05,11.380291340623266,Yes
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,llama3:latest,zero_shot,Yes,0.9999859196977129,1.4080302287067537e-05,11.170719657811468,Yes
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,llama3:latest,zero_shot,Yes,0.9999530395052958,4.696049470429531e-05,9.966156886313627,Yes
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,llama3:latest,zero_shot,Yes,0.9999435249180018,5.647508199815133e-05,9.781654566997322,Yes
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,llama3:latest,zero_shot,No,0.4138056932562087,0.5861943067437914,-0.34825479240007917,No
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,llama3:latest,zero_shot,Yes,0.9987065155642244,0.001293484435775615,6.649121267345251,Yes
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,llama3:latest,zero_shot,Yes,0.9998152821118453,0.00018471788815461237,8.596496090716778,Yes
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,llama3:latest,zero_shot,No,0.059219343851071485,0.9407806561489285,-2.7654617731082993,No
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,llama3:latest,zero_shot,No,0.04430427354864733,0.9556957264513526,-3.071358443854657,No
+INF-042,That is a toy pistol.,That is a pistol.,No,llama3:latest,zero_shot,Yes,0.6724512843843878,0.3275487156156121,0.7192928752905414,Yes
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,llama3:latest,zero_shot,Yes,0.9999959112184875,4.088781512423735e-06,12.407259462229094,Yes
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,llama3:latest,zero_shot,Yes,0.9997002704585579,0.0002997295414420813,8.112330243986397,Yes
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,llama3:latest,zero_shot,Yes,0.9999345570978793,6.544290212077472e-05,9.634267073798167,Yes
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,llama3:latest,zero_shot,Yes,0.9998794341044553,0.00012056589554468882,9.023193530344615,Yes
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,llama3:latest,zero_shot,Yes,0.5125188786163527,0.4874811213836473,0.05008598233753503,Yes
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,llama3:latest,zero_shot,Yes,0.9938922887075041,0.0061077112924958574,5.09207672019391,Yes
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,llama3:latest,zero_shot,Yes,0.9998680723471283,0.0001319276528717687,8.933124933579702,Yes
+INF-095,He feigned being asleep.,He was asleep.,No,llama3:latest,zero_shot,No,0.0019738596996171937,0.9980261403003827,-6.225788604324217,No
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,llama3:latest,zero_shot,Yes,0.9999358138938823,6.4186106117764e-05,9.653659598134615,Yes
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,llama3:latest,zero_shot,Yes,0.9846949829049648,0.015305017095035124,4.164151241837197,Yes
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,llama3:latest,zero_shot,No,0.01926846326156649,0.9807315367384335,-3.929829027723974,No
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,llama3:latest,zero_shot,Yes,0.9988476203371842,0.0011523796628158584,6.7647731584248225,Yes
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,llama3:latest,zero_shot,Yes,0.9975639870922562,0.00243601290774379,6.014953645588556,Yes
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,llama3:latest,zero_shot,Yes,0.7244174091701245,0.27558259082987535,0.966480389365161,Yes
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,llama3:latest,zero_shot,Yes,0.993877859756264,0.006122140243736039,5.089702573180075,Yes
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,llama3:latest,zero_shot,Yes,0.7803909373351996,0.21960906266480035,1.2679460180865774,Yes
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,llama3:latest,zero_shot,Yes,0.9659530217527723,0.03404697824722777,3.3453739172213686,Yes
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,llama3:latest,zero_shot,Yes,0.993946163826588,0.006053836173411899,5.100990894699578,Yes
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,llama3:latest,zero_shot,Yes,0.9999942074427578,5.792557242300187e-06,12.058930905973957,Yes
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,llama3:latest,zero_shot,Yes,0.9992629658691438,0.0007370341308561003,7.212139050449314,Yes
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,llama3:latest,few_shot,Yes,0.9997643515998579,0.0002356484001422559,8.35293401757485,Yes
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,llama3:latest,few_shot,Yes,0.9999926022917336,7.397708266293567e-06,11.814332901727644,Yes
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,llama3:latest,few_shot,Yes,0.9994634375589094,0.0005365624410904714,7.529790910220874,Yes
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,llama3:latest,few_shot,Yes,0.9998652854793841,0.0001347145206157627,8.912217957090904,Yes
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,llama3:latest,few_shot,No,0.21167390562038704,0.7883260943796131,-1.3148649201894824,No
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,llama3:latest,few_shot,Yes,0.9834547655535254,0.01654523444647471,4.084973531930512,Yes
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,llama3:latest,few_shot,Yes,0.9973747918263597,0.0026252081736403824,5.939966421763762,Yes
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,llama3:latest,few_shot,No,7.300485222779422e-06,0.9999926995147773,-11.827562442633122,No
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,llama3:latest,few_shot,Yes,0.9216227871867096,0.07837721281329035,2.4646027830990564,Yes
+INF-042,That is a toy pistol.,That is a pistol.,No,llama3:latest,few_shot,No,0.007548487350627535,0.9924515126493725,-4.878830965336433,No
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,llama3:latest,few_shot,Yes,0.9999774004766965,2.2599523303539544e-05,10.69755914489355,Yes
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,llama3:latest,few_shot,Yes,0.9998661970923943,0.00013380290760559355,8.919008867662738,Yes
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,llama3:latest,few_shot,Yes,0.9988419655216791,0.0011580344783209044,6.759872420731255,Yes
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,llama3:latest,few_shot,Yes,0.9997579587421792,0.0002420412578208205,8.326160288921393,Yes
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,llama3:latest,few_shot,No,0.33732585828997863,0.6626741417100213,-0.6752339770169482,No
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,llama3:latest,few_shot,Yes,0.9960819498720177,0.003918050127982392,5.538235419469031,Yes
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,llama3:latest,few_shot,Yes,0.8491447705784283,0.15085522942157178,1.7279090593407902,Yes
+INF-095,He feigned being asleep.,He was asleep.,No,llama3:latest,few_shot,No,4.2846865323885845e-06,0.9999957153134675,-12.360458878529853,No
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,llama3:latest,few_shot,Yes,0.9990820733400357,0.0009179266599642557,6.992474713429093,Yes
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,llama3:latest,few_shot,Yes,0.9997248694332246,0.0002751305667754081,8.197989616277647,Yes
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,llama3:latest,few_shot,No,3.023783239695345e-05,0.9999697621676031,-10.406386450927432,No
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,llama3:latest,few_shot,No,0.0015290769573547771,0.9984709230426453,-6.481560774291916,No
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,llama3:latest,few_shot,No,0.01928542849224963,0.9807145715077503,-3.928931650207374,No
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,llama3:latest,few_shot,No,0.0006708393231059124,0.9993291606768941,-7.3063098440895065,No
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,llama3:latest,few_shot,No,0.0522384467796127,0.9477615532203874,-2.898284192348414,No
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,llama3:latest,few_shot,No,0.1459209518800874,0.8540790481199125,-1.766958702100474,No
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,llama3:latest,few_shot,No,6.139102887953125e-05,0.9999386089711205,-9.698185450026706,No
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,llama3:latest,few_shot,No,0.46326735116442763,0.5367326488355724,-0.1471957901367945,No
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,llama3:latest,few_shot,Yes,0.9990100965474217,0.0009899034525783757,6.916912748508807,Yes
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,llama3:latest,few_shot,Yes,0.9998698004198681,0.00013019958013188364,8.946311844931692,Yes
+INF-001,The shopper purchased a sedan.,The shopper purchased an automobile.,Yes,llama3:latest,cot,Yes,,,,"The Premise uses the term ""sedan"", which is a type of automobile. The shopper's purchase of a sedan implies that they purchased an automobile, as sedans are a specific type of automobile. 
+
+Final Answer: Yes"
+INF-002,A finch perched on the railing.,A bird perched on the railing.,Yes,llama3:latest,cot,Yes,,,,"The Premise only mentions a finch, but the Hypothesis is more general, referring to a bird in general. Since a finch is a type of bird, the Hypothesis logically follows from the Premise.
+
+Final Answer: Yes"
+INF-003,The cook chopped a carrot.,The cook chopped a vegetable.,Yes,llama3:latest,cot,Yes,,,,"The Premise only mentions a specific type of vegetable, a carrot, but the Hypothesis is more general, referring to any vegetable. The Premise does not imply that the cook only chopped carrots, so it's possible that the cook chopped other vegetables as well. 
+
+Final Answer: Yes"
+INF-005,The locomotive arrived at midnight.,The locomotive arrived.,Yes,llama3:latest,cot,Yes,,,,"The Premise specifies the exact time of arrival, midnight, which implies that the locomotive's arrival is not delayed or prevented by any external factors. Therefore, the Hypothesis, which only states the locomotive's arrival without specifying the time, logically follows from the Premise.
+
+Final Answer: Yes"
+INF-006,Elena murmured the secret.,Elena spoke the secret.,Yes,llama3:latest,cot,No,,,,"The Premise implies that Elena communicated the secret in a quiet or subtle manner, which doesn't necessarily require her to have spoken it out loud. The word ""murmured"" suggests a soft and possibly whispered tone, which doesn't necessarily imply vocalization.
+
+Final Answer: No"
+INF-028,The shopper did not purchase an automobile.,The shopper did not purchase a sedan.,Yes,llama3:latest,cot,Yes,,,,"The Premise only mentions automobiles, not sedans. The shopper's purchase decision is not restricted to a specific type of vehicle. Therefore,
+
+Final Answer: Yes"
+INF-029,The shopper did not purchase a sedan.,The shopper did not purchase an automobile.,No,llama3:latest,cot,No,,,,"The Premise only mentions sedans, not automobiles. The shopper's purchase decision is not dependent on the type of automobile, only the specific model. Therefore, the shopper's decision not to purchase a sedan does not imply a decision not to purchase an automobile.
+
+Final Answer: No"
+INF-034,The shopper purchased an automobile.,The shopper purchased a sedan.,No,llama3:latest,cot,No,,,,"The Premise only mentions the purchase of an automobile, which is a broad category that includes sedans. The word ""automobile"" does not imply a specific type of vehicle, so the Hypothesis does not necessarily follow from the Premise.
+
+Final Answer: No"
+INF-041,It is a counterfeit diamond.,It is a diamond.,No,llama3:latest,cot,No,,,,"The Premise implies that the object in question is not a genuine diamond, but it does not deny the possibility that it could be a diamond in some sense. The key is to consider what ""diamond"" means in this context.
+
+The Premise only rules out the possibility that the object is a genuine, naturally occurring diamond. It does not rule out the possibility that the object is a synthetic or artificial diamond, such as a lab-created diamond or a diamond simulant.
+
+Final Answer: No"
+INF-042,That is a toy pistol.,That is a pistol.,No,llama3:latest,cot,No,,,,"The Premise implies that the object referred to by ""that"" is a toy, which is a type of imitation or representation of something. This suggests that the object is not a real, functional pistol. Therefore, the Hypothesis, which states that the object is simply a pistol, without any qualification or indication of it being a toy, does not logically follow from the Premise.
+
+Final Answer: No"
+INF-061,Daniel quit smoking last year.,Daniel used to smoke.,Yes,llama3:latest,cot,Yes,,,,"The Premise implies that Daniel had a habit of smoking in the past, which is now discontinued. This implies that Daniel used to smoke, as quitting implies a prior state of smoking.
+
+Final Answer: Yes"
+INF-062,Daniel did not quit smoking last year.,Daniel used to smoke.,Yes,llama3:latest,cot,Yes,,,,"The Premise implies that Daniel was a smoker at some point, as quitting implies a prior state of smoking. The Hypothesis simply states that Daniel used to smoke, which is consistent with the Premise's implication.
+
+Final Answer: Yes"
+INF-064,Hannah regretted selling her apartment.,Hannah sold her apartment.,Yes,llama3:latest,cot,Yes,,,,"The Premise implies that Hannah had a change of heart regarding the sale of her apartment, which is only possible if she had sold it in the first place. This logical connection is straightforward.
+
+Final Answer: Yes"
+INF-065,Hannah did not regret selling her apartment.,Hannah sold her apartment.,Yes,llama3:latest,cot,Yes,,,,"The Premise implies that Hannah's decision to sell her apartment was not accompanied by regret. This implies that she did, in fact, sell her apartment, as regret would imply a negative emotional response to the decision. The Premise's wording takes for granted that selling an apartment is a significant decision that can elicit regret.
+
+Final Answer: Yes"
+INF-069,Lucas returned to Vienna.,Lucas had been in Vienna before.,Yes,llama3:latest,cot,No,,,,"The Premise only mentions Lucas' return to Vienna, not his first visit. It's possible that this is his first time in Vienna, so the Hypothesis doesn't necessarily follow.
+
+Final Answer: No"
+INF-071,It was Thomas who shattered the vase.,Someone shattered the vase.,Yes,llama3:latest,cot,No,,,,"The Premise specifies that Thomas was the one who shattered the vase, which implies that there was a single person responsible for the action. The Hypothesis only claims that someone shattered the vase, which is a more general statement that doesn't necessarily imply a specific individual.
+
+Final Answer: No"
+INF-091,Daniel claims that the earth is flat.,The earth is flat.,No,llama3:latest,cot,Yes,,,,"The Premise states that Daniel claims something, which implies that the truth value of the claim is not necessarily being evaluated. The Hypothesis simply states the claim itself, without any additional information or evaluation. Therefore,
+
+Final Answer: Yes"
+INF-095,He feigned being asleep.,He was asleep.,No,llama3:latest,cot,No,,,,"The Premise implies that the person's behavior was intentionally deceptive, suggesting that he was not actually asleep. The wording of the Premise takes for granted that the person's behavior was not genuine. Therefore,
+
+Final Answer: No"
+INF-097,"If Daniel used to smoke, he quit last year.",Daniel used to smoke.,No,llama3:latest,cot,Yes,,,,"The Premise implies that Daniel's smoking habit has changed, and the Hypothesis only claims that he used to smoke, which is a part of the Premise. The Hypothesis does not require the additional information that he quit last year.
+
+Final Answer: Yes"
+INF-099,"Daniel never smoked in his life, so he did not quit smoking.",Daniel used to smoke.,No,llama3:latest,cot,Yes,,,,"The Premise implies that Daniel never started smoking, which means he never had the opportunity to quit. The Hypothesis states that Daniel used to smoke, which is consistent with the Premise's assumption that Daniel never smoked. Therefore,
+
+Final Answer: Yes"
+INF-121,The sprinter collapsed right after crossing the finish line.,The sprinter was suffering a myocardial infarction.,No,llama3:latest,cot,Yes,,,,"The Premise implies that the sprinter's physical exertion was intense and sudden, which is consistent with the Hypothesis's claim that the sprinter was experiencing a severe cardiovascular event. Additionally, the Premise's mention of collapse suggests a sudden and severe physiological response, which is also characteristic of a myocardial infarction.
+
+Final Answer: Yes"
+INF-123,Storm clouds gathered swiftly over the town.,It began raining heavily.,No,llama3:latest,cot,Yes,,,,"The Premise sets the scene for a potentially severe weather condition, with storm clouds gathering swiftly, implying a high level of atmospheric instability. This instability is often accompanied by heavy rainfall. Therefore, it is reasonable to infer that the Hypothesis follows from the Premise.
+
+Final Answer: Yes"
+INF-124,She placed the kettle on the stove and lit the burner.,She brewed a cup of tea.,No,llama3:latest,cot,Yes,,,,"The Premise implies that the stove is being used for heating, which is a common purpose for using a kettle. The Hypothesis assumes that the kettle is being used to make tea, which is a common use for a kettle on a stove. Therefore,
+
+Final Answer: Yes"
+INF-125,The tumbler slipped from her hand onto the stone floor.,The tumbler shattered into pieces.,No,llama3:latest,cot,Yes,,,,"The Premise implies that the tumbler fell from a certain height, which is likely to cause damage or breakage. The stone floor also suggests a hard surface that could contribute to the tumbler's destruction. 
+
+Final Answer: Yes"
+INF-126,Smoke billowed out of the kitchen window.,There was a fire in the kitchen.,No,llama3:latest,cot,Yes,,,,"The Premise implies that the smoke is coming from the kitchen, which is a common source of smoke that is often associated with fires. The word ""billowed"" also suggests a sudden and intense release of smoke, which is consistent with the idea of a fire.
+
+Final Answer: Yes"
+INF-128,Sirens wailed as the ambulance raced down the avenue.,Someone had been hurt in a crash.,No,llama3:latest,cot,Yes,,,,"The Premise sets a scene with sirens wailing, which is typically associated with emergency vehicles responding to an incident. The phrase ""raced down the avenue"" implies a sense of urgency and haste, which is consistent with a response to an accident or injury.
+
+Final Answer: Yes"
+INF-131,He pressed the brake pedal abruptly.,The vehicle came to a full stop.,No,llama3:latest,cot,No,,,,"The Premise implies sudden braking action, which is typically associated with a vehicle coming to a stop. However, it's possible to imagine scenarios where the vehicle only slows down or partially stops.
+
+Final Answer: No"
+INF-145,The cat knocked the porcelain cup off the desk.,The cup broke.,No,llama3:latest,cot,Yes,,,,"The Premise implies that the cat's action caused the cup to fall, but it doesn't specify the cup's condition after the fall. The Hypothesis assumes that the cup's falling resulted in its breaking, which is a reasonable inference given the typical fragility of porcelain cups.
+
+Final Answer: Yes"
+INF-151,The sprinter crossed the finish line before collapsing.,The sprinter finished the race.,Yes,llama3:latest,cot,Yes,,,,"The Premise implies that the sprinter completed the race, but it does not explicitly state that the sprinter finished the race in a normal or expected manner. The Hypothesis assumes that the sprinter's completion of the race is not unusual or exceptional.
+
+Final Answer: Yes"
+INF-156,Every pupil in the room failed the test.,No pupil in the room passed the test.,Yes,llama3:latest,cot,Invalid,,,,"The Premise states that every pupil failed, implying that there are no pupils who passed. This information can be used to conclude that no pupil passed, as there is no exception to the failure."

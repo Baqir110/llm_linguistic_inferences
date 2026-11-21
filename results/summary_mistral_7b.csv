@@ -1,0 +1,4 @@
+model,strategy,n_samples,accuracy,acc_ci_low,acc_ci_high,macro_f1,balanced_accuracy,false_positive_rate,false_negative_rate,invalid_rate,acc_excl_contested,acc_lexical,f1_lexical,bacc_lexical,acc_presupposition,f1_presupposition,bacc_presupposition,acc_plausible_non_ent,f1_plausible_non_ent,bacc_plausible_non_ent
+mistral:7b,cot,180,0.7611,0.6944,0.8222,0.7552,0.7611,0.4222,0.0444,0.0056,0.7557,0.9,0.899,0.9,0.7,0.698,0.7,0.6833,0.6557,0.6833
+mistral:7b,few_shot,180,0.7389,0.6722,0.8001,0.7215,0.7389,0.5111,0.0111,0.0,0.7386,0.8667,0.8643,0.8667,0.7333,0.718,0.7333,0.6167,0.5506,0.6167
+mistral:7b,zero_shot,180,0.6889,0.6222,0.75,0.6651,0.6889,0.5778,0.0444,0.0,0.6875,0.8333,0.8286,0.8333,0.7167,0.7068,0.7167,0.5167,0.3939,0.5167

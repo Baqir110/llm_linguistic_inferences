@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-linguistic-inferences"
+version = "0.1.0"
+description = "Benchmark and evaluation pipeline for testing LLMs on simple linguistic inferences."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Muhammad Baqir"}]
+dependencies = [
+  "pandas>=2.1.0",
+  "numpy>=1.26.0",
+  "scipy>=1.11.0",
+  "scikit-learn>=1.3.0",
+  "requests>=2.31.0",
+  "matplotlib>=3.8.0",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.30.0"]
+hf = [
+  "torch>=2.1.0",
+  "transformers>=4.40.0",
+  "accelerate>=0.28.0",
+]
+dev = [
+  "pytest>=8.0.0",
+]
+all = [
+  "openai>=1.30.0",
+  "torch>=2.1.0",
+  "transformers>=4.40.0",
+  "accelerate>=0.28.0",
+  "pytest>=8.0.0",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
