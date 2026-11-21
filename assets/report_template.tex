@@ -1,198 +1,489 @@
 \documentclass[11pt, a4paper]{article}
 
-\usepackage[a4paper, margin=2.5cm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage[a4paper, margin=2.2cm, headheight=15pt, footskip=26pt]{geometry}
+\usepackage{fontspec}
 \usepackage[english]{babel}
-\usepackage{amsmath}
-\usepackage{tabularx}
-\usepackage{xcolor}
-\usepackage{enumitem}
-\usepackage{hyperref}
+\IfFontExistsTF{Noto Sans}{\setmainfont{Noto Sans}}{\setmainfont{TeX Gyre Heros}}
 \usepackage{graphicx}
+\usepackage{amssymb} % Provides \boxtimes for the submission checklist
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
 
-\definecolor{bambergblue}{RGB}{0, 69, 125}
-\definecolor{slatetext}{RGB}{55, 65, 81}
+\definecolor{bambergnavy}{RGB}{0, 56, 101}
+\definecolor{labeltint}{RGB}{238, 244, 250}
+\definecolor{rowtint}{RGB}{248, 250, 252}
+\definecolor{rulegray}{RGB}{185, 198, 212}
+\definecolor{footergray}{RGB}{85, 92, 102}
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=bambergblue,
-    citecolor=bambergblue,
-    urlcolor=bambergblue
+    linkcolor=bambergnavy,
+    citecolor=bambergnavy,
+    urlcolor=bambergnavy
 }
 
-\title{\textcolor{bambergblue}{\textbf{Evaluating Large Language Models on Simple Linguistic Inferences}}}
-\author{
-    \textbf{Muhammad Baqir} (Matriculation No. 2184791) \\
-    M.Sc. International Software Systems Science \\
-    University of Bamberg \\
-    \small Course: GdI-Proj-B/M: LLMs and Linguistic Theory (WS 2026/27) \\
-    \small Supervisor: Dr. Luke Burke
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{rulegray}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[L]{\small\color{footergray} University of Bamberg $\mid$ GdI-Proj-B/M: LLMs and Linguistic Theory $\mid$ Muhammad Baqir}
+\fancyfoot[R]{\small\color{footergray} Page \thepage}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+    \renewcommand{\footrule}{\hbox to\headwidth{\color{rulegray}\leaders\hrule height \footrulewidth\hfill}}
+    \fancyfoot[L]{\small\color{footergray} University of Bamberg $\mid$ GdI-Proj-B/M: LLMs and Linguistic Theory $\mid$ Muhammad Baqir}
+    \fancyfoot[R]{\small\color{footergray} Page \thepage}
 }
-\date{\today}
 
 \begin{document}
+\thispagestyle{plain}
 
+% --- Cover Page ---
+\vspace*{0.4cm}
 \begin{center}
-    \IfFileExists{assets/uni_bambeg_logo.png}{\includegraphics[width=0.55\textwidth]{assets/uni_bambeg_logo.png}}{\IfFileExists{uni_bambeg_logo.png}{\includegraphics[width=0.55\textwidth]{uni_bambeg_logo.png}}{\IfFileExists{assets/uni_bamberg_logo.png}{\includegraphics[width=0.55\textwidth]{assets/uni_bamberg_logo.png}}{}}}
+    % Place uni_bamberg_logo.png in the same folder as this .tex file.
+    \IfFileExists{uni_bamberg_logo.png}{%
+        \includegraphics[width=3.6cm,height=2.6cm,keepaspectratio]{uni_bamberg_logo.png}%
+    }{%
+        \fcolorbox{bambergnavy}{labeltint}{%
+            \parbox[c][2.2cm][c]{3.4cm}{\centering\small\bfseries\color{bambergnavy} OTTO-FRIEDRICH\\UNIVERSITÄT\\BAMBERG\\[2pt]\scriptsize\normalfont\color{footergray} Logo file not found}%
+        }%
+    }\\[0.9em]
+    {\large\bfseries\color{bambergnavy} Otto-Friedrich-Universität Bamberg}\\
+    {\normalsize\color{footergray} University of Bamberg}\\[1.6em]
+    {\LARGE\bfseries\color{bambergnavy} LLMs and Linguistic Inferences}\\[0.4em]
+    {\large\color{footergray} Evaluating Large Language Models on Entailment, Presupposition, and Implicature}
 \end{center}
-\vspace{0.5em}
-\maketitle
 
-\begin{abstract}
-Fluent text generation in Large Language Models (LLMs) does not confirm that these systems execute rule-based semantic reasoning. Building on the evaluation framework of Basmov et al. (2024), this study examines open-weights and proprietary LLMs across three inference classes: lexical entailment, presupposition projection, and plausible non-entailment. Using a controlled benchmark of 180 premise--hypothesis pairs and 30 truth-preserving lexical paraphrases, we evaluate zero-shot, few-shot, and chain-of-thought prompting alongside next-token log-probabilities. We isolate specific error patterns—including world-knowledge over-entailment, negation scope failures, and upward-monotonicity bias—and connect these findings to the linguistic competence versus performance debate.
-\end{abstract}
+\vspace{1.2em}
 
-\section{Introduction}
-Large Language Models produce grammatical, coherent text across diverse domains, prompting debate over whether they acquire structural linguistic competence (Piantadosi, 2023) or rely on surface statistical associations (Fox and Katzir, 2024; Futrell and Mahowald, 2026). A direct diagnostic for this question is simple, non-contextual semantic inference: determining whether a hypothesis strictly follows from a premise based on word meanings and syntactic structure rather than real-world likelihood.
+\noindent
+\begingroup
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.45}
+\arrayrulecolor{bambergnavy}
+\begin{tabularx}{\textwidth}{|>{\columncolor{labeltint}\bfseries\color{bambergnavy}\raggedright\arraybackslash}p{3.4cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Author & Muhammad Baqir (2184791) \\
+\arrayrulecolor{rulegray}\hline
+Program & M.Sc. International Software Systems Science \\
+\hline
+Course & GdI-Proj-B/M: LLMs and Linguistic Theory (Projektmodul) \\
+\hline
+Supervision & Dr. Luke Burke, University of Bamberg \\
+\hline
+Semester & WS 2026/27 \\
+\hline
+Date & November 22, 2026 \\
+\hline
+Repository & \url{https://github.com/Baqir110/llm_linguistic_inferences} \\
+\arrayrulecolor{bambergnavy}\hline
+\end{tabularx}
+\endgroup
 
-Following Basmov et al. (2024), this project evaluates how reliably modern LLMs distinguish strict logical entailment from plausible real-world continuation. Specifically, we address four research questions:
+\vspace{1.4em}
+\begin{center}
+    \small\itshape\color{footergray}
+    This report summarizes the benchmark, evaluation pipeline, real model runs, analysis,\\
+    and limitations. It is intended for academic project submission.
+\end{center}
+
+\newpage
+
+% --- Body Content ---
+\noindent
+\begin{tabular}{@{}ll@{}}
+\textbf{Student:} & Muhammad Baqir (2184791) \\
+\textbf{Program:} & M.Sc. International Software Systems Science \\
+\textbf{Course:} & GdI-Proj-B/M: LLMs and Linguistic Theory (WS 2026/27) \\
+\textbf{Supervisor:} & Dr. Luke Burke \\
+\textbf{University:} & University of Bamberg \\
+\textbf{Date:} & 22 November 2026 \\
+\end{tabular}
+
+\vspace{0.6em}
+\noindent{\color{rulegray}\rule{\textwidth}{0.6pt}}
+
+\section*{\color{bambergnavy} 1. What this project is about}
+Language models can write text that sounds very good. But sounding good is not the same as understanding what a sentence really means. In this project, I wanted to check a simple thing: when a model is given one sentence (the premise) and another sentence (the hypothesis), can it tell whether the second sentence must be true, or whether it only sounds likely?
+
+This matters because many model mistakes come from guessing what is common in the real world instead of following what the words actually say. I built a small benchmark and a Python testing pipeline to check this in a clear and repeatable way.
+
+\section*{\color{bambergnavy} 2. Research questions}
+I worked with these main questions:
 \begin{enumerate}[leftmargin=*]
-    \item \textbf{Rule Execution vs. World Knowledge:} Do modern open-weights and proprietary LLMs consistently execute lexical and presuppositional rules while rejecting plausible but non-entailed hypotheses?
-    \item \textbf{Prompt Sensitivity:} How does classification accuracy vary across zero-shot, few-shot, and chain-of-thought (CoT) prompting?
-    \item \textbf{Model Scale and Architecture:} How do smaller local models (Llama 3 8B, Mistral 7B, Qwen2.5 7B) compare against larger or API-hosted systems (Mixtral 8x7B, GPT-OSS 20B via Groq, Llama 3.3 70B fp8-fast via Cloudflare) on identical inference pairs?
-    \item \textbf{Error Attribution:} Which linguistic structures—such as downward-monotone negation, factive projection, or script-based plausibility—account for systematic model errors?
+    \item Can selected language models tell the difference between a real inference and a plausible but wrong one?
+    \item Does the prompt style change the result? I tested zero-shot, few-shot, and chain-of-thought prompts.
+    \item Do bigger or proprietary models do better than smaller open models?
+    \item What kind of mistakes do models make? For example, do they over-accept likely statements, or do they miss presuppositions and negation?
 \end{enumerate}
 
-\section{Benchmark Dataset}
-We constructed a balanced evaluation benchmark of 180 premise--hypothesis pairs (60 items per category) paired with 30 truth-preserving lexical paraphrases:
+\section*{\color{bambergnavy} 3. The dataset used}
+The main benchmark has 180 items. Each item has a premise, a hypothesis, and a gold label (Yes or No). The data is balanced:
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Lexical Entailment ($n=60$):} Tests hypernymy (e.g., \textit{sedan} $\rightarrow$ \textit{car}), manner verbs, intersective versus privative modifiers (e.g., \textit{fake diamond}), and upward versus downward monotonicity under negation.
-    \item \textbf{Presupposition Projection ($n=60$):} Tests change-of-state verbs (e.g., \textit{John stopped smoking} $\rightarrow$ \textit{John used to smoke}), factive predicates, iteratives, and clefts across affirmative, negated, and interrogative frames, alongside non-factive verbs and conditional filters as negative controls.
-    \item \textbf{Plausible Non-Entailment ($n=60$):} Pairs common-sense causal scripts (e.g., collapsing at a finish line $\rightarrow$ having a heart attack) with strictly entailed event controls so models cannot succeed through a constant negative bias.
-    \item \textbf{Lexical Perturbation Set ($n=30$):} Replaces nouns, verbs, and proper names with synonyms while preserving exact truth conditions to measure prediction stability.
+    \item 60 lexical entailment items (30 Yes, 30 No)
+    \item 60 presupposition items (30 Yes, 30 No)
+    \item 60 plausible non-entailment items (30 Yes, 30 No)
 \end{itemize}
+I also made 30 perturbation items. These are small rewrites of original items. The meaning stays the same, so the gold label should stay the same. This helps check if a model is stable when wording changes.
 
+\subsection*{\color{bambergnavy} Examples}
 \begin{table}[htbp]
 \centering
-\caption{Representative benchmark items across the three evaluation categories.}
-\label{tab:examples}
-\begin{tabularx}{\textwidth}{lXXc}
-\hline
-\textbf{Category} & \textbf{Premise} & \textbf{Hypothesis} & \textbf{Label} \\
-\hline
-Lexical Entailment & The buyer purchased a sedan. & The buyer purchased a car. & Yes \\
-Lexical Entailment & The buyer purchased a car. & The buyer purchased a sedan. & No \\
-Presupposition & John did not stop smoking. & John used to smoke. & Yes \\
-Plausible Non-Ent. & The runner collapsed after crossing the line. & The runner was having a heart attack. & No \\
-\hline
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}p{3.4cm} >{\raggedright\arraybackslash}p{3.3cm} c >{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{labeltint}
+\textbf{Category} & \textbf{Premise} & \textbf{Hypothesis} & \textbf{Gold} & \textbf{Simple reason} \\
+\midrule
+Lexical entailment & The shopper purchased a sedan. & The shopper purchased an automobile. & Yes & A sedan is an automobile. \\
+\rowcolor{rowtint}
+Lexical entailment & The child did not eat a fruit. & The child did not eat an apple. & No & Not eating any fruit does not mean not eating an apple. \\
+Presupposition & John did not stop smoking. & John used to smoke. & Yes & ``Stopped'' still suggests he smoked before. \\
+\rowcolor{rowtint}
+Presupposition & Tom believes that the shop is open. & The shop is open. & No & Believing something does not make it true. \\
+Plausible non-entailment & The runner collapsed after crossing the finish line. & The runner had a heart attack. & No & It is possible, but not certain. \\
+\rowcolor{rowtint}
+Plausible non-entailment & The firefighters extinguished the blaze. & There was a fire. & Yes & You cannot extinguish a blaze if there was no fire. \\
+\bottomrule
 \end{tabularx}
 \end{table}
 
-\section{Methodology}
-Each target model is evaluated via an automated Python pipeline (\texttt{transformers}, \texttt{ollama}, \texttt{pandas}, \texttt{scikit-learn}) at temperature $0.0$ under three prompting strategies:
-\begin{enumerate}[leftmargin=*]
-    \item \textbf{Zero-Shot:} Direct binary classification (\texttt{Yes} / \texttt{No}).
-    \item \textbf{Few-Shot:} Four balanced in-context demonstrations covering hypernymy, factive projection under negation, and plausible non-entailment.
-    \item \textbf{Chain-of-Thought (CoT):} Step-by-step verification of lexical relations, negation scope, and presupposition triggers prior to emitting \texttt{Final Answer: Yes} or \texttt{Final Answer: No}.
-\end{enumerate}
-
-For Hugging Face and OpenAI models, we extract next-token log-probabilities $\log P(\text{Yes})$ and $\log P(\text{No})$ to compute calibrated probability margins:
-\begin{equation}
-\Delta_{\text{logprob}} = \log P(\text{Yes} \mid x) - \log P(\text{No} \mid x)
-\end{equation}
-Model performance is quantified using overall Accuracy, Macro F1 per inference category, False Positive Rate (FPR), False Negative Rate (FNR), and lexical perturbation consistency rate.
-
-\section{Experimental Results}
-Table~\ref{tab:main_results} summarizes classification performance across the evaluated models and prompting regimes. Values are from \texttt{results/primary\_summary.csv} and \texttt{results/master\_summary.csv}.
+\subsection*{\color{bambergnavy} Contested items}
+Four items are marked as contested because language experts may argue about them. I kept them in the data, but I marked them clearly. The report should show results with all items and also without these contested items.
 
 \begin{table}[htbp]
 \centering
-\caption{Model accuracy, Macro F1, error rates, and category accuracy ($N = 180$).}
-\label{tab:main_results}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llccccccc}
-\hline
-\textbf{Model} & \textbf{Prompt} & \textbf{Acc.} & \textbf{Macro F1} & \textbf{FPR} & \textbf{FNR} & \textbf{Lex.} & \textbf{Presup.} & \textbf{Plaus.} \\
-\hline
-llama3:latest & Zero-Shot & 0.6778 & 0.6459 & 0.6222 & 0.0222 & 0.7833 & 0.7167 & 0.5333 \\
-llama3:latest & Few-Shot  & 0.7722 & 0.7662 & 0.3889 & 0.0667 & 0.8500 & 0.7667 & 0.7000 \\
-llama3:latest & CoT       & 0.5944 & 0.6006 & 0.5333 & 0.1889 & 0.7333 & 0.6500 & 0.4000 \\
-\hline
-mistral:7b & Zero-Shot & 0.6889 & 0.6651 & 0.5778 & 0.0444 & 0.8333 & 0.7167 & 0.5167 \\
-mistral:7b & Few-Shot  & 0.7389 & 0.7215 & 0.5111 & 0.0111 & 0.8667 & 0.7333 & 0.6167 \\
-mistral:7b & CoT       & 0.7611 & 0.7552 & 0.4222 & 0.0444 & 0.9000 & 0.7000 & 0.6833 \\
-\hline
-mixtral:8x7b & Zero-Shot & 0.7778 & 0.8006 & 0.2556 & 0.0556 & 0.8833 & 0.7667 & 0.6833 \\
-mixtral:8x7b & Few-Shot  & 0.8556 & 0.8572 & 0.2000 & 0.0778 & 0.9000 & 0.8333 & 0.8333 \\
-mixtral:8x7b & CoT       & 0.7667 & 0.7631 & 0.3556 & 0.1111 & 0.9000 & 0.7167 & 0.6833 \\
-\hline
-qwen2.5:7b (extra) & Zero-Shot & 0.8667 & 0.8663 & 0.1889 & 0.0778 & 0.8333 & 0.8667 & 0.9000 \\
-qwen2.5:7b (extra) & Few-Shot  & 0.9056 & 0.9054 & 0.1333 & 0.0556 & 0.8833 & 0.9000 & 0.9333 \\
-qwen2.5:7b (extra) & CoT       & 0.9000 & 0.8998 & 0.1444 & 0.0556 & 0.8667 & 0.9000 & 0.9333 \\
-\hline
-gpt-oss-20b (Groq) & Zero-Shot & 0.4389 & 0.5986 & 0.0111 & 0.0444 & 0.6167 & 0.3833 & 0.3167 \\
-gpt-oss-20b (Groq) & Few-Shot  & 0.3667 & 0.4764 & 0.2667 & 0.0444 & 0.4833 & 0.4000 & 0.2167 \\
-gpt-oss-20b (Groq) & CoT       & 0.9056 & 0.9184 & 0.0889 & 0.0444 & 0.9500 & 0.9000 & 0.8667 \\
-\hline
-Llama 3.3 70B fp8-fast (CF) & Zero-Shot & 0.9444 & 0.9443 & 0.1000 & 0.0111 & 0.9500 & 0.9667 & 0.9167 \\
-Llama 3.3 70B fp8-fast (CF) & Few-Shot  & 0.9667 & 0.9667 & 0.0556 & 0.0111 & 0.9333 & 0.9667 & 1.0000 \\
-Llama 3.3 70B fp8-fast (CF) & CoT       & 0.9667 & 0.9666 & 0.0667 & 0.0000 & 0.9833 & 0.9833 & 0.9333 \\
-\hline
-\end{tabular}%
-}
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{l l c >{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{labeltint}
+\textbf{ID} & \textbf{Category} & \textbf{Gold} & \textbf{Why it is debated} \\
+\midrule
+INF-017 & Lexical entailment & Yes & ``Every'' can be tricky when there are no students at all. \\
+\rowcolor{rowtint}
+INF-066 & Presupposition & Yes & ``The king of France'' is a famous philosophy/language case. \\
+INF-076 & Presupposition & Yes & ``Managed to'' may show difficulty, but some people call it an implicature, not a strict entailment. \\
+\rowcolor{rowtint}
+INF-118 & Presupposition & No & Counterfactual sentences often suggest the opposite happened, but that suggestion can be canceled. \\
+\bottomrule
+\end{tabularx}
 \end{table}
 
-\section{Error Analysis and Linguistic Discussion}
-\subsection{Failure Mode Taxonomy}
-Using the attribution rules implemented in \texttt{src/metrics.py}, misclassified items are categorized into five distinct linguistic failure modes:
+\section*{\color{bambergnavy} 4. How I built the evaluation}
+\subsection*{\color{bambergnavy} Prompt styles}
+I used the same task definition in all three prompt styles so the comparison is fair:
 \begin{itemize}[leftmargin=*]
-    \item \textbf{World-Knowledge Over-Entailment:} Accepting high-probability script continuations as strict logical entailments, yielding elevated FPR on \texttt{plausible\_non\_entailment}.
-    \item \textbf{Negation Scope Failure:} Failing to block presupposition projection under explicit cancellation or conditional filters, or misinterpreting downward-monotone negation.
-    \item \textbf{Upward-Monotonicity Bias:} Inferring specific hyponyms from general hypernyms (e.g., \textit{car} $\rightarrow$ \textit{sedan}) or disregarding privative modifiers (\textit{fake}, \textit{toy}).
-    \item \textbf{Presupposition Projection Failure:} Rejecting valid presuppositions when triggers appear inside negated or interrogative clauses.
-    \item \textbf{Lexical Entailment Failure:} Missing valid affirmative hypernym or manner-verb entailments.
+    \item \textbf{Zero-shot:} give the task rule and ask for Yes/No.
+    \item \textbf{Few-shot:} give the same rule plus 4 example answers. These examples are not in the benchmark.
+    \item \textbf{Chain-of-thought:} give the same rule, ask for short reasoning, and require the last line to be \texttt{Final Answer: Yes} or \texttt{Final Answer: No}.
 \end{itemize}
 
+\subsection*{\color{bambergnavy} Models and backends}
+The code supports these backends:
+\begin{itemize}[leftmargin=*]
+    \item Ollama for local open-weight models like Llama 3 and Mistral.
+    \item Hugging Face for local transformer models, with exact Yes/No token probability for direct prompts.
+    \item OpenAI API for models like GPT-4o.
+\end{itemize}
+I ran real local tests through Ollama on four models: \texttt{llama3:latest}, \texttt{mistral:7b}, \texttt{mixtral:8x7b}, and \texttt{qwen2.5:7b} (qwen was an extra model, not in the original proposal). I also ran \texttt{openai/gpt-oss-20b} via Groq (OpenAI-compatible API) and \texttt{@cf/meta/llama-3.3-70b-instruct-fp8-fast} via Cloudflare Workers AI (a quantized fp8-fast variant of Llama 3.3 70B; close to the proposal model but not the same local/HF exact setup). I tried a free OpenRouter model, but the current key in \texttt{apikeys.env} did not authenticate for OpenRouter chat completions. I ran the full 180-item benchmark with all three prompt styles, plus the 30 perturbation items. I did not run all models named in the original proposal (still missing OpenAI GPT models due to API quota, and optional HF exact-logit check pending approval). The numbers below come from those saved result files.
+
+\subsection*{\color{bambergnavy} How answers are scored}
+\begin{itemize}[leftmargin=*]
+    \item For normal prompts, the code reads the Yes/No answer.
+    \item For chain-of-thought, only \texttt{Final Answer: Yes} or \texttt{Final Answer: No} is accepted. Anything else is marked \texttt{Invalid}.
+    \item Invalid answers count as wrong, but they are also counted separately so we can see format problems.
+\end{itemize}
+
+\section*{\color{bambergnavy} 5. Metrics}
+I split metrics into two groups so the main results stay clear.
+
+\subsection*{\color{bambergnavy} Main metrics}
+These are the main numbers I would use to compare models:
+\begin{itemize}[leftmargin=*]
+    \item Accuracy
+    \item 95\% bootstrap confidence interval for accuracy
+    \item Macro-F1
+    \item Balanced accuracy
+    \item Per-category accuracy and Macro-F1
+    \item McNemar test for paired model/prompt comparisons
+\end{itemize}
+
+\subsection*{\color{bambergnavy} Extra diagnostic metrics}
+These are useful, but they should be read with care:
+\begin{itemize}[leftmargin=*]
+    \item False positive rate (model says Yes too often)
+    \item False negative rate (model says No too often)
+    \item Invalid rate
+    \item Accuracy without contested items
+    \item Heuristic error type labels
+    \item Perturbation consistency
+\end{itemize}
+
+\section*{\color{bambergnavy} 6. What I checked and fixed in the code}
+I ran the tests before and after my fixes. The final result was: \textbf{13 passed}.
+
+The main bugs I found and fixed were:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Cache type bug:} Old cache saving could turn some values into strings. I fixed it so booleans, numbers, and missing values stay correct.
+    \item \textbf{Stale cache bug:} If a benchmark item changed but the ID stayed the same, old cache could be reused by mistake. I added a check for premise and hypothesis.
+    \item \textbf{Hugging Face crash:} If a tokenizer had no single-token Yes/No option, the code crashed in a confusing way. I added a clear error message.
+    \item \textbf{Ollama logprob bug:} Sometimes the chosen Yes/No token was not inside top logprobs. I fixed the parser to include it.
+    \item \textbf{OpenAI logprob bug:} The first token can be a blank line or space. I changed the code to skip empty tokens.
+    \item \textbf{Contested item bug:} ``False'' as a string can be read as true in Python. I fixed the contested check so it reads values safely.
+    \item \textbf{Metrics and analysis cleanup:} I used nanmean where needed, removed an unused import, made analysis ignore duplicate rows, and made it safer when \texttt{error\_type} is missing.
+\end{enumerate}
+I also added regression tests for these cases so the same bugs are less likely to come back.
+
+\section*{\color{bambergnavy} 7. Real model results}
+I ran four local Ollama models on the full benchmark. These are real saved results, not guesses.
+
+\subsection*{\color{bambergnavy} Main results (primary metrics)}
 \begin{table}[htbp]
 \centering
-\caption{Distribution of selected linguistic error types in zero-shot runs (from \texttt{results/error\_attribution.csv}).}
-\label{tab:errors}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{lccccc}
-\hline
-\textbf{Model (Zero-Shot)} & \textbf{Over-Ent.} & \textbf{Neg. Scope} & \textbf{Upward Bias} & \textbf{Presup. Fail} & \textbf{Lex. Fail} \\
-\hline
-llama3:latest & 28 & 8 & 10 & 1 & 1 \\
-mistral:7b & 28 & 9 & 7 & 3 & 0 \\
-mixtral:8x7b & 10 & 4 & 5 & 3 & 0 \\
-qwen2.5:7b (extra) & 6 & 4 & 7 & 3 & 1 \\
-gpt-oss-20b (Groq) & 1 & 2 & 0 & 0 & 1 \\
-Llama 3.3 70B fp8-fast (CF) & 5 & 1 & 3 & 0 & 0 \\
-\hline
-\end{tabular}%
-}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l c c c c c c c}
+\toprule
+\rowcolor{labeltint}
+\textbf{Model} & \textbf{Strategy} & \textbf{Accuracy} & \textbf{95\% CI} & \textbf{Macro-F1} & \textbf{Bal. Acc} & \textbf{Lex Acc} & \textbf{Presup Acc} & \textbf{Plaus. Non-Ent Acc} \\
+\midrule
+llama3:latest & zero\_shot & 0.6778 & 0.6111--0.7444 & 0.6459 & 0.6778 & 0.7833 & 0.7167 & 0.5333 \\
+llama3:latest & few\_shot & 0.7722 & 0.7056--0.8333 & 0.7662 & 0.7722 & 0.8500 & 0.7667 & 0.7000 \\
+llama3:latest & cot & 0.5944 & 0.5278--0.6611 & 0.6006 & 0.5944 & 0.7333 & 0.6500 & 0.4000 \\
+\midrule
+mistral:7b & zero\_shot & 0.6889 & 0.6222--0.7500 & 0.6651 & 0.6889 & 0.8333 & 0.7167 & 0.5167 \\
+mistral:7b & few\_shot & 0.7389 & 0.6722--0.8001 & 0.7215 & 0.7389 & 0.8667 & 0.7333 & 0.6167 \\
+mistral:7b & cot & 0.7611 & 0.6944--0.8222 & 0.7552 & 0.7611 & 0.9000 & 0.7000 & 0.6833 \\
+\midrule
+mixtral:8x7b & zero\_shot & 0.7778 & 0.7165--0.8333 & 0.8006 & 0.7778 & 0.8833 & 0.7667 & 0.6833 \\
+mixtral:8x7b & few\_shot & 0.8556 & 0.8056--0.9056 & 0.8572 & 0.8556 & 0.9000 & 0.8333 & 0.8333 \\
+mixtral:8x7b & cot & 0.7667 & 0.7000--0.8222 & 0.7631 & 0.7667 & 0.9000 & 0.7167 & 0.6833 \\
+\midrule
+qwen2.5:7b & zero\_shot & 0.8667 & 0.8111--0.9111 & 0.8663 & 0.8667 & 0.8333 & 0.8667 & 0.9000 \\
+qwen2.5:7b & few\_shot & 0.9056 & 0.8610--0.9444 & 0.9054 & 0.9056 & 0.8833 & 0.9000 & 0.9333 \\
+qwen2.5:7b & cot & 0.9000 & 0.8556--0.9389 & 0.8998 & 0.9000 & 0.8667 & 0.9000 & 0.9333 \\
+\midrule
+openai/gpt-oss-20b (Groq) & zero\_shot & 0.4389 & 0.3611--0.5056 & 0.5986 & 0.4389 & 0.6167 & 0.3833 & 0.3167 \\
+openai/gpt-oss-20b (Groq) & few\_shot & 0.3667 & 0.2944--0.4389 & 0.4764 & 0.3667 & 0.4833 & 0.4000 & 0.2167 \\
+openai/gpt-oss-20b (Groq) & cot & 0.9056 & 0.8556--0.9444 & 0.9184 & 0.9056 & 0.9500 & 0.9000 & 0.8667 \\
+\midrule
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & zero\_shot & 0.9444 & 0.9056--0.9778 & 0.9443 & 0.9444 & 0.9500 & 0.9667 & 0.9167 \\
+\rowcolor{rowtint}
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & few\_shot & \textbf{0.9667} & 0.9389--0.9889 & \textbf{0.9667} & \textbf{0.9667} & 0.9333 & 0.9667 & \textbf{1.0000} \\
+\rowcolor{rowtint}
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & cot & \textbf{0.9667} & 0.9333--0.9889 & 0.9666 & \textbf{0.9667} & \textbf{0.9833} & \textbf{0.9833} & 0.9333 \\
+\bottomrule
+\end{tabularx}
 \end{table}
 
-\subsection{Implications for Linguistic Theory}
-The results show a mixed picture. Larger or stronger models, especially Llama 3.3 70B fp8-fast on Cloudflare and Qwen2.5 7B, did well on many affirmative hypernym and presupposition cases. But smaller local models often failed on plausible non-entailments and negation-sensitive items. This suggests the models can learn useful patterns, but they do not always follow strict semantic rules in the same way a formal linguistic theory would require. In that sense, the evidence fits a cautious middle position: LLMs show strong performance on many linguistic tests, but the systematic error patterns still matter for claims about linguistic competence (Piantadosi, 2023; Fox and Katzir, 2024; Futrell and Mahowald, 2026).
+\subsection*{\color{bambergnavy} What I noticed}
+Among the four local Ollama models, Qwen2.5:7b was strongest (about 87--91\%), followed by Mixtral:8x7b (about 77--86\%), Mistral:7b (about 69--76\%), and Llama3:latest (about 59--77\%). Across all tested backends, Cloudflare's Llama 3.3 70B variant achieved the highest accuracy (96.67\% in few-shot and CoT). Groq's gpt-oss-20b also reached 90.56\% in CoT.
 
-\section{Conclusion}
-This project built a small benchmark for lexical entailment, presupposition, and plausible non-entailment, then evaluated six model configurations across zero-shot, few-shot, and chain-of-thought prompting. The strongest overall run was Llama 3.3 70B Instruct fp8-fast via Cloudflare (up to 96.67\% accuracy), while smaller local models showed more world-knowledge over-entailment and negation/presupposition errors. Chain-of-thought helped some models but was not uniformly better. The main limitations are the small dataset, theory-dependent labels, missing OpenAI GPT/HF exact-logit runs, and no independent human agreement study yet. Future work should expand the dataset, collect independent annotations, and complete the remaining proposal models.
+Plausible non-entailment was the hardest category for most models, especially Llama3:latest (40--70\%) and Mistral:7b zero-shot (51.67\%). This suggests world-knowledge over-acceptance is a real problem.
 
-\begin{thebibliography}{9}
+Few-shot helped most models. Llama3 improved a lot with few-shot; Mixtral also jumped in few-shot. Mistral got its best score in CoT, but CoT hurt Llama3.
 
-\bibitem[Basmov et al.(2024)]{basmov2024simple}
-Basmov, V., Goldberg, Y., \& Tsarfaty, R. (2024).
-\newblock Simple linguistic inferences of large language models.
-\newblock \emph{arXiv preprint arXiv:2305.14785}.
+Invalid answers were rare overall for most models, but Mixtral zero-shot had 6.67\% invalid outputs and Llama3 CoT had 4.44\%. \texttt{openai/gpt-oss-20b} (Groq, reasoning model) was very strong in CoT (90.56\%) but had very high invalid rates in zero-shot/few-shot (53.33\%/47.78\%) because it often put answers in reasoning content instead of a clean final label.
 
-\bibitem[Fox \& Katzir(2024)]{fox2024theoretical}
-Fox, D., \& Katzir, R. (2024).
-\newblock Large language models and theoretical linguistics.
-\newblock \emph{Theoretical Linguistics}, 50(1--2), 71--76.
+\subsection*{\color{bambergnavy} Extra diagnostic results}
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l c c c c}
+\toprule
+\rowcolor{labeltint}
+\textbf{Model} & \textbf{Strategy} & \textbf{FP rate} & \textbf{FN rate} & \textbf{Invalid rate} & \textbf{Acc. excl. contested} \\
+\midrule
+llama3:latest & zero\_shot & 0.6222 & 0.0222 & 0.0000 & 0.6705 \\
+llama3:latest & few\_shot & 0.3889 & 0.0667 & 0.0000 & 0.7670 \\
+llama3:latest & cot & 0.5333 & 0.1889 & 0.0444 & 0.5966 \\
+\midrule
+mistral:7b & zero\_shot & 0.5778 & 0.0444 & 0.0000 & 0.6875 \\
+mistral:7b & few\_shot & 0.5111 & 0.0111 & 0.0000 & 0.7386 \\
+mistral:7b & cot & 0.4222 & 0.0444 & 0.0056 & 0.7557 \\
+\midrule
+mixtral:8x7b & zero\_shot & 0.2556 & 0.0556 & 0.0667 & 0.7727 \\
+mixtral:8x7b & few\_shot & 0.2000 & 0.0778 & 0.0056 & 0.8523 \\
+mixtral:8x7b & cot & 0.3556 & 0.1111 & 0.0000 & 0.7614 \\
+\midrule
+qwen2.5:7b & zero\_shot & 0.1889 & 0.0778 & 0.0000 & 0.8636 \\
+qwen2.5:7b & few\_shot & 0.1333 & 0.0556 & 0.0000 & 0.9034 \\
+qwen2.5:7b & cot & 0.1444 & 0.0556 & 0.0000 & 0.8977 \\
+\midrule
+openai/gpt-oss-20b (Groq) & zero\_shot & 0.0111 & 0.0444 & 0.5333 & 0.4432 \\
+openai/gpt-oss-20b (Groq) & few\_shot & 0.2667 & 0.0444 & 0.4778 & 0.3580 \\
+openai/gpt-oss-20b (Groq) & cot & 0.0889 & 0.0444 & 0.0278 & 0.9148 \\
+\midrule
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & zero\_shot & 0.1000 & 0.0111 & 0.0000 & 0.9432 \\
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & few\_shot & 0.0556 & 0.0111 & 0.0000 & 0.9659 \\
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & cot & 0.0667 & 0.0000 & 0.0000 & 0.9659 \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\bibitem[Futrell \& Mahowald(2026)]{futrell2026theory}
-Futrell, R., \& Mahowald, K. (2026).
-\newblock What is the theory that language models provide?
-\newblock \emph{Behavioral and Brain Sciences}, 49.
+The false positive rate shows over-entailment. Llama3 and Mistral had high false positive rates, which fits the idea that they accepted too many plausible statements.
 
-\bibitem[Piantadosi(2023)]{piantadosi2023modern}
-Piantadosi, S. T. (2023).
-\newblock Modern language models refute Chomsky's approach to language.
-\newblock \emph{Lingbuzz/007180}.
+\subsection*{\color{bambergnavy} Perturbation robustness (30 items)}
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X l c c c c}
+\toprule
+\rowcolor{labeltint}
+\textbf{Model} & \textbf{Strategy} & \textbf{Consistency} & \textbf{Joint Acc.} & \textbf{Orig. Acc.} & \textbf{Perturbed Acc.} \\
+\midrule
+llama3:latest & zero\_shot & 0.9667 & 0.5667 & 0.6000 & 0.5667 \\
+llama3:latest & few\_shot & 0.9000 & 0.7333 & 0.8000 & 0.7667 \\
+llama3:latest & cot & 0.8000 & 0.4333 & 0.5333 & 0.5333 \\
+\midrule
+mistral:7b & zero\_shot & 0.9667 & 0.6667 & 0.6667 & 0.7000 \\
+mistral:7b & few\_shot & 0.9667 & 0.6333 & 0.6333 & 0.6667 \\
+mistral:7b & cot & 0.9667 & 0.8000 & 0.8333 & 0.8000 \\
+\midrule
+mixtral:8x7b & zero\_shot & 0.9333 & 0.8000 & 0.8667 & 0.8000 \\
+mixtral:8x7b & few\_shot & 1.0000 & 0.8667 & 0.8667 & 0.8667 \\
+mixtral:8x7b & cot & 0.7667 & 0.6000 & 0.8000 & 0.6333 \\
+\midrule
+qwen2.5:7b & zero\_shot & 0.8667 & 0.8000 & 0.8333 & 0.9000 \\
+qwen2.5:7b & few\_shot & 0.8333 & 0.8000 & 0.9000 & 0.8667 \\
+qwen2.5:7b & cot & 0.8667 & 0.7667 & 0.8333 & 0.8333 \\
+\midrule
+openai/gpt-oss-20b (Groq) & zero\_shot & 0.6333 & 0.0000 & 0.3333 & 0.0000 \\
+openai/gpt-oss-20b (Groq) & few\_shot & 0.3667 & 0.0000 & 0.5000 & 0.0000 \\
+openai/gpt-oss-20b (Groq) & cot & 0.9667 & 0.9333 & 0.9333 & 0.9667 \\
+\midrule
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & zero\_shot & 0.9667 & 0.9667 & 0.9667 & 1.0000 \\
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & few\_shot & 0.9333 & 0.9000 & 0.9333 & 0.9333 \\
+@cf/meta/llama-3.3-70b-instruct-fp8-fast (Cloudflare) & cot & 0.9667 & 0.9667 & 1.0000 & 0.9667 \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
-\end{thebibliography}
+These are small-sample robustness checks (only 30 pairs), so I would not make strong claims from them alone.
+
+\subsection*{\color{bambergnavy} Statistical significance (McNemar, paired exact test)}
+I used paired exact McNemar tests because each model answers the same items. Some differences that look small are still meaningful, and some are not.
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Llama3:latest:} few-shot was significantly better than zero-shot ($p = 0.0023$). Zero-shot was significantly better than CoT ($p = 0.0237$).
+    \item \textbf{Mistral:7b:} CoT ($p = 0.0023$) and few-shot ($p = 0.0225$) were significantly better than zero-shot.
+    \item \textbf{Mixtral:8x7b:} few-shot was significantly better than zero-shot ($p = 0.0094$); CoT vs zero-shot was not significant ($p = 0.8555$).
+    \item \textbf{Qwen2.5:7b:} few-shot was significantly better than zero-shot ($p = 0.0391$); CoT vs zero-shot was not significant ($p = 0.1460$).
+    \item \textbf{Model comparisons:} Qwen2.5:7b was significantly better than Llama3 and Mistral in all tested strategies, and better than Mixtral in zero-shot and CoT; Mixtral vs Qwen few-shot was close but not significant at 0.05 ($p = 0.0931$). Mistral vs Mixtral CoT was not significant ($p = 1.0$).
+\end{itemize}
+Full results are in \texttt{results/significance\_tests.csv}.
+
+\subsection*{\color{bambergnavy} Error analysis (exploratory)}
+The error labels are heuristic (rule-based), so I treat them as exploratory, not final truth. Still, the pattern is clear:
+\begin{itemize}[leftmargin=*]
+    \item World-knowledge over-entailment was the most common error for weaker models, especially Llama3 and Mistral. This matches the high false positive rates.
+    \item Negation/presupposition/factivity errors appeared across models, showing that logical scope and trigger handling are still hard.
+    \item Format errors were rare, but Mixtral zero-shot had 12 format errors in the heuristic attribution and 6.67\% invalid rate overall; this should be checked manually.
+\end{itemize}
+Full table: \texttt{results/error\_attribution.csv}. Figures: \texttt{results/category\_accuracy\_comparison.png} and \texttt{results/fp\_fn\_rates.png}.
+
+\section*{\color{bambergnavy} 8. How to fix the limitations}
+You asked for a clear answer to the earlier limitations. Here is how I would fix them.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}p{4.3cm} >{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{labeltint}
+\textbf{Limitation} & \textbf{Why it is a problem} & \textbf{How to fix it} \\
+\midrule
+Some proposal models still not run & The proposal listed more models; current results are still incomplete. & Run remaining planned models (\texttt{llama3.3:70b} or exact 70B tag, GPT-4o, a current GPT-3.5 replacement such as \texttt{gpt-4o-mini}, and optional HF exact-logit check) when resources/API access are available. Save raw predictions and manifests for every run. I attempted \texttt{llama3.3:70b} locally but got an Ollama 500 Internal Server Error (likely memory/resource limit). Try a smaller quantized 70B tag, a machine with more RAM/VRAM, or a cloud GPU. \\
+\rowcolor{rowtint}
+No independent human inter-annotator agreement & One person or one team can miss label problems. & Ask at least 2 independent annotators to label items using the same written rules. Start with all 4 contested items and a sample of tricky items; ideally label all 180. Compute agreement (for example Cohen's kappa for two people, Fleiss' kappa for more). Resolve disagreements by discussion and document final decisions. \\
+Log-probability scores are not fully comparable across backends & HF gives exact token logits, while Ollama/OpenAI often give top-logprob approximations. & Do not compare raw logprob margins across different backends as if they were identical. For fair comparison, use the same backend where possible, or report exact-logit HF results separately. Also report plain Yes/No accuracy for all models. \\
+\rowcolor{rowtint}
+Plagiarism risk in writing/code & Copying text or code can cause serious academic problems. & Write text in your own words, cite sources for ideas, keep notes of where ideas came from, and do not copy benchmark text from papers. For code, write your own implementation, keep commit history, and run a plagiarism/originality check before submission. \\
+Small dataset & 180 items is good for a class project, but not enough for big claims. & Add more items, more categories, and more annotators. Test on other benchmarks too. Be careful with claims in the final report. \\
+\rowcolor{rowtint}
+Theory-dependent labels & Some cases depend on linguistics theory, not just simple right/wrong. & Keep contested labels visible, report both all-items and no-contested results, and explain the theory issue in the report. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{\color{bambergnavy} 9. Reproducibility}
+I tried to make the project easy to run again. The repo now includes:
+\begin{itemize}[leftmargin=*]
+    \item \texttt{pyproject.toml} for clean installs with extras
+    \item \texttt{requirements.txt} for simple install
+    \item \texttt{scripts/run\_all.sh} for Linux/macOS
+    \item \texttt{scripts/run\_all.ps1} for Windows
+    \item JSONL cache files so runs can continue after a crash
+    \item run manifest files with hashes, command, time, and git commit
+    \item tests for data, metrics, parsing, and bug fixes
+\end{itemize}
+
+\subsection*{\color{bambergnavy} Basic commands}
+\begin{verbatim}
+pip install -e .[dev]
+pytest -v
+python -m src.evaluate --backend ollama --model llama3:8b
+python -m src.analyze
+\end{verbatim}
+
+\section*{\color{bambergnavy} 10. Limits of this report}
+This report is honest about what is done and what is not done. I ran real tests for four local Ollama models (\texttt{llama3:latest}, \texttt{mistral:7b}, \texttt{mixtral:8x7b}, \texttt{qwen2.5:7b}), one Groq API model (\texttt{openai/gpt-oss-20b}), and one Cloudflare Workers AI model (\texttt{@cf/meta/llama-3.3-70b-instruct-fp8-fast}, an fp8-fast Llama 3.3 70B variant), and the code/data checks pass. But I did not run all models from the original proposal exactly as planned (OpenAI GPT models still missing due to quota/deprecation; HF exact-logit \texttt{Meta-Llama-3-8B-Instruct} check still pending approval). OpenRouter free-model runs were limited by authentication/quota. I also did not collect independent human agreement scores. The dataset is still small, and some labels are theory-dependent. These parts should be improved before a final submission.
+
+\section*{\color{bambergnavy} 11. Final thoughts}
+The main value of this project is that it gives a clear and simple way to test language models on meaning, not just fluency. The benchmark is small, but it is balanced and easy to inspect. The code now has better tests, better caching, run manifests, and clearer metric reporting. The real runs show that Cloudflare's Llama 3.3 70B variant achieved the highest scores across the tested backends, while \texttt{qwen2.5:7b} was the strongest local Ollama model. Mixtral was strong in few-shot, and Llama3/Mistral made many over-entailment mistakes, especially on plausible non-entailment. With more models and human label checks, this setup can give an even stronger and more trustworthy comparison.
+
+\section*{\color{bambergnavy} 12. Submission checklist}
+\begin{itemize}[leftmargin=*]
+    \item[$\boxtimes$] Clean 1-page proposal PDF/MD.
+    \item[$\boxtimes$] Detailed plain-language report PDF/MD.
+    \item[$\boxtimes$] Balanced benchmark (180) + perturbations (30) + data card.
+    \item[$\boxtimes$] Reproducible code with tests (13 passed).
+    \item[$\boxtimes$] Run manifests, caches, raw predictions, summaries, plots.
+    \item[$\boxtimes$] Real runs for 6 models (llama3, mistral, mixtral, qwen2.5, gpt-oss-20b via Groq, llama-3.3-70b-instruct-fp8-fast via Cloudflare).
+    \item[$\boxtimes$] Significance tests and error attribution.
+    \item[$\boxtimes$] Annotation protocol/template for human agreement.
+    \item[$\boxtimes$] RTX 4060 GPU detected; CUDA PyTorch install attempted for optional HF exact-logit run.
+    \item[$\square$] Independent human inter-annotator agreement (kappa) completed by real annotators.
+    \item[$\square$] Remaining proposal models run (70B/API/HF exact-logit) or explicitly justified.
+    \item[$\square$] Final plagiarism/originality check before submission.
+\end{itemize}
+
+\section*{\color{bambergnavy} Appendix A: Human annotation package}
+Prepared files for independent agreement study:
+\begin{itemize}[leftmargin=*]
+    \item \texttt{annotation/annotation\_template.csv} (blind, 180 items)
+    \item \texttt{annotation/ANNOTATION\_PROTOCOL.md}
+    \item \texttt{annotation/disagreement\_resolution\_template.csv}
+    \item \texttt{scripts/compute\_agreement.py}
+\end{itemize}
+This step needs real human annotators and cannot be honestly automated.
+
+\section*{\color{bambergnavy} References}
+\begin{description}[leftmargin=0pt, style=nextline]
+    \item[Basmov, V., Goldberg, Y., \& Tsarfaty, R. (2024).] Simple Linguistic Inferences of Large Language Models (LLMs): Blind Spots and Blinds. \emph{arXiv:2305.14785}.
+    \item[Fox, D., \& Katzir, R. (2024).] Large Language Models and theoretical linguistics. \emph{Theoretical Linguistics}, 50(1--2), 71--76.
+    \item[Futrell, R., \& Mahowald, K. (2026).] How linguistics learned to stop worrying and love the language models. \emph{Behavioral and Brain Sciences}, 49, e198.
+    \item[Piantadosi, S. T. (2023).] Modern language models refute Chomsky's approach to language. \emph{Lingbuzz preprint 007180}.
+\end{description}
 
 \end{document}
