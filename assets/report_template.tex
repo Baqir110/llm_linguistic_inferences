@@ -1,0 +1,198 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\definecolor{bambergblue}{RGB}{0, 69, 125}
+\definecolor{slatetext}{RGB}{55, 65, 81}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=bambergblue,
+    citecolor=bambergblue,
+    urlcolor=bambergblue
+}
+
+\title{\textcolor{bambergblue}{\textbf{Evaluating Large Language Models on Simple Linguistic Inferences}}}
+\author{
+    \textbf{Muhammad Baqir} (Matriculation No. 2184791) \\
+    M.Sc. International Software Systems Science \\
+    University of Bamberg \\
+    \small Course: GdI-Proj-B/M: LLMs and Linguistic Theory (WS 2026/27) \\
+    \small Supervisor: Dr. Luke Burke
+}
+\date{\today}
+
+\begin{document}
+
+\begin{center}
+    \IfFileExists{assets/uni_bambeg_logo.png}{\includegraphics[width=0.55\textwidth]{assets/uni_bambeg_logo.png}}{\IfFileExists{uni_bambeg_logo.png}{\includegraphics[width=0.55\textwidth]{uni_bambeg_logo.png}}{\IfFileExists{assets/uni_bamberg_logo.png}{\includegraphics[width=0.55\textwidth]{assets/uni_bamberg_logo.png}}{}}}
+\end{center}
+\vspace{0.5em}
+\maketitle
+
+\begin{abstract}
+Fluent text generation in Large Language Models (LLMs) does not confirm that these systems execute rule-based semantic reasoning. Building on the evaluation framework of Basmov et al. (2024), this study examines open-weights and proprietary LLMs across three inference classes: lexical entailment, presupposition projection, and plausible non-entailment. Using a controlled benchmark of 180 premise--hypothesis pairs and 30 truth-preserving lexical paraphrases, we evaluate zero-shot, few-shot, and chain-of-thought prompting alongside next-token log-probabilities. We isolate specific error patterns—including world-knowledge over-entailment, negation scope failures, and upward-monotonicity bias—and connect these findings to the linguistic competence versus performance debate.
+\end{abstract}
+
+\section{Introduction}
+Large Language Models produce grammatical, coherent text across diverse domains, prompting debate over whether they acquire structural linguistic competence (Piantadosi, 2023) or rely on surface statistical associations (Fox and Katzir, 2024; Futrell and Mahowald, 2026). A direct diagnostic for this question is simple, non-contextual semantic inference: determining whether a hypothesis strictly follows from a premise based on word meanings and syntactic structure rather than real-world likelihood.
+
+Following Basmov et al. (2024), this project evaluates how reliably modern LLMs distinguish strict logical entailment from plausible real-world continuation. Specifically, we address four research questions:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Rule Execution vs. World Knowledge:} Do modern open-weights and proprietary LLMs consistently execute lexical and presuppositional rules while rejecting plausible but non-entailed hypotheses?
+    \item \textbf{Prompt Sensitivity:} How does classification accuracy vary across zero-shot, few-shot, and chain-of-thought (CoT) prompting?
+    \item \textbf{Model Scale and Architecture:} How do smaller local models (Llama 3 8B, Mistral 7B, Qwen2.5 7B) compare against larger or API-hosted systems (Mixtral 8x7B, GPT-OSS 20B via Groq, Llama 3.3 70B fp8-fast via Cloudflare) on identical inference pairs?
+    \item \textbf{Error Attribution:} Which linguistic structures—such as downward-monotone negation, factive projection, or script-based plausibility—account for systematic model errors?
+\end{enumerate}
+
+\section{Benchmark Dataset}
+We constructed a balanced evaluation benchmark of 180 premise--hypothesis pairs (60 items per category) paired with 30 truth-preserving lexical paraphrases:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Lexical Entailment ($n=60$):} Tests hypernymy (e.g., \textit{sedan} $\rightarrow$ \textit{car}), manner verbs, intersective versus privative modifiers (e.g., \textit{fake diamond}), and upward versus downward monotonicity under negation.
+    \item \textbf{Presupposition Projection ($n=60$):} Tests change-of-state verbs (e.g., \textit{John stopped smoking} $\rightarrow$ \textit{John used to smoke}), factive predicates, iteratives, and clefts across affirmative, negated, and interrogative frames, alongside non-factive verbs and conditional filters as negative controls.
+    \item \textbf{Plausible Non-Entailment ($n=60$):} Pairs common-sense causal scripts (e.g., collapsing at a finish line $\rightarrow$ having a heart attack) with strictly entailed event controls so models cannot succeed through a constant negative bias.
+    \item \textbf{Lexical Perturbation Set ($n=30$):} Replaces nouns, verbs, and proper names with synonyms while preserving exact truth conditions to measure prediction stability.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\caption{Representative benchmark items across the three evaluation categories.}
+\label{tab:examples}
+\begin{tabularx}{\textwidth}{lXXc}
+\hline
+\textbf{Category} & \textbf{Premise} & \textbf{Hypothesis} & \textbf{Label} \\
+\hline
+Lexical Entailment & The buyer purchased a sedan. & The buyer purchased a car. & Yes \\
+Lexical Entailment & The buyer purchased a car. & The buyer purchased a sedan. & No \\
+Presupposition & John did not stop smoking. & John used to smoke. & Yes \\
+Plausible Non-Ent. & The runner collapsed after crossing the line. & The runner was having a heart attack. & No \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Methodology}
+Each target model is evaluated via an automated Python pipeline (\texttt{transformers}, \texttt{ollama}, \texttt{pandas}, \texttt{scikit-learn}) at temperature $0.0$ under three prompting strategies:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Zero-Shot:} Direct binary classification (\texttt{Yes} / \texttt{No}).
+    \item \textbf{Few-Shot:} Four balanced in-context demonstrations covering hypernymy, factive projection under negation, and plausible non-entailment.
+    \item \textbf{Chain-of-Thought (CoT):} Step-by-step verification of lexical relations, negation scope, and presupposition triggers prior to emitting \texttt{Final Answer: Yes} or \texttt{Final Answer: No}.
+\end{enumerate}
+
+For Hugging Face and OpenAI models, we extract next-token log-probabilities $\log P(\text{Yes})$ and $\log P(\text{No})$ to compute calibrated probability margins:
+\begin{equation}
+\Delta_{\text{logprob}} = \log P(\text{Yes} \mid x) - \log P(\text{No} \mid x)
+\end{equation}
+Model performance is quantified using overall Accuracy, Macro F1 per inference category, False Positive Rate (FPR), False Negative Rate (FNR), and lexical perturbation consistency rate.
+
+\section{Experimental Results}
+Table~\ref{tab:main_results} summarizes classification performance across the evaluated models and prompting regimes. Values are from \texttt{results/primary\_summary.csv} and \texttt{results/master\_summary.csv}.
+
+\begin{table}[htbp]
+\centering
+\caption{Model accuracy, Macro F1, error rates, and category accuracy ($N = 180$).}
+\label{tab:main_results}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccccc}
+\hline
+\textbf{Model} & \textbf{Prompt} & \textbf{Acc.} & \textbf{Macro F1} & \textbf{FPR} & \textbf{FNR} & \textbf{Lex.} & \textbf{Presup.} & \textbf{Plaus.} \\
+\hline
+llama3:latest & Zero-Shot & 0.6778 & 0.6459 & 0.6222 & 0.0222 & 0.7833 & 0.7167 & 0.5333 \\
+llama3:latest & Few-Shot  & 0.7722 & 0.7662 & 0.3889 & 0.0667 & 0.8500 & 0.7667 & 0.7000 \\
+llama3:latest & CoT       & 0.5944 & 0.6006 & 0.5333 & 0.1889 & 0.7333 & 0.6500 & 0.4000 \\
+\hline
+mistral:7b & Zero-Shot & 0.6889 & 0.6651 & 0.5778 & 0.0444 & 0.8333 & 0.7167 & 0.5167 \\
+mistral:7b & Few-Shot  & 0.7389 & 0.7215 & 0.5111 & 0.0111 & 0.8667 & 0.7333 & 0.6167 \\
+mistral:7b & CoT       & 0.7611 & 0.7552 & 0.4222 & 0.0444 & 0.9000 & 0.7000 & 0.6833 \\
+\hline
+mixtral:8x7b & Zero-Shot & 0.7778 & 0.8006 & 0.2556 & 0.0556 & 0.8833 & 0.7667 & 0.6833 \\
+mixtral:8x7b & Few-Shot  & 0.8556 & 0.8572 & 0.2000 & 0.0778 & 0.9000 & 0.8333 & 0.8333 \\
+mixtral:8x7b & CoT       & 0.7667 & 0.7631 & 0.3556 & 0.1111 & 0.9000 & 0.7167 & 0.6833 \\
+\hline
+qwen2.5:7b (extra) & Zero-Shot & 0.8667 & 0.8663 & 0.1889 & 0.0778 & 0.8333 & 0.8667 & 0.9000 \\
+qwen2.5:7b (extra) & Few-Shot  & 0.9056 & 0.9054 & 0.1333 & 0.0556 & 0.8833 & 0.9000 & 0.9333 \\
+qwen2.5:7b (extra) & CoT       & 0.9000 & 0.8998 & 0.1444 & 0.0556 & 0.8667 & 0.9000 & 0.9333 \\
+\hline
+gpt-oss-20b (Groq) & Zero-Shot & 0.4389 & 0.5986 & 0.0111 & 0.0444 & 0.6167 & 0.3833 & 0.3167 \\
+gpt-oss-20b (Groq) & Few-Shot  & 0.3667 & 0.4764 & 0.2667 & 0.0444 & 0.4833 & 0.4000 & 0.2167 \\
+gpt-oss-20b (Groq) & CoT       & 0.9056 & 0.9184 & 0.0889 & 0.0444 & 0.9500 & 0.9000 & 0.8667 \\
+\hline
+Llama 3.3 70B fp8-fast (CF) & Zero-Shot & 0.9444 & 0.9443 & 0.1000 & 0.0111 & 0.9500 & 0.9667 & 0.9167 \\
+Llama 3.3 70B fp8-fast (CF) & Few-Shot  & 0.9667 & 0.9667 & 0.0556 & 0.0111 & 0.9333 & 0.9667 & 1.0000 \\
+Llama 3.3 70B fp8-fast (CF) & CoT       & 0.9667 & 0.9666 & 0.0667 & 0.0000 & 0.9833 & 0.9833 & 0.9333 \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Error Analysis and Linguistic Discussion}
+\subsection{Failure Mode Taxonomy}
+Using the attribution rules implemented in \texttt{src/metrics.py}, misclassified items are categorized into five distinct linguistic failure modes:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{World-Knowledge Over-Entailment:} Accepting high-probability script continuations as strict logical entailments, yielding elevated FPR on \texttt{plausible\_non\_entailment}.
+    \item \textbf{Negation Scope Failure:} Failing to block presupposition projection under explicit cancellation or conditional filters, or misinterpreting downward-monotone negation.
+    \item \textbf{Upward-Monotonicity Bias:} Inferring specific hyponyms from general hypernyms (e.g., \textit{car} $\rightarrow$ \textit{sedan}) or disregarding privative modifiers (\textit{fake}, \textit{toy}).
+    \item \textbf{Presupposition Projection Failure:} Rejecting valid presuppositions when triggers appear inside negated or interrogative clauses.
+    \item \textbf{Lexical Entailment Failure:} Missing valid affirmative hypernym or manner-verb entailments.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\caption{Distribution of selected linguistic error types in zero-shot runs (from \texttt{results/error\_attribution.csv}).}
+\label{tab:errors}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc}
+\hline
+\textbf{Model (Zero-Shot)} & \textbf{Over-Ent.} & \textbf{Neg. Scope} & \textbf{Upward Bias} & \textbf{Presup. Fail} & \textbf{Lex. Fail} \\
+\hline
+llama3:latest & 28 & 8 & 10 & 1 & 1 \\
+mistral:7b & 28 & 9 & 7 & 3 & 0 \\
+mixtral:8x7b & 10 & 4 & 5 & 3 & 0 \\
+qwen2.5:7b (extra) & 6 & 4 & 7 & 3 & 1 \\
+gpt-oss-20b (Groq) & 1 & 2 & 0 & 0 & 1 \\
+Llama 3.3 70B fp8-fast (CF) & 5 & 1 & 3 & 0 & 0 \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Implications for Linguistic Theory}
+The results show a mixed picture. Larger or stronger models, especially Llama 3.3 70B fp8-fast on Cloudflare and Qwen2.5 7B, did well on many affirmative hypernym and presupposition cases. But smaller local models often failed on plausible non-entailments and negation-sensitive items. This suggests the models can learn useful patterns, but they do not always follow strict semantic rules in the same way a formal linguistic theory would require. In that sense, the evidence fits a cautious middle position: LLMs show strong performance on many linguistic tests, but the systematic error patterns still matter for claims about linguistic competence (Piantadosi, 2023; Fox and Katzir, 2024; Futrell and Mahowald, 2026).
+
+\section{Conclusion}
+This project built a small benchmark for lexical entailment, presupposition, and plausible non-entailment, then evaluated six model configurations across zero-shot, few-shot, and chain-of-thought prompting. The strongest overall run was Llama 3.3 70B Instruct fp8-fast via Cloudflare (up to 96.67\% accuracy), while smaller local models showed more world-knowledge over-entailment and negation/presupposition errors. Chain-of-thought helped some models but was not uniformly better. The main limitations are the small dataset, theory-dependent labels, missing OpenAI GPT/HF exact-logit runs, and no independent human agreement study yet. Future work should expand the dataset, collect independent annotations, and complete the remaining proposal models.
+
+\begin{thebibliography}{9}
+
+\bibitem[Basmov et al.(2024)]{basmov2024simple}
+Basmov, V., Goldberg, Y., \& Tsarfaty, R. (2024).
+\newblock Simple linguistic inferences of large language models.
+\newblock \emph{arXiv preprint arXiv:2305.14785}.
+
+\bibitem[Fox \& Katzir(2024)]{fox2024theoretical}
+Fox, D., \& Katzir, R. (2024).
+\newblock Large language models and theoretical linguistics.
+\newblock \emph{Theoretical Linguistics}, 50(1--2), 71--76.
+
+\bibitem[Futrell \& Mahowald(2026)]{futrell2026theory}
+Futrell, R., \& Mahowald, K. (2026).
+\newblock What is the theory that language models provide?
+\newblock \emph{Behavioral and Brain Sciences}, 49.
+
+\bibitem[Piantadosi(2023)]{piantadosi2023modern}
+Piantadosi, S. T. (2023).
+\newblock Modern language models refute Chomsky's approach to language.
+\newblock \emph{Lingbuzz/007180}.
+
+\end{thebibliography}
+
+\end{document}
