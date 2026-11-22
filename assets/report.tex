@@ -1,11 +1,13 @@
 \documentclass[11pt, a4paper]{article}
 
 \usepackage[a4paper, margin=2.2cm, headheight=15pt, footskip=26pt]{geometry}
-\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-\IfFontExistsTF{Noto Sans}{\setmainfont{Noto Sans}}{\setmainfont{TeX Gyre Heros}}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{amssymb} % Provides \boxtimes for the submission checklist
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -51,14 +53,7 @@
 % --- Cover Page ---
 \vspace*{0.4cm}
 \begin{center}
-    % Place uni_bamberg_logo.png in the same folder as this .tex file.
-    \IfFileExists{uni_bamberg_logo.png}{%
-        \includegraphics[width=3.6cm,height=2.6cm,keepaspectratio]{uni_bamberg_logo.png}%
-    }{%
-        \fcolorbox{bambergnavy}{labeltint}{%
-            \parbox[c][2.2cm][c]{3.4cm}{\centering\small\bfseries\color{bambergnavy} OTTO-FRIEDRICH\\UNIVERSITÄT\\BAMBERG\\[2pt]\scriptsize\normalfont\color{footergray} Logo file not found}%
-        }%
-    }\\[0.9em]
+    \includegraphics[width=3.6cm]{uni_bamberg_logo.png}\\[0.9em]
     {\large\bfseries\color{bambergnavy} Otto-Friedrich-Universität Bamberg}\\
     {\normalsize\color{footergray} University of Bamberg}\\[1.6em]
     {\LARGE\bfseries\color{bambergnavy} LLMs and Linguistic Inferences}\\[0.4em]

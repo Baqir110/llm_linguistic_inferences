@@ -22,3 +22,7 @@ assets/report_template.out
 assets/report_template.toc
 assets/report_template.synctex.gz
 assets/report_template.pdf
+.log
+.out
+.tex
+
